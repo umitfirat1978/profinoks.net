@@ -1,0 +1,114 @@
+import React from "react";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Header from "./components/layout/Header";
+import HomePage from "./components/pages/HomePage";
+import AdminLogin from "./components/admin/AdminLogin";
+import AdminProducts from "./components/admin/AdminProducts";
+import { LanguageProvider } from "./contexts/LanguageContext";
+import { AdminAuthProvider, useAdminAuth } from "./contexts/AdminAuthContext";
+import "./index.css";
+
+const PlaceholderPage = ({ title, description }) => (
+  <div className="mt-[140px] bg-[#050505] pb-16 pt-10 text-white">
+    <div className="mx-auto max-w-6xl px-4">
+      <h1 className="text-2xl font-semibold tracking-[0.18em] uppercase">
+        {title}
+      </h1>
+      <p className="mt-4 max-w-2xl text-sm text-white/75">{description}</p>
+    </div>
+  </div>
+);
+
+const AdminRoute = ({ children }) => {
+  const { isAdmin } = useAdminAuth();
+  if (!isAdmin) {
+    window.location.href = "/admin/login";
+    return null;
+  }
+  return children;
+};
+
+function App() {
+  return (
+    <BrowserRouter>
+      <LanguageProvider>
+        <AdminAuthProvider>
+          <div className="min-h-screen bg-[#050505] text-white">
+            <Header />
+            <main>
+              <Routes>
+                <Route path="/" element={<HomePage />} />
+                <Route
+                  path="/corporate"
+                  element={
+                    <PlaceholderPage
+                      title="Corporate"
+                      description="This is a static placeholder for the Corporate page in the Profinoks clone. In the original site, this section presents the company's history, mission and values."
+                    />
+                  }
+                />
+                <Route
+                  path="/products"
+                  element={
+                    <PlaceholderPage
+                      title="Products"
+                      description="Static placeholder for the Products page. Here you would browse detailed product categories and items similar to the original Profinoks website."
+                    />
+                  }
+                />
+                <Route
+                  path="/references"
+                  element={
+                    <PlaceholderPage
+                      title="References"
+                      description="Static placeholder for the References page listing hotel and hospitality brands that work with Profinoks."
+                    />
+                  }
+                />
+                <Route
+                  path="/projects"
+                  element={
+                    <PlaceholderPage
+                      title="Projects"
+                      description="Static placeholder for the Projects page where completed reference projects would be showcased."
+                    />
+                  }
+                />
+                <Route
+                  path="/news"
+                  element={
+                    <PlaceholderPage
+                      title="News"
+                      description="Static placeholder for the News page that would normally list announcements, fairs and press releases."
+                    />
+                  }
+                />
+                <Route
+                  path="/contact"
+                  element={
+                    <PlaceholderPage
+                      title="Contact"
+                      description="Static placeholder for the Contact page including address, phone and contact form in a full version."
+                    />
+                  }
+                />
+                <Route path="/admin/login" element={<AdminLogin />} />
+                <Route
+                  path="/admin/products"
+                  element={
+                    <AdminRoute>
+                      <AdminProducts />
+                    </AdminRoute>
+                  }
+                />
+                <Route path="*" element={<HomePage />} />
+              </Routes>
+            </main>
+          </div>
+        </AdminAuthProvider>
+      </LanguageProvider>
+    </BrowserRouter>
+  );
+}
+
+export default App;
