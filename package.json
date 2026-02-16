@@ -4,11 +4,11 @@
   "description": "Profinoks website prepared for Hostinger Node.js deployment",
   "main": "server.js",
   "engines": {
-    "node": ">=18.0.0"
+    "node": "24.x"
   },
   "scripts": {
     "start": "node server.js",
-    "build": "cd frontend && npm install && npm run build",
+    "build": "cd frontend && npm install && npm run build && cd .. && rm -rf .next && mkdir -p .next && cp -r frontend/build/* .next/",
     "postinstall": "cd frontend && npm install"
   },
   "dependencies": {
