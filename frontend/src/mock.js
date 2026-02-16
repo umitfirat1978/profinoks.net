@@ -35,47 +35,32 @@ export const sliderItems = [
 ];
 
 export const productGroups = [
-  {
-    id: 1,
-    title: "RESTAURANT EQUIPMENTS",
-    slug: "restaurant-equipments",
-    imageUrl: "/ormel/group-restaurant.png",
-    activeBackgroundUrl: "/ormel/group-restaurant.png",
-    href: "https://profinoks.com.tr/en/products.aspx?id=1",
-    description:
-      "Buffet and service solutions that combine durability with refined aesthetics.",
-  },
-  {
-    id: 2,
-    title: "HOUSEKEEPING EQUIPMENTS",
-    slug: "housekeeping-equipments",
-    imageUrl: "/ormel/group-housekeeping.png",
-    activeBackgroundUrl: "/ormel/group-housekeeping.png",
-    href: "https://profinoks.com.tr/en/products.aspx?id=2",
-    description:
-      "Operationally functional trolleys and equipment for housekeeping teams.",
-  },
-  {
-    id: 3,
-    title: "FRONT OFFICE EQUIPMENTS",
-    slug: "front-office-equipments",
-    imageUrl: "/ormel/group-frontoffice.png",
-    activeBackgroundUrl: "/ormel/group-frontoffice.png",
-    href: "https://profinoks.com.tr/en/products.aspx?id=3",
-    description:
-      "Elegant and functional solutions for lobby and reception areas.",
-  },
-  {
-    id: 4,
-    title: "BANQUET & MEETING EQUIPMENTS",
-    slug: "banquet-meeting-equipments",
-    imageUrl: "/ormel/group-banquet.png",
-    activeBackgroundUrl: "/ormel/group-banquet.png",
-    href: "https://profinoks.com.tr/en/products.aspx?id=4",
-    description:
-      "Modular banquet and meeting equipment that adapts to every setup.",
-  },
+  { id: 1, title: "PİŞİRİCİLER", slug: "cookers", imageUrl: "/ormel/group-restaurant.png", description: "Gazlı ve elektrikli yer ocakları, devrilir tavalar, kuzine fırınlar ve ızgaralar." },
+  { id: 2, title: "FIRINLAR", slug: "ovens", imageUrl: "/ormel/group-restaurant.png", description: "Gazlı pasta börek fırınları ve çeşitli endüstriyel fırınlar." },
+  { id: 3, title: "BULAŞIK MAKİNELERİ", slug: "dishwashers", imageUrl: "/ormel/group-restaurant.png", description: "Endüstriyel bulaşık yıkama çözümleri." },
+  { id: 4, title: "HAZIRLIK MAKİNELERİ", slug: "prep-machines", imageUrl: "/ormel/group-restaurant.png", description: "Mutfak hazırlık süreçleri için yardımcı ekipmanlar." },
+  { id: 5, title: "İÇECEK MAKİNELERİ", slug: "beverage-machines", imageUrl: "/ormel/group-restaurant.png", description: "Çay, kahve ve soğuk içecek hazırlama makineleri." },
+  { id: 6, title: "SELF SERVİS ÜNİTELERİ", slug: "self-service", imageUrl: "/ormel/group-restaurant.png", description: "Yemek dağıtım ve self servis hatları." },
+  { id: 7, title: "AÇIK BÜFE SERVİS ÜNİTELERİ", slug: "buffet-service", imageUrl: "/ormel/group-restaurant.png", description: "Modern ve estetik açık büfe sunum çözümleri." },
+  { id: 8, title: "BUZDOLAPLARI", slug: "refrigerators", imageUrl: "/ormel/group-restaurant.png", description: "Endüstriyel tip buzdolapları ve saklama üniteleri." },
+  { id: 9, title: "SOĞUK ODALAR", slug: "cold-rooms", imageUrl: "/ormel/group-restaurant.png", description: "Panel tip soğuk oda ve depo çözümleri." },
+  { id: 10, title: "TEZGAHLAR", slug: "workbenches", imageUrl: "/ormel/group-restaurant.png", description: "Çalışma, evyeli ve hazırlık tezgahları." },
+  { id: 11, title: "İSTİF RAFLARI VE DEPOLAMA", slug: "storage", imageUrl: "/ormel/group-restaurant.png", description: "Mutfak ve depo için raf sistemleri." },
+  { id: 12, title: "YER IZGARALARI & YAĞ AYIRICILAR", slug: "gratings", imageUrl: "/ormel/group-restaurant.png", description: "Drenaj kanalları ve yağ ayırıcı sistemler." },
+  { id: 13, title: "DAVLUMBAZLAR", slug: "hoods", imageUrl: "/ormel/group-restaurant.png", description: "Havalandırma ve davlumbaz sistemleri." },
+  { id: 14, title: "MUTFAK ARABALARI", slug: "trolleys", imageUrl: "/ormel/group-housekeeping.png", description: "Taşıma, servis ve toplama arabaları." },
+  { id: 15, title: "YARDIMCI MUTFAK EKİPMANLARI", slug: "auxiliary", imageUrl: "/ormel/group-restaurant.png", description: "Tencere, tava ve küçük el aletleri." },
+  { id: 16, title: "SETÜSTÜ OTEL EKİPMANLARI", slug: "tabletop", imageUrl: "/ormel/group-frontoffice.png", description: "Otel odası ve restoran setüstü ekipmanları." },
+  { id: 17, title: "ÇAMAŞIRHANE EKİPMANLARI", slug: "laundry", imageUrl: "/ormel/group-housekeeping.png", description: "Endüstriyel çamaşır yıkama ve kurutma makineleri." },
 ];
+
+export const contactInfo = {
+  address: "Firuzköy Mah. Mezarlık Üstü Cad. No:13 34325 Avcılar İstanbul Türkiye",
+  phone: ["+90 850 420 87 37", "+90 212 501 51 25"],
+  fax: "+90 212 501 51 26",
+  emails: ["info@profinoks.com.tr", "proje@profinoks.com.tr"],
+  workingHours: "Pazartesi - Cuma: 09:00 - 18:00"
+};
 
 export const referenceLogos = [
   "/ormel/ref-1.jpg",

@@ -2,8 +2,11 @@ import React from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Header from "./components/layout/Header";
 import HomePage from "./components/pages/HomePage";
+import ProductsPage from "./components/pages/ProductsPage";
+import ContactPage from "./components/pages/ContactPage";
 import AdminLogin from "./components/admin/AdminLogin";
 import AdminProducts from "./components/admin/AdminProducts";
+import Footer from "./components/layout/Footer";
 import { LanguageProvider } from "./contexts/LanguageContext";
 import { AdminAuthProvider, useAdminAuth } from "./contexts/AdminAuthContext";
 import "./index.css";
@@ -47,15 +50,7 @@ function App() {
                     />
                   }
                 />
-                <Route
-                  path="/products"
-                  element={
-                    <PlaceholderPage
-                      title="Products"
-                      description="Static placeholder for the Products page. Here you would browse detailed product categories and items similar to the original Profinoks website."
-                    />
-                  }
-                />
+                <Route path="/products" element={<ProductsPage />} />
                 <Route
                   path="/references"
                   element={
@@ -83,15 +78,7 @@ function App() {
                     />
                   }
                 />
-                <Route
-                  path="/contact"
-                  element={
-                    <PlaceholderPage
-                      title="Contact"
-                      description="Static placeholder for the Contact page including address, phone and contact form in a full version."
-                    />
-                  }
-                />
+                <Route path="/contact" element={<ContactPage />} />
                 <Route path="/admin/login" element={<AdminLogin />} />
                 <Route
                   path="/admin/products"
@@ -104,6 +91,7 @@ function App() {
                 <Route path="*" element={<HomePage />} />
               </Routes>
             </main>
+            <Footer />
           </div>
         </AdminAuthProvider>
       </LanguageProvider>

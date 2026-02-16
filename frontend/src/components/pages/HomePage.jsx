@@ -123,8 +123,8 @@ const HomePage = () => {
                   !sliderItems.length
                     ? prev
                     : prev === 0
-                    ? sliderItems.length - 1
-                    : prev - 1
+                      ? sliderItems.length - 1
+                      : prev - 1
                 )
               }
             >
@@ -370,20 +370,6 @@ const HomePage = () => {
         </div>
       </section>
 
-      {/* Footer strip */}
-      <footer className="border-t border-white/10 bg-black py-3 text-[11px] text-white/70">
-        <div className="mx-auto flex max-w-6xl items-center justify-between px-4">
-          <span>©2025 - All Right Reserved.</span>
-          <a
-            href="http://ttrbilisim.com/"
-            target="_blank"
-            rel="noreferrer"
-            className="font-semibold tracking-[0.14em] text-white/80 hover:text-white"
-          >
-            TTR BILISIM
-          </a>
-        </div>
-      </footer>
     </div>
   );
 };
