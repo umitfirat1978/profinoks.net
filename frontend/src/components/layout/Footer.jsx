@@ -1,7 +1,7 @@
 import React from "react";
 import { useLanguage } from "../../contexts/LanguageContext";
 import { contactInfo, productGroups } from "../../mock";
-import { Mail, Phone, MapPin, Facebook, Instagram, Linkedin, Twitter } from "lucide-react";
+import { Mail, Phone, MapPin, Facebook, Instagram, Linkedin, Youtube, MessageCircle } from "lucide-react";
 
 const Footer = () => {
     const { lang } = useLanguage();
@@ -21,10 +21,11 @@ const Footer = () => {
                                 : "Since 2010, we have been providing services in the production and installation of industrial kitchen equipment. We are one of the leading companies in the sector with our quality production approach and customer satisfaction-oriented working principle."}
                         </p>
                         <div className="flex space-x-4 pt-2">
-                            <a href="#" className="text-white/40 hover:text-white transition-colors"><Facebook size={18} /></a>
-                            <a href="#" className="text-white/40 hover:text-white transition-colors"><Instagram size={18} /></a>
-                            <a href="#" className="text-white/40 hover:text-white transition-colors"><Linkedin size={18} /></a>
-                            <a href="#" className="text-white/40 hover:text-white transition-colors"><Twitter size={18} /></a>
+                            <a href="https://www.facebook.com/profinoks.endustriyelmutfakekipmanlari" target="_blank" rel="noreferrer" className="text-white/40 hover:text-white transition-colors" title="Facebook"><Facebook size={18} /></a>
+                            <a href="https://www.instagram.com/profinoks/?hl=tr" target="_blank" rel="noreferrer" className="text-white/40 hover:text-white transition-colors" title="Instagram"><Instagram size={18} /></a>
+                            <a href="https://www.linkedin.com/in/profinoks-end%C3%BCstriyel-mutfak-ekipmanlari-4471921b2/" target="_blank" rel="noreferrer" className="text-white/40 hover:text-white transition-colors" title="LinkedIn"><Linkedin size={18} /></a>
+                            <a href="https://www.youtube.com/channel/UCTsoSgntPEXAshH80VtSa-g/featured" target="_blank" rel="noreferrer" className="text-white/40 hover:text-white transition-colors" title="YouTube"><Youtube size={18} /></a>
+                            <a href="https://api.whatsapp.com/send?phone=905306140705" target="_blank" rel="noreferrer" className="text-white/40 hover:text-white transition-colors" title="WhatsApp"><MessageCircle size={18} /></a>
                         </div>
                     </div>
 

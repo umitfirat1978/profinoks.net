@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Link, NavLink, useLocation } from "react-router-dom";
-import { Linkedin, Youtube, Globe2, Search, Menu, X } from "lucide-react";
+import { Linkedin, Youtube, Instagram, Facebook, MessageCircle, Globe2, Search, Menu, X } from "lucide-react";
 
 import { Input } from "../../components/ui/input";
 import { Button } from "../../components/ui/button";
@@ -48,20 +48,49 @@ const Header = () => {
           <div className="hidden items-center space-x-4 md:flex">
             <div className="flex items-center space-x-3 text-white/70">
               <a
-                href="https://www.linkedin.com/company/34727350"
+                href="https://www.instagram.com/profinoks/?hl=tr"
                 target="_blank"
                 rel="noreferrer"
                 className="inline-flex h-7 w-7 items-center justify-center rounded-full border border-white/20 hover:border-white hover:text-white transition-colors"
+                title="Instagram"
+              >
+                <Instagram className="h-3.5 w-3.5" />
+              </a>
+              <a
+                href="https://www.facebook.com/profinoks.endustriyelmutfakekipmanlari"
+                target="_blank"
+                rel="noreferrer"
+                className="inline-flex h-7 w-7 items-center justify-center rounded-full border border-white/20 hover:border-white hover:text-white transition-colors"
+                title="Facebook"
+              >
+                <Facebook className="h-3.5 w-3.5" />
+              </a>
+              <a
+                href="https://www.linkedin.com/in/profinoks-end%C3%BCstriyel-mutfak-ekipmanlari-4471921b2/"
+                target="_blank"
+                rel="noreferrer"
+                className="inline-flex h-7 w-7 items-center justify-center rounded-full border border-white/20 hover:border-white hover:text-white transition-colors"
+                title="LinkedIn"
               >
                 <Linkedin className="h-3.5 w-3.5" />
               </a>
               <a
-                href="https://www.youtube.com/channel/UCcnq_1lpwAdVxWPFVJNEqLw"
+                href="https://www.youtube.com/channel/UCTsoSgntPEXAshH80VtSa-g/featured"
                 target="_blank"
                 rel="noreferrer"
                 className="inline-flex h-7 w-7 items-center justify-center rounded-full border border-white/20 hover:border-white hover:text-white transition-colors"
+                title="YouTube"
               >
                 <Youtube className="h-3.5 w-3.5" />
+              </a>
+              <a
+                href="https://api.whatsapp.com/send?phone=905306140705"
+                target="_blank"
+                rel="noreferrer"
+                className="inline-flex h-7 w-7 items-center justify-center rounded-full border border-white/20 hover:border-white hover:text-white transition-colors"
+                title="WhatsApp"
+              >
+                <MessageCircle className="h-3.5 w-3.5" />
               </a>
             </div>
 
@@ -123,20 +152,16 @@ const Header = () => {
       {/* Main navigation */}
       <div className="bg-black/90 backdrop-blur border-b border-white/5">
         <div className="mx-auto flex max-w-6xl items-center justify-between px-4 py-3">
-          <Link to="/" className="flex items-center space-x-2">
-            <div className="flex h-9 w-9 items-center justify-center rounded-full bg-white">
-              <span className="text-[18px] font-bold tracking-[0.2em] text-black">
-                P
-              </span>
-            </div>
-            <div className="leading-tight">
-              <div className="text-sm font-semibold tracking-[0.25em]">
-                PROFINOKS
-              </div>
-              <div className="text-[10px] uppercase text-white/60 tracking-[0.18em]">
-                {lang === "tr" ? "Otel Ekipmanları" : "Hotel Equipment"}
-              </div>
-            </div>
+          <Link to="/" className="flex items-center">
+            <img
+              src="/profinoks/logo.png"
+              alt="Profinoks Logo"
+              className="h-10 w-auto sm:h-12"
+              onError={(e) => {
+                e.target.onerror = null;
+                e.target.src = "https://via.placeholder.com/150x50?text=PROFINOKS";
+              }}
+            />
           </Link>
 
           <nav className="hidden items-center space-x-6 text-[13px] uppercase tracking-[0.12em] lg:flex">
