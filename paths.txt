@@ -1,0 +1,6 @@
+C:\Users\umitf\Downloads\Ormel\profinoks-10\.emergent
+C:\Users\umitf\Downloads\Ormel\profinoks-10\.emergent\emergent.yml
+C:\Users\umitf\Downloads\Ormel\profinoks-10\frontend\build\ormel
+C:\Users\umitf\Downloads\Ormel\profinoks-10\frontend\node_modules\jsdom\lib\jsdom\living\generated\HTMLFormElement.js
+C:\Users\umitf\Downloads\Ormel\profinoks-10\frontend\node_modules\jsdom\lib\jsdom\living\nodes\HTMLFormElement-impl.js
+C:\Users\umitf\Downloads\Ormel\profinoks-10\frontend\public\ormel

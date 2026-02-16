@@ -1,0 +1,3 @@
+C:\Users\umitf\Downloads\Ormel\profinoks-10\.emergent
+C:\Users\umitf\Downloads\Ormel\profinoks-10\emergent_paths.txt
+C:\Users\umitf\Downloads\Ormel\profinoks-10\.emergent\emergent.yml
