@@ -95,13 +95,12 @@ const Header = () => {
             </div>
 
             <a
-              href="http://www.profinoks.com.tr/images/uploads/profinoks-katalog-en.pdf"
-              target="_blank"
-              rel="noreferrer"
+              href="https://srv2079-files.hstgr.io/305025dd7dc5cf93/files/public_html/profinoks/PROF%C4%B0NOKS-2025-F%C4%B0YAT%20L%C4%B0STES%C4%B0-1.pdf"
+              download="PROFİNOKS-2025-FİYAT-LİSTESİ.pdf"
               className="text-white/80 hover:text-white transition-colors"
             >
               <span className="align-middle mr-1 inline-block h-4 w-4 rounded-sm bg-white/10" />
-              Product Catalogue
+              {t(lang, "nav.catalogue")}
             </a>
 
 

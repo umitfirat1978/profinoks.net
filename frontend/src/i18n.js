@@ -21,6 +21,7 @@ export const translations = {
       projects: "Projects",
       news: "News",
       contact: "Contact",
+      catalogue: "Product Catalogue",
       admin: "Admin",
     },
     productGroups: {
@@ -63,6 +64,7 @@ export const translations = {
       projects: "Projeler",
       news: "Haberler",
       contact: "İletişim",
+      catalogue: "Ürün Kataloğu",
       admin: "Yönetim",
     },
     productGroups: {
