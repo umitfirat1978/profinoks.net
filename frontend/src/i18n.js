@@ -25,7 +25,7 @@ export const translations = {
       admin: "Admin",
     },
     productGroups: {
-      heading: "PRODUCT GROUPS",
+      heading: "OUR PRODUCTS",
       animation: "Animation",
     },
     references: {
@@ -68,7 +68,7 @@ export const translations = {
       admin: "Yönetim",
     },
     productGroups: {
-      heading: "ÜRÜN GRUPLARI",
+      heading: "ÜRÜNLERİMİZ",
       animation: "Animasyon",
     },
     references: {

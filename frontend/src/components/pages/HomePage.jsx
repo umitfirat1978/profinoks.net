@@ -147,100 +147,41 @@ const HomePage = () => {
       </section>
 
       {/* Product groups */}
-      <section className="bg-[#050505] py-10 md:py-14">
+      <section className="bg-[#050505] py-14 md:py-20 border-t border-white/5">
         <div className="mx-auto max-w-6xl px-4">
-          <div className="mb-6 flex items-center justify-between">
-            <h2 className="text-lg font-semibold tracking-[0.2em] text-white">
+          <div className="mb-10 lg:mb-14">
+            <h2 className="text-2xl md:text-3xl font-semibold tracking-[0.16em] text-white uppercase">
               {t(lang, "productGroups.heading")}
             </h2>
-            <a
-              href="https://profinoks.com.tr/en/animation"
-              target="_blank"
-              rel="noreferrer"
-              className="hidden items-center text-xs uppercase tracking-[0.2em] text-amber-400 hover:text-amber-300 sm:inline-flex"
-            >
-              <span className="mr-1 inline-block h-8 w-8 rounded-full border border-amber-400/60 bg-black/60" />
-              {t(lang, "productGroups.animation")}
-              <ArrowRight className="ml-2 h-3 w-3" />
-            </a>
+            <div className="mt-4 h-1 w-20 bg-amber-400" />
           </div>
 
-          {/* Mobile grid */}
-          <div className="grid gap-4 sm:grid-cols-2 lg:hidden">
+          <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
             {productGroups.map((group) => (
               <a
                 key={group.id}
-                href={group.href}
+                href={group.href || "#"}
                 target="_blank"
                 rel="noreferrer"
-                className="group overflow-hidden rounded-md border border-[#262626] bg-[#111111] shadow-sm transition-transform hover:-translate-y-0.5"
+                className="group flex flex-col overflow-hidden rounded-md border border-[#222] bg-[#0c0c0c] transition-all duration-300 hover:border-amber-400/50 hover:bg-[#111] hover:-translate-y-1"
               >
-                <div className="overflow-hidden bg-black">
+                <div className="aspect-[4/3] overflow-hidden bg-black/40 p-4">
                   <img
                     src={group.image_url || group.imageUrl}
                     alt={group.title}
-                    className="h-40 w-full object-cover transition-transform duration-500 group-hover:scale-105"
+                    className="h-full w-full object-contain transition-transform duration-500 group-hover:scale-110"
                   />
                 </div>
-                <div className="px-4 py-3">
-                  <p className="text-xs uppercase tracking-[0.16em] text-white/80">
+                <div className="flex flex-1 flex-col p-5 border-t border-white/5 bg-[#0e0e0e] group-hover:bg-[#121212] transition-colors">
+                  <h3 className="text-sm font-bold uppercase tracking-[0.14em] text-white group-hover:text-amber-400 transition-colors">
                     {group.title}
-                  </p>
-                  <p className="mt-1 text-[11px] text-white/60">
+                  </h3>
+                  <p className="mt-2 text-[12px] leading-relaxed text-white/50 line-clamp-2">
                     {group.description}
                   </p>
                 </div>
               </a>
             ))}
-          </div>
-
-          {/* Desktop interactive row */}
-          <div className="mt-8 hidden lg:block">
-            <div className="flex gap-4">
-              {productGroups.map((group) => (
-                <a
-                  key={group.id}
-                  href={group.href}
-                  target="_blank"
-                  rel="noreferrer"
-                  className="group relative flex-1 overflow-hidden rounded-md border border-[#262626] bg-[#090909]"
-                >
-                  {/* Inactive state */}
-                  <div className="flex h-56 flex-col items-center justify-center space-y-4 bg-[#101010] transition-opacity duration-300 group-hover:opacity-0">
-                    <div className="overflow-hidden rounded-md bg-black/80 p-3">
-                      <img
-                        src={group.image_url || group.imageUrl}
-                        alt={group.title}
-                        className="h-32 w-auto object-contain"
-                      />
-                    </div>
-                    <div className="text-xs uppercase tracking-[0.18em] text-white/80">
-                      {group.title}
-                    </div>
-                  </div>
-
-                  {/* Active state */}
-                  <div className="pointer-events-none absolute inset-0 opacity-0 transition-opacity duration-300 group-hover:opacity-100">
-                    <div
-                      className="flex h-full flex-col justify-between bg-cover bg-center"
-                      style={{
-                        backgroundImage: `url(${group.active_background_url || group.activeBackgroundUrl})`,
-                      }}
-                    >
-                      <div className="h-1 w-16 bg-amber-400" />
-                      <div className="bg-gradient-to-t from-black/85 via-black/60 to-black/0 p-6">
-                        <div className="text-xs uppercase tracking-[0.18em] text-white">
-                          {group.title}
-                        </div>
-                        <p className="mt-2 max-w-xs text-[12px] text-white/75">
-                          {group.description}
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-                </a>
-              ))}
-            </div>
           </div>
         </div>
       </section>
