@@ -97,7 +97,7 @@ const Header = () => {
             <button
               onClick={() => {
                 const link = document.createElement("a");
-                link.href = "https://srv2079-files.hstgr.io/305025dd7dc5cf93/files/Katalog/PROF%C4%B0NOKS-2025-F%C4%B0YAT%20L%C4%B0STES%C4%B0-1.pdf";
+                link.href = "https://srv2079-files.hstgr.io/ce9edf11205af529/files/Katalog/PROF%C4%B0NOKS-2025-F%C4%B0YAT%20L%C4%B0STES%C4%B0-1.pdf";
                 link.download = "PROFİNOKS-2025-FİYAT-LİSTESİ.pdf";
                 document.body.appendChild(link);
                 link.click();
