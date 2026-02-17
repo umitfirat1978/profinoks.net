@@ -4,6 +4,8 @@ import Header from "./components/layout/Header";
 import HomePage from "./components/pages/HomePage";
 import ProductsPage from "./components/pages/ProductsPage";
 import ContactPage from "./components/pages/ContactPage";
+import PrivacyPage from "./components/pages/PrivacyPage";
+import TermsPage from "./components/pages/TermsPage";
 import AdminLogin from "./components/admin/AdminLogin";
 import AdminProducts from "./components/admin/AdminProducts";
 import Footer from "./components/layout/Footer";
@@ -88,6 +90,8 @@ function App() {
                     </AdminRoute>
                   }
                 />
+                <Route path="/privacy" element={<PrivacyPage />} />
+                <Route path="/terms" element={<TermsPage />} />
                 <Route path="*" element={<HomePage />} />
               </Routes>
             </main>

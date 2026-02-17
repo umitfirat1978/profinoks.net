@@ -2,6 +2,7 @@ import React from "react";
 import { useLanguage } from "../../contexts/LanguageContext";
 import { contactInfo, productGroups } from "../../mock";
 import { Mail, Phone, MapPin, Facebook, Instagram, Linkedin, Youtube, MessageCircle } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const Footer = () => {
     const { lang } = useLanguage();
@@ -83,8 +84,8 @@ const Footer = () => {
                 <div className="pt-8 border-t border-white/5 flex flex-col md:flex-row justify-between items-center text-xs text-white/40 gap-4">
                     <p>© {new Date().getFullYear()} Profinoks Endüstriyel Mutfak. Tüm hakları saklıdır.</p>
                     <div className="flex space-x-6">
-                        <a href="/privacy" className="hover:text-white transition-colors">Privacy Policy</a>
-                        <a href="/terms" className="hover:text-white transition-colors">Terms of Service</a>
+                        <Link to="/privacy" className="hover:text-white transition-colors">Privacy Policy</Link>
+                        <Link to="/terms" className="hover:text-white transition-colors">Terms of Service</Link>
                     </div>
                 </div>
             </div>

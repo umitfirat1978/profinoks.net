@@ -104,14 +104,7 @@ const Header = () => {
               Product Catalogue
             </a>
 
-            <a
-              href="https://odeme.profinoks.com.tr/"
-              target="_blank"
-              rel="noreferrer"
-              className="text-white/80 hover:text-white transition-colors"
-            >
-              Online Payment
-            </a>
+
           </div>
 
           <div className="ml-4 flex flex-1 items-center justify-end space-x-3">

@@ -9,7 +9,7 @@ export const LANGUAGES = {
 export const translations = {
   en: {
     hero: {
-      badge: "Profinoks Hotel Equipment",
+      badge: "Profinoks Industrial Kitchen Equipment",
       subtitle:
         "Reliable designer and manufacturer of hotel equipment and movable furniture for the hospitality industry.",
     },
@@ -51,7 +51,7 @@ export const translations = {
   },
   tr: {
     hero: {
-      badge: "Profinoks Otel Ekipmanları",
+      badge: "PROFİNOKS ENDÜSTRİYEL MUTFAK EKİPMANLARI",
       subtitle:
         "Otel ekipmanları ve hareketli mobilyaların güvenilir tasarımcısı ve üreticisi.",
     },

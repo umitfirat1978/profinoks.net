@@ -59,7 +59,7 @@ export const contactInfo = {
   phone: ["+90 850 420 87 37", "+90 212 501 51 25"],
   fax: "+90 212 501 51 26",
   emails: ["info@profinoks.com.tr", "proje@profinoks.com.tr"],
-  workingHours: "Pazartesi - Cuma: 09:00 - 18:00"
+  workingHours: "Pazartesi - Cuma: 08:30 - 18:30"
 };
 
 export const referenceLogos = [
