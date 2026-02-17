@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 import {
   sliderItems as sliderMock,
   productGroups as productMock,
@@ -191,12 +192,12 @@ const HomePage = () => {
         <div className="mx-auto max-w-6xl px-4">
           <div className="flex flex-col items-start md:flex-row md:items-center md:justify-between">
             <div>
-              <a
-                href="https://profinoks.com.tr/en/references"
+              <Link
+                to="/references"
                 className="text-lg font-semibold tracking-[0.22em] text-white hover:text-amber-400"
               >
                 {t(lang, "references.heading")}
-              </a>
+              </Link>
               <hr className="mt-2 h-px w-16 border-none bg-amber-400" />
             </div>
             <p className="mt-3 text-sm text-white/70 md:mt-0">

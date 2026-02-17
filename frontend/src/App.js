@@ -6,23 +6,13 @@ import ProductsPage from "./components/pages/ProductsPage";
 import ContactPage from "./components/pages/ContactPage";
 import PrivacyPage from "./components/pages/PrivacyPage";
 import TermsPage from "./components/pages/TermsPage";
+import ReferencesPage from "./components/pages/ReferencesPage";
 import AdminLogin from "./components/admin/AdminLogin";
 import AdminProducts from "./components/admin/AdminProducts";
 import Footer from "./components/layout/Footer";
 import { LanguageProvider } from "./contexts/LanguageContext";
 import { AdminAuthProvider, useAdminAuth } from "./contexts/AdminAuthContext";
 import "./index.css";
-
-const PlaceholderPage = ({ title, description }) => (
-  <div className="mt-[140px] bg-[#050505] pb-16 pt-10 text-white">
-    <div className="mx-auto max-w-6xl px-4">
-      <h1 className="text-2xl font-semibold tracking-[0.18em] uppercase">
-        {title}
-      </h1>
-      <p className="mt-4 max-w-2xl text-sm text-white/75">{description}</p>
-    </div>
-  </div>
-);
 
 const AdminRoute = ({ children }) => {
   const { isAdmin } = useAdminAuth();
@@ -46,29 +36,33 @@ function App() {
                 <Route
                   path="/corporate"
                   element={
-                    <PlaceholderPage
-                      title="Corporate"
-                      description="This is a static placeholder for the Corporate page in the Profinoks clone. In the original site, this section presents the company's history, mission and values."
-                    />
+                    <div className="mt-[140px] bg-[#050505] pb-16 pt-10 text-white">
+                      <div className="mx-auto max-w-6xl px-4">
+                        <h1 className="text-2xl font-semibold tracking-[0.18em] uppercase">
+                          Corporate
+                        </h1>
+                        <p className="mt-4 max-w-2xl text-sm text-white/75">
+                          This is a static placeholder for the Corporate page in the Profinoks clone.
+                        </p>
+                      </div>
+                    </div>
                   }
                 />
                 <Route path="/products" element={<ProductsPage />} />
-                <Route
-                  path="/references"
-                  element={
-                    <PlaceholderPage
-                      title="References"
-                      description="Static placeholder for the References page listing hotel and hospitality brands that work with Profinoks."
-                    />
-                  }
-                />
+                <Route path="/references" element={<ReferencesPage />} />
                 <Route
                   path="/projects"
                   element={
-                    <PlaceholderPage
-                      title="Projects"
-                      description="Static placeholder for the Projects page where completed reference projects would be showcased."
-                    />
+                    <div className="mt-[140px] bg-[#050505] pb-16 pt-10 text-white">
+                      <div className="mx-auto max-w-6xl px-4">
+                        <h1 className="text-2xl font-semibold tracking-[0.18em] uppercase">
+                          Projects
+                        </h1>
+                        <p className="mt-4 max-w-2xl text-sm text-white/75">
+                          Static placeholder for the Projects page.
+                        </p>
+                      </div>
+                    </div>
                   }
                 />
                 <Route
