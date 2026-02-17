@@ -9,6 +9,7 @@ import TermsPage from "./components/pages/TermsPage";
 import ReferencesPage from "./components/pages/ReferencesPage";
 import CorporatePage from "./components/pages/CorporatePage";
 import NewsPage from "./components/pages/NewsPage";
+import ProjectsPage from "./components/pages/ProjectsPage";
 import AdminLogin from "./components/admin/AdminLogin";
 import AdminProducts from "./components/admin/AdminProducts";
 import Footer from "./components/layout/Footer";
@@ -49,22 +50,8 @@ function App() {
                 <Route path="/corporate" element={<CorporatePage />} />
                 <Route path="/products" element={<ProductsPage />} />
                 <Route path="/references" element={<ReferencesPage />} />
-                <Route
-                  path="/projects"
-                  element={
-                    <div className="mt-[140px] bg-[#050505] pb-16 pt-10 text-white">
-                      <div className="mx-auto max-w-6xl px-4">
-                        <h1 className="text-2xl font-semibold tracking-[0.18em] uppercase">
-                          Projects
-                        </h1>
-                        <p className="mt-4 max-w-2xl text-sm text-white/75">
-                          Static placeholder for the Projects page.
-                        </p>
-                      </div>
-                    </div>
-                  }
-                />
                 <Route path="/news" element={<NewsPage />} />
+                <Route path="/projects" element={<ProjectsPage />} />
                 <Route path="/contact" element={<ContactPage />} />
                 <Route path="/admin/login" element={<AdminLogin />} />
                 <Route
