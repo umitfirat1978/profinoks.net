@@ -14,6 +14,17 @@ import { LanguageProvider } from "./contexts/LanguageContext";
 import { AdminAuthProvider, useAdminAuth } from "./contexts/AdminAuthContext";
 import "./index.css";
 
+const PlaceholderPage = ({ title, description }) => (
+  <div className="mt-[140px] bg-[#050505] pb-16 pt-10 text-white">
+    <div className="mx-auto max-w-6xl px-4">
+      <h1 className="text-2xl font-semibold tracking-[0.18em] uppercase">
+        {title}
+      </h1>
+      <p className="mt-4 max-w-2xl text-sm text-white/75">{description}</p>
+    </div>
+  </div>
+);
+
 const AdminRoute = ({ children }) => {
   const { isAdmin } = useAdminAuth();
   if (!isAdmin) {
