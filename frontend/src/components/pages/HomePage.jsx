@@ -94,22 +94,7 @@ const HomePage = () => {
                 alt={slide.title}
                 className="h-full w-full object-cover"
               />
-              <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/60 to-black/0" />
-              <div className="absolute inset-0 flex items-center">
-                <div className="mx-auto flex w-full max-w-6xl px-4">
-                  <div className="max-w-xl animate-[fade-in-up_0.7s_ease-out]">
-                    <div className="inline-block bg-white/5 px-4 py-1 text-xs uppercase tracking-[0.3em] text-white/70">
-                      {t(lang, "hero.badge")}
-                    </div>
-                    <h1 className="mt-4 text-3xl font-semibold tracking-[0.12em] md:text-4xl lg:text-[40px]">
-                      {slide.title}
-                    </h1>
-                    <p className="mt-4 max-w-lg text-sm text-white/75">
-                      {t(lang, "hero.subtitle")}
-                    </p>
-                  </div>
-                </div>
-              </div>
+              <div className="absolute inset-0 bg-black/20" />
             </div>
           ))}
 

@@ -4,33 +4,28 @@
 export const sliderItems = [
   {
     id: 1,
-    title: "Since 1993",
-    imageUrl: "/ormel/slider-1.jpg",
+    title: "",
+    imageUrl: "/profinoks/hero/hero-1.jpg",
   },
   {
     id: 2,
-    title: "Strong & Practical",
-    imageUrl: "/ormel/slider-2.jpg",
+    title: "",
+    imageUrl: "/profinoks/hero/hero-2.jpg",
   },
   {
     id: 3,
-    title: "Aesthetics & Dynamic",
-    imageUrl: "/ormel/slider-3.png",
+    title: "",
+    imageUrl: "/profinoks/hero/hero-3.jpg",
   },
   {
     id: 4,
-    title: "Functional & Modular",
-    imageUrl: "/ormel/slider-4.jpg",
+    title: "",
+    imageUrl: "/profinoks/hero/hero-4.jpg",
   },
   {
     id: 5,
-    title: "The Best For Your Guest",
-    imageUrl: "/ormel/slider-5.png",
-  },
-  {
-    id: 6,
-    title: "30 years of Production and Industry Experience",
-    imageUrl: "/ormel/slider-6.jpg",
+    title: "",
+    imageUrl: "/profinoks/hero/hero-5.jpg",
   },
 ];
 
