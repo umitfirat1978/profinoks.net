@@ -7,6 +7,7 @@ import ContactPage from "./components/pages/ContactPage";
 import PrivacyPage from "./components/pages/PrivacyPage";
 import TermsPage from "./components/pages/TermsPage";
 import ReferencesPage from "./components/pages/ReferencesPage";
+import CorporatePage from "./components/pages/CorporatePage";
 import AdminLogin from "./components/admin/AdminLogin";
 import AdminProducts from "./components/admin/AdminProducts";
 import Footer from "./components/layout/Footer";
@@ -44,21 +45,7 @@ function App() {
             <main>
               <Routes>
                 <Route path="/" element={<HomePage />} />
-                <Route
-                  path="/corporate"
-                  element={
-                    <div className="mt-[140px] bg-[#050505] pb-16 pt-10 text-white">
-                      <div className="mx-auto max-w-6xl px-4">
-                        <h1 className="text-2xl font-semibold tracking-[0.18em] uppercase">
-                          Corporate
-                        </h1>
-                        <p className="mt-4 max-w-2xl text-sm text-white/75">
-                          This is a static placeholder for the Corporate page in the Profinoks clone.
-                        </p>
-                      </div>
-                    </div>
-                  }
-                />
+                <Route path="/corporate" element={<CorporatePage />} />
                 <Route path="/products" element={<ProductsPage />} />
                 <Route path="/references" element={<ReferencesPage />} />
                 <Route
