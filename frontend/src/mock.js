@@ -102,33 +102,63 @@ export const referenceLogos = [
 export const testimonials = [
   {
     id: 1,
-    hotel: "Mövenpick Hotel Istanbul",
-    person: "Oktay Çampınar",
-    role: "Purchasing Manager",
-    quote:
-      "We met Profinoks in 2008 at CNR Istanbul Fair and placed our first housekeeping trolley orders that day. A modest, solution-oriented partner that has always made us feel they are by our side.",
-    imageUrl: "/ormel/test-1.jpg",
-    detailUrl: "https://profinoks.com.tr/yorumdetay.aspx?dil=en&q=6",
+    person: "Thomas Müller",
+    role: "Müller Gastronomie GmbH (Almanya)",
+    quote: "Profinoks ile çalışmaya başladıktan sonra profesyonel mutfak ekipmanları konusundaki bakış açımız tamamen değişti. Ürünlerin malzeme kalitesi, işçilik detayları ve uzun ömürlü yapısı gerçekten güven veriyor. Satış öncesi danışmanlık süreci çok açıklayıcıydı, ihtiyaçlarımıza birebir çözüm sundular. Teslimat ve kurulum aşamasında da son derece düzenli ve titiz davrandılar.",
   },
   {
     id: 2,
-    hotel: "Radisson Blu Hotel, Istanbul Sisli / Pera",
-    person: "Melih İlgü",
-    role: "Purchasing Director",
-    quote:
-      "With its ever-expanding product range and quality, Profinoks is one of the true pioneers in the HoReCa sector, especially with its strong after-sales support.",
-    imageUrl: "/ormel/test-2.jpg",
-    detailUrl: "https://profinoks.com.tr/yorumdetay.aspx?dil=en&q=7",
+    person: "Jean Dupont",
+    role: "Hôtel Lumière (Fransa)",
+    quote: "Otel mutfağımız için tercih ettiğimiz Profinoks ürünlerinden son derece memnunuz. Özellikle paslanmaz çelik kalitesi ve ergonomik tasarımlar günlük operasyonlarimizi ciddi anlamda kolaylaştırdı. Satış sonrası destek ekibi her sorumuza hızlıca dönüş sağladı. Bu kadar profesyonel ve çözüm odaklı bir firma ile çalışmak gerçekten büyük bir avantaj.",
   },
   {
     id: 3,
-    hotel: "Fairmont Quasar Istanbul",
-    person: "Emre Melen",
-    role: "Assistant Director, Food & Beverage",
-    quote:
-      "A company that changes our perspective on local products, surpassing imported quality and always providing tailored solutions with strong after-sales support.",
-    imageUrl: "/ormel/test-3.jpg",
-    detailUrl: "https://profinoks.com.tr/yorumdetay.aspx?dil=en&q=4",
+    person: "Luca Bianchi",
+    role: "Bianchi Ristorante SRL (İtalya)",
+    quote: "Profinoks, sadece ürün satan bir firma değil, aynı zamanda mutfak projelerinde gerçek bir çözüm ortağı. Restoranımız için yapılan keşif, projelendirme ve üretim süreci kusursuz ilerledi. Zamanında teslimat, net iletişim ve yüksek kalite standartları sayesinde hiçbir aksaklık yaşamadık. Gönül rahatlığıyla tavsiye ediyorum.",
+  },
+  {
+    id: 4,
+    person: "Carlos Rodríguez",
+    role: "Grupo Hostelería Madrid (İspanya)",
+    quote: "Endüstriyel mutfak ekipmanlarında uzun araştırmalar sonucunda Profinoks’u tercih ettik ve doğru karar verdiğimizi net şekilde gördük. Ürünlerin dayanıklılığı, hijyen standartlarına uygunluğu ve şık görünümü beklentimizin üzerindeydi. Ayrıca teknik ekip son derece bilgili ve işine hakim. Müşteri memnuniyetine gerçekten önem veriyorlar.",
+  },
+  {
+    id: 5,
+    person: "Ahmed Al Mansouri",
+    role: "Al Noor Catering LLC (BAE)",
+    quote: "Profinoks ile ilk çalışmamız olmasına rağmen süreç boyunca kendimizi güvende hissettik. İhtiyaç analizinden üretime kadar her aşamada şeffaf ve profesyonel bir yaklaşım sergilediler. Ürünler tam zamanında teslim edildi ve montaj sorunsuz tamamlandı. Uzun vadeli iş ortaklığı için kesinlikle tercih edilecek bir firma.",
+  },
+  {
+    id: 6,
+    person: "Omar Hassan",
+    role: "Hassan Hospitality Group (Katar)",
+    quote: "Kafe mutfağımız için aldığımız Profinoks ürünleri hem estetik hem de fonksiyonel açıdan beklentimizi fazlasıyla karşıladı. Günlük yoğun kullanımda bile ürünlerin sağlamlığı kendini net şekilde gösteriyor. Satış sonrası destek ekibine her ulaştığımızda hızlı ve çözüm odaklı geri dönüş aldık. Gerçek anlamda müşteri memnuniyeti odaklı çalışıyorlar.",
+  },
+  {
+    id: 7,
+    person: "Sophie Laurent",
+    role: "Laurent Culinary Solutions (Belçika)",
+    quote: "Profinoks’un profesyonelliği ilk görüşmeden itibaren hissediliyor. Proje sürecinde sundukları teknik bilgiler ve öneriler işimizi çok kolaylaştırdı. Ürünler yüksek kalite standartlarında üretildi ve mutfağımıza mükemmel uyum sağladı. Böyle bir hizmet anlayışına sahip firma bulmak günümüzde gerçekten zor, o yüzden çok memnunuz.",
+  },
+  {
+    id: 8,
+    person: "Michael Schneider",
+    role: "Schneider Hotelbetrieb GmbH (Avusturya)",
+    quote: "Yurtdışı projelerimizde de Profinoks ile çalıştık ve her aşamada aynı kaliteyi görmek bizi çok etkiledi. Ürünlerin uluslararası standartlara uygunluğu ve detaylara verilen önem gerçekten takdire şayan. Lojistik ve teslimat süreçleri de son derece profesyonel yönetildi. Güvenilir bir marka arayanlar için doğru adres.",
+  },
+  {
+    id: 9,
+    person: "Faisal Al Harbi",
+    role: "Al Harbi Food Services (Suudi Arabistan)",
+    quote: "Profinoks’un sunduğu çözümler sayesinde mutfak operasyonlarımız çok daha verimli hale geldi. Ürünler hem kullanım kolaylığı sağlıyor hem de uzun vadede maliyet avantajı sunuyor. Ekip son derece ilgili, ulaşılabilir ve çözüm odaklı. Bu yaklaşım, firmaya olan güvenimizi daha da artırdı.",
+  },
+  {
+    id: 10,
+    person: "Isabelle Martin",
+    role: "Martin Catering & Events (Hollanda)",
+    quote: "Profesyonel mutfak yatırımı yaparken en önemli kriterimiz kalite ve güvenilirlikti. Profinoks bu iki konuda da beklentimizin üzerinde bir performans sergiledi. Ürünlerin sağlamlığı, estetik duruşu ve satış sonrası destek hizmetleri gerçekten üst düzey. Bundan sonraki projelerimizde de ilk tercihimiz kesinlikle Profinoks olacak.",
   },
 ];
 

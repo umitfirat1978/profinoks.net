@@ -225,74 +225,79 @@ const HomePage = () => {
       </section>
 
       {/* Customer testimonials */}
-      <section className="bg-[#050505] pb-14 pt-4 md:pb-20 md:pt-6">
-        <div className="mx-auto max-w-6xl px-4">
-          <div className="mb-6 flex items-center justify-between">
-            <h2 className="text-lg font-semibold tracking-[0.22em] text-white">
+      <section className="bg-[#050505] pb-20 pt-10 border-t border-white/5">
+        <div className="mx-auto max-w-4xl px-4">
+          <div className="mb-12 flex flex-col items-center justify-center text-center">
+            <h2 className="text-xl md:text-2xl font-bold tracking-[0.2em] text-white uppercase">
               {t(lang, "testimonials.heading")}
             </h2>
-            <div className="flex items-center space-x-2">
-              <button
-                type="button"
-                onClick={prevTestimonial}
-                className="inline-flex h-8 w-8 items-center justify-center rounded-full border border-white/30 bg-black/40 text-white hover:bg-black/70"
-              >
-                <ChevronLeft className="h-4 w-4" />
-              </button>
-              <button
-                type="button"
-                onClick={nextTestimonial}
-                className="inline-flex h-8 w-8 items-center justify-center rounded-full border border-white/30 bg-black/40 text-white hover:bg-black/70"
-              >
-                <ChevronRight className="h-4 w-4" />
-              </button>
-            </div>
+            <div className="mt-4 h-1 w-16 bg-amber-500" />
           </div>
 
-          <div className="overflow-hidden rounded-md border border-white/10 bg-white/5">
+          <div className="relative overflow-hidden min-h-[350px] md:min-h-[300px] flex items-center">
             {testimonials.map((item, index) => (
               <div
                 key={item.id}
                 className={[
-                  "grid gap-0 md:grid-cols-[1fr,1.4fr] md:gap-6 transition-opacity duration-500",
-                  index === activeTestimonial ? "opacity-100" : "hidden opacity-0",
+                  "absolute inset-0 flex flex-col items-center justify-center text-center transition-all duration-700 ease-in-out px-4 md:px-12",
+                  index === activeTestimonial
+                    ? "opacity-100 translate-x-0 scale-100"
+                    : "opacity-0 translate-x-10 scale-95 pointer-events-none",
                 ].join(" ")}
               >
-                <div className="relative flex items-center justify-center bg-black/70 p-6">
-                  <div className="relative max-w-xs">
-                    <img
-                      src={item.image_url || item.imageUrl}
-                      alt={item.hotel}
-                      className="w-full rounded-sm object-cover shadow-lg"
-                    />
-                    <div className="absolute inset-0 border border-white/20" />
-                  </div>
+                <div className="mb-8">
+                  <span className="text-6xl text-amber-500/20 font-serif leading-none">"</span>
                 </div>
-                <div className="flex flex-col justify-center bg-[#111111] p-6 md:p-8">
-                  <div className="text-xs uppercase tracking-[0.18em] text-amber-400">
-                    {item.hotel}
-                  </div>
-                  <div className="mt-2 text-sm font-semibold text-white">
+
+                <p className="text-lg md:text-xl text-white/90 leading-relaxed font-light italic -mt-8">
+                  {item.quote}
+                </p>
+
+                <div className="mt-10 flex flex-col items-center">
+                  <div className="h-px w-8 bg-amber-500/30 mb-4" />
+                  <div className="text-base font-bold text-white tracking-wide">
                     {item.person}
                   </div>
-                  <div className="text-xs text-white/70">{item.role}</div>
-                  <p className="mt-4 text-sm text-white/80 leading-relaxed">
-                    {item.quote}
-                  </p>
-                  <div className="mt-4">
-                    <a
-                      href={item.detail_url || item.detailUrl}
-                      target="_blank"
-                      rel="noreferrer"
-                      className="inline-flex items-center text-xs uppercase tracking-[0.18em] text-amber-400 hover:text-amber-300"
-                    >
-                      {t(lang, "testimonials.readMore")}
-                      <ArrowRight className="ml-2 h-3 w-3" />
-                    </a>
+                  <div className="text-xs text-amber-500/70 mt-1 uppercase tracking-widest font-medium">
+                    {item.role}
                   </div>
                 </div>
               </div>
             ))}
+          </div>
+
+          {/* Slider Controls */}
+          <div className="mt-12 flex items-center justify-center space-x-6">
+            <button
+              type="button"
+              onClick={prevTestimonial}
+              className="inline-flex h-10 w-10 items-center justify-center rounded-full border border-white/10 bg-white/5 text-white hover:border-amber-500 hover:text-amber-500 transition-all"
+            >
+              <ChevronLeft className="h-5 w-5" />
+            </button>
+
+            <div className="flex space-x-2">
+              {testimonials.map((_, index) => (
+                <button
+                  key={index}
+                  onClick={() => setActiveTestimonial(index)}
+                  className={[
+                    "h-1.5 rounded-full transition-all duration-300",
+                    index === activeTestimonial
+                      ? "w-8 bg-amber-500"
+                      : "w-2 bg-white/10 hover:bg-white/30"
+                  ].join(" ")}
+                />
+              ))}
+            </div>
+
+            <button
+              type="button"
+              onClick={nextTestimonial}
+              className="inline-flex h-10 w-10 items-center justify-center rounded-full border border-white/10 bg-white/5 text-white hover:border-amber-500 hover:text-amber-500 transition-all"
+            >
+              <ChevronRight className="h-5 w-5" />
+            </button>
           </div>
         </div>
       </section>
