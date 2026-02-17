@@ -8,6 +8,7 @@ import PrivacyPage from "./components/pages/PrivacyPage";
 import TermsPage from "./components/pages/TermsPage";
 import ReferencesPage from "./components/pages/ReferencesPage";
 import CorporatePage from "./components/pages/CorporatePage";
+import NewsPage from "./components/pages/NewsPage";
 import AdminLogin from "./components/admin/AdminLogin";
 import AdminProducts from "./components/admin/AdminProducts";
 import Footer from "./components/layout/Footer";
@@ -63,15 +64,7 @@ function App() {
                     </div>
                   }
                 />
-                <Route
-                  path="/news"
-                  element={
-                    <PlaceholderPage
-                      title="News"
-                      description="Static placeholder for the News page that would normally list announcements, fairs and press releases."
-                    />
-                  }
-                />
+                <Route path="/news" element={<NewsPage />} />
                 <Route path="/contact" element={<ContactPage />} />
                 <Route path="/admin/login" element={<AdminLogin />} />
                 <Route
