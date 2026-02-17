@@ -37,8 +37,10 @@ const Footer = () => {
                         </h3>
                         <ul className="space-y-4 text-sm text-white/60">
                             <li><Link to="/corporate" className="hover:text-amber-400 transition-colors flex items-center">› <span className="ml-2">{lang === "tr" ? "Kurumsal" : "Corporate"}</span></Link></li>
-                            <li><Link to="/products" className="hover:text-amber-400 transition-colors flex items-center">› <span className="ml-2">{lang === "tr" ? "Ürünlerimiz" : "Products"}</span></Link></li>
+                            <li><Link to="/products" className="hover:text-amber-400 transition-colors flex items-center">› <span className="ml-2">{lang === "tr" ? "Ürünler" : "Products"}</span></Link></li>
                             <li><Link to="/references" className="hover:text-amber-400 transition-colors flex items-center">› <span className="ml-2">{lang === "tr" ? "Referanslar" : "References"}</span></Link></li>
+                            <li><Link to="/projects" className="hover:text-amber-400 transition-colors flex items-center">› <span className="ml-2">{lang === "tr" ? "Projeler" : "Projects"}</span></Link></li>
+                            <li><Link to="/news" className="hover:text-amber-400 transition-colors flex items-center">› <span className="ml-2">{lang === "tr" ? "Haberler" : "News"}</span></Link></li>
                             <li><Link to="/contact" className="hover:text-amber-400 transition-colors flex items-center">› <span className="ml-2">{lang === "tr" ? "İletişim" : "Contact"}</span></Link></li>
                         </ul>
                     </div>
@@ -79,37 +81,6 @@ const Footer = () => {
                             </p>
                         </div>
                     </div>
-                </div>
-
-
-                {/* Horizontal Navigation Bar (New Section) */}
-                <div className="pt-8 border-t border-white/5 mb-8">
-                    <nav className="flex flex-wrap justify-center gap-6 md:gap-10 text-[11px] md:text-[13px] font-bold uppercase tracking-[0.2em]">
-                        {[
-                            { label: lang === "tr" ? "ANA SAYFA" : "HOME PAGE", path: "/" },
-                            { label: lang === "tr" ? "KURUMSAL" : "CORPORATE", path: "/corporate" },
-                            { label: lang === "tr" ? "ÜRÜNLER" : "PRODUCTS", path: "/products" },
-                            { label: lang === "tr" ? "REFERANSLAR" : "REFERENCES", path: "/references" },
-                            { label: lang === "tr" ? "PROJELER" : "PROJECTS", path: "/projects" },
-                            { label: lang === "tr" ? "HABERLER" : "NEWS", path: "/news" },
-                            { label: lang === "tr" ? "İLETİŞİM" : "CONTACT", path: "/contact" },
-                        ].map((item) => (
-                            <NavLink
-                                key={item.path}
-                                to={item.path}
-                                className={({ isActive }) =>
-                                    [
-                                        "transition-colors pb-1 border-b-2 hover:text-white",
-                                        isActive
-                                            ? "text-white border-amber-400"
-                                            : "text-white/60 border-transparent hover:border-white/20"
-                                    ].join(" ")
-                                }
-                            >
-                                {item.label}
-                            </NavLink>
-                        ))}
-                    </nav>
                 </div>
 
                 <div className="pt-8 border-t border-white/5 flex flex-col md:flex-row justify-between items-center text-xs text-white/40 gap-4">
