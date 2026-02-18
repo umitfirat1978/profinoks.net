@@ -43,7 +43,7 @@ const Header = () => {
   return (
     <header className="fixed inset-x-0 top-0 z-40 text-white font-medium">
       {/* Top utility bar */}
-      <div className="bg-white/95 backdrop-blur border-b border-black/5">
+      <div className="bg-transparent">
         <div className="mx-auto flex max-w-6xl items-center justify-end px-4 py-2 text-xs sm:text-[13px]">
           <div className="hidden items-center space-x-4 md:flex">
             <div className="flex items-center bg-black/90 px-3 py-1 rounded-full space-x-3 text-white">
@@ -98,9 +98,9 @@ const Header = () => {
               onClick={() => {
                 window.open("https://drive.google.com/file/d/1DTSz_N8ljmdiRxP0BQP_TmKiXxGlJwRQ/view?usp=sharing", "_blank");
               }}
-              className="text-black/80 hover:text-black transition-colors"
+              className="text-white hover:text-white/80 transition-colors"
             >
-              <span className="align-middle mr-1 inline-block h-4 w-4 rounded-sm bg-black/10" />
+              <span className="align-middle mr-1 inline-block h-4 w-4 rounded-sm bg-white/20" />
               <span className="text-base font-semibold">{t(lang, "nav.catalogue")}</span>
             </button>
 
@@ -111,7 +111,7 @@ const Header = () => {
             <button
               type="button"
               onClick={toggleLang}
-              className="flex items-center space-x-2 text-black/80 hover:text-black"
+              className="flex items-center space-x-2 text-white hover:text-white/80"
             >
               <Globe2 className="h-5 w-5" />
               <span className="text-[15px] font-bold uppercase tracking-[0.16em]">
@@ -127,14 +127,14 @@ const Header = () => {
                 <Input
                   value={searchTerm}
                   onChange={(e) => setSearchTerm(e.target.value)}
-                  className="h-10 bg-black/5 pr-10 text-[15px] placeholder:text-black/50 border-black/10 text-black focus-visible:ring-primary/40"
+                  className="h-10 bg-white/10 pr-10 text-[15px] placeholder:text-white/70 border-white/20 text-white focus-visible:ring-white/40"
                   placeholder={lang === "tr" ? "Ürün Arama" : "Search Product"}
                 />
                 <button
                   type="submit"
                   className="absolute inset-y-0 right-2 flex items-center text-black/70 hover:text-black"
                 >
-                  <Search className="h-5 w-5" />
+                  <Search className="h-5 w-5 text-white/70 hover:text-white" />
                 </button>
               </div>
             </form>
