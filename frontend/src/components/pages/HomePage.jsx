@@ -6,7 +6,7 @@ import {
   referenceLogos as referenceMock,
   testimonials as testimonialMock,
 } from "../../mock";
-import { ChevronLeft, ChevronRight, ArrowRight } from "lucide-react";
+import { ChevronLeft, ChevronRight, ArrowRight, User } from "lucide-react";
 import { fetchHomePageData } from "../../api";
 import { useLanguage } from "../../contexts/LanguageContext";
 import { t } from "../../i18n";
@@ -209,12 +209,12 @@ const HomePage = () => {
               {[...referenceLogos, ...referenceLogos].map((logo, index) => (
                 <div
                   key={`${logo}-${index}`}
-                  className="flex h-16 w-32 items-center justify-center bg-white"
+                  className="flex h-32 w-64 items-center justify-center bg-white"
                 >
                   <img
                     src={logo.image_url || logo}
                     alt="Reference logo"
-                    className="max-h-14 max-w-[110px] object-contain"
+                    className="max-h-28 max-w-[220px] object-contain"
                   />
                 </div>
               ))}
@@ -244,12 +244,8 @@ const HomePage = () => {
                     : "opacity-0 translate-x-10 pointer-events-none",
                 ].join(" ")}
               >
-                <div className="w-full md:w-1/2 h-64 md:h-80 overflow-hidden relative border-4 border-primary">
-                  <img
-                    src={item.imageUrl || "https://images.unsplash.com/photo-1550963295-019d8a8a61c5?q=80&w=600&auto=format&fit=crop"}
-                    alt={item.person}
-                    className="w-full h-full object-cover"
-                  />
+                <div className="w-full md:w-1/2 h-64 md:h-80 flex items-center justify-center bg-gray-50 border-4 border-primary">
+                  <User size={120} className="text-primary/20" strokeWidth={1} />
                 </div>
                 <div className="w-full md:w-1/2 bg-primary p-8 md:p-12 text-left relative flex flex-col justify-between min-h-[256px] md:min-h-[320px]">
                   <div>

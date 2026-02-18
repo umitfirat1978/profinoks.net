@@ -18,16 +18,16 @@ const ReferencesPage = () => {
                     </p>
                 </header>
 
-                <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-6">
+                <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-8">
                     {referenceLogos.map((logo, index) => (
                         <div
                             key={index}
-                            className="flex aspect-video items-center justify-center rounded-lg bg-white p-6 shadow-sm transition-transform hover:scale-105"
+                            className="flex h-48 items-center justify-center rounded-lg bg-white p-8 shadow-sm transition-transform hover:scale-105 border border-black/5"
                         >
                             <img
                                 src={logo}
                                 alt={`Reference logo ${index + 1}`}
-                                className="max-h-full max-w-full object-contain"
+                                className="max-h-32 max-w-full object-contain"
                             />
                         </div>
                     ))}
