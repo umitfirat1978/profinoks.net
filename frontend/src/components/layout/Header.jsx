@@ -134,7 +134,7 @@ const Header = () => {
 
             <button onClick={toggleLang} className="flex items-center space-x-2 text-white font-bold text-[14px]">
               <Globe2 className="h-4 w-4" />
-              <span>{lang === "en" ? "TR" : "TR"}</span>
+              <span>{lang === "tr" ? "EN" : "TR"}</span>
             </button>
 
             <div className="lg:hidden">
