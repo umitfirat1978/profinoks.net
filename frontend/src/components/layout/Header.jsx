@@ -54,7 +54,7 @@ const Header = () => {
                 className="hover:text-primary transition-colors"
                 title="WhatsApp"
               >
-                <MessageCircle className="h-3.5 w-3.5" />
+                <MessageCircle className="h-5 w-5" />
               </a>
               <a
                 href="https://www.instagram.com/profinoks/?hl=tr"
@@ -63,7 +63,7 @@ const Header = () => {
                 className="hover:text-primary transition-colors"
                 title="Instagram"
               >
-                <Instagram className="h-3.5 w-3.5" />
+                <Instagram className="h-5 w-5" />
               </a>
               <a
                 href="https://www.facebook.com/profinoks.endustriyelmutfakekipmanlari"
@@ -72,7 +72,7 @@ const Header = () => {
                 className="hover:text-primary transition-colors"
                 title="Facebook"
               >
-                <Facebook className="h-3.5 w-3.5" />
+                <Facebook className="h-5 w-5" />
               </a>
               <a
                 href="https://www.linkedin.com/in/profinoks-end%C3%BCstriyel-mutfak-ekipmanlari-4471921b2/"
@@ -81,7 +81,7 @@ const Header = () => {
                 className="hover:text-primary transition-colors"
                 title="LinkedIn"
               >
-                <Linkedin className="h-3.5 w-3.5" />
+                <Linkedin className="h-5 w-5" />
               </a>
               <a
                 href="https://www.youtube.com/channel/UCTsoSgntPEXAshH80VtSa-g/featured"
@@ -90,7 +90,7 @@ const Header = () => {
                 className="hover:text-primary transition-colors"
                 title="YouTube"
               >
-                <Youtube className="h-3.5 w-3.5" />
+                <Youtube className="h-5 w-5" />
               </a>
             </div>
 
@@ -101,7 +101,7 @@ const Header = () => {
               className="text-black/80 hover:text-black transition-colors"
             >
               <span className="align-middle mr-1 inline-block h-4 w-4 rounded-sm bg-black/10" />
-              {t(lang, "nav.catalogue")}
+              <span className="text-base font-semibold">{t(lang, "nav.catalogue")}</span>
             </button>
 
 
@@ -113,8 +113,8 @@ const Header = () => {
               onClick={toggleLang}
               className="flex items-center space-x-2 text-black/80 hover:text-black"
             >
-              <Globe2 className="h-4 w-4" />
-              <span className="text-xs uppercase tracking-[0.16em]">
+              <Globe2 className="h-5 w-5" />
+              <span className="text-[15px] font-bold uppercase tracking-[0.16em]">
                 {lang === "en" ? "EN / TR" : "TR / EN"}
               </span>
             </button>
@@ -127,14 +127,14 @@ const Header = () => {
                 <Input
                   value={searchTerm}
                   onChange={(e) => setSearchTerm(e.target.value)}
-                  className="h-8 bg-black/5 pr-8 text-xs placeholder:text-black/50 border-black/10 text-black focus-visible:ring-primary/40"
-                  placeholder="Search Product"
+                  className="h-10 bg-black/5 pr-10 text-[15px] placeholder:text-black/50 border-black/10 text-black focus-visible:ring-primary/40"
+                  placeholder={lang === "tr" ? "Ürün Arama" : "Search Product"}
                 />
                 <button
                   type="submit"
                   className="absolute inset-y-0 right-2 flex items-center text-black/70 hover:text-black"
                 >
-                  <Search className="h-3.5 w-3.5" />
+                  <Search className="h-5 w-5" />
                 </button>
               </div>
             </form>
@@ -143,7 +143,7 @@ const Header = () => {
       </div>
 
       {/* Main navigation */}
-      <div className="bg-primary/80 backdrop-blur-md border-b border-white/5 shadow-lg">
+      <div className="bg-primary/60 backdrop-blur-md border-b border-white/5 shadow-lg">
         <div className="mx-auto flex max-w-6xl items-center justify-start px-4 py-3">
           <Link to="/" className="flex items-center">
             <img
@@ -157,7 +157,7 @@ const Header = () => {
             />
           </Link>
 
-          <nav className="hidden items-center ml-auto space-x-6 text-[13px] uppercase tracking-[0.12em] lg:flex">
+          <nav className="hidden items-center ml-auto space-x-8 text-[16px] font-bold uppercase tracking-[0.12em] lg:flex">
             {mainNavItems.map((item) => (
               <NavLink
                 key={item.path}
