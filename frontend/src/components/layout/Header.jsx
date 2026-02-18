@@ -98,7 +98,7 @@ const Header = () => {
               onClick={() => {
                 window.open("https://drive.google.com/file/d/1DTSz_N8ljmdiRxP0BQP_TmKiXxGlJwRQ/view?usp=sharing", "_blank");
               }}
-              className="bg-black/40 px-4 py-1.5 rounded-full text-white hover:bg-black/60 transition-colors"
+              className="bg-black/40 px-4 h-10 rounded-full text-white hover:bg-black/60 transition-colors flex items-center"
             >
               <span className="align-middle mr-1 inline-block h-4 w-4 rounded-sm bg-white/20" />
               <span className="text-base font-semibold">{t(lang, "nav.catalogue")}</span>
@@ -111,7 +111,7 @@ const Header = () => {
             <button
               type="button"
               onClick={toggleLang}
-              className="bg-black/40 px-4 py-1.5 rounded-full flex items-center space-x-2 text-white hover:bg-black/60"
+              className="bg-black/40 px-4 h-10 rounded-full flex items-center space-x-2 text-white hover:bg-black/60"
             >
               <Globe2 className="h-5 w-5" />
               <span className="text-[15px] font-bold uppercase tracking-[0.16em]">
