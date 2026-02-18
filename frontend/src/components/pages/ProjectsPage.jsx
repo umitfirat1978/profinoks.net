@@ -34,11 +34,11 @@ const ProjectsPage = () => {
     return (
         <div className="mt-[122px] md:pt-[130px] lg:pt-[140px] bg-[#050505] pb-20 text-white min-h-screen">
             <div className="mx-auto max-w-7xl px-4 py-12">
-                <header className="mb-12 border-b border-amber-500/30 pb-8 text-center">
+                <header className="mb-12 border-b border-primary/30 pb-8 text-center">
                     <h1 className="text-3xl md:text-5xl font-bold tracking-[0.1em] uppercase text-white">
                         PROJELERİMİZ
                     </h1>
-                    <p className="mt-4 text-amber-500 font-medium tracking-widest uppercase text-sm">
+                    <p className="mt-4 text-primary font-medium tracking-widest uppercase text-sm">
                         FUAR FLASH SLAYT KOLEKSİYONU
                     </p>
                 </header>
@@ -48,7 +48,7 @@ const ProjectsPage = () => {
                         <div
                             key={index}
                             onClick={() => openLightbox(index)}
-                            className="group relative aspect-square overflow-hidden rounded-lg bg-[#111] cursor-pointer border border-white/5 hover:border-amber-500/50 transition-all duration-300"
+                            className="group relative aspect-square overflow-hidden rounded-lg bg-[#111] cursor-pointer border border-white/5 hover:border-primary/50 transition-all duration-300"
                         >
                             <img
                                 src={image}
@@ -73,14 +73,14 @@ const ProjectsPage = () => {
                     onClick={closeLightbox}
                 >
                     <button
-                        className="absolute top-6 right-6 text-white hover:text-amber-500 transition-colors"
+                        className="absolute top-6 right-6 text-white hover:text-primary transition-colors"
                         onClick={closeLightbox}
                     >
                         <X size={32} />
                     </button>
 
                     <button
-                        className="absolute left-4 top-1/2 -translate-y-1/2 text-white hover:text-amber-500 transition-colors bg-white/5 p-3 rounded-full hidden md:block"
+                        className="absolute left-4 top-1/2 -translate-y-1/2 text-white hover:text-primary transition-colors bg-white/5 p-3 rounded-full hidden md:block"
                         onClick={prevImage}
                     >
                         <ChevronLeft size={48} />
@@ -93,7 +93,7 @@ const ProjectsPage = () => {
                     />
 
                     <button
-                        className="absolute right-4 top-1/2 -translate-y-1/2 text-white hover:text-amber-500 transition-colors bg-white/5 p-3 rounded-full hidden md:block"
+                        className="absolute right-4 top-1/2 -translate-y-1/2 text-white hover:text-primary transition-colors bg-white/5 p-3 rounded-full hidden md:block"
                         onClick={nextImage}
                     >
                         <ChevronRight size={48} />

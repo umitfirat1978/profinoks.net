@@ -249,7 +249,7 @@ const AdminProducts = () => {
                 <button
                   type="submit"
                   disabled={loading}
-                  className="rounded-md bg-amber-400 px-4 py-1.5 text-xs font-semibold text-black hover:bg-amber-300 disabled:opacity-60"
+                  className="rounded-md bg-primary px-4 py-1.5 text-xs font-semibold text-white hover:opacity-90 disabled:opacity-60"
                 >
                   {t(lang, "admin.save")}
                 </button>

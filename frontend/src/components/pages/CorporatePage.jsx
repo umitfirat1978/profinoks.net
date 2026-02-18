@@ -6,8 +6,8 @@ const CorporatePage = () => {
             <div className="mx-auto max-w-4xl px-4 py-12">
                 {/* HAKKIMIZDA */}
                 <section className="mb-20">
-                    <header className="mb-8 border-b border-amber-500/30 pb-4">
-                        <h1 className="text-3xl md:text-4xl font-bold tracking-tight uppercase text-amber-500">
+                    <header className="mb-8 border-b border-primary/30 pb-4">
+                        <h1 className="text-3xl md:text-4xl font-bold tracking-tight uppercase text-primary">
                             HAKKIMIZDA
                         </h1>
                     </header>
@@ -32,15 +32,15 @@ const CorporatePage = () => {
 
                 {/* MİSYON & VİZYON */}
                 <section className="mb-20">
-                    <header className="mb-8 border-b border-amber-500/30 pb-4">
-                        <h2 className="text-3xl md:text-4xl font-bold tracking-tight uppercase text-amber-500">
+                    <header className="mb-8 border-b border-primary/30 pb-4">
+                        <h2 className="text-3xl md:text-4xl font-bold tracking-tight uppercase text-primary">
                             MİSYON & VİZYON
                         </h2>
                     </header>
 
                     <div className="grid gap-12 md:grid-cols-2">
                         <div>
-                            <h3 className="text-xl font-bold text-white mb-4 uppercase tracking-wider border-l-4 border-amber-500 pl-4">
+                            <h3 className="text-xl font-bold text-white mb-4 uppercase tracking-wider border-l-4 border-primary pl-4">
                                 MİSYONUMUZ
                             </h3>
                             <p className="text-white/80 leading-relaxed">
@@ -48,7 +48,7 @@ const CorporatePage = () => {
                             </p>
                         </div>
                         <div>
-                            <h3 className="text-xl font-bold text-white mb-4 uppercase tracking-wider border-l-4 border-amber-500 pl-4">
+                            <h3 className="text-xl font-bold text-white mb-4 uppercase tracking-wider border-l-4 border-primary pl-4">
                                 VİZYONUMUZ
                             </h3>
                             <p className="text-white/80 leading-relaxed">
@@ -60,8 +60,8 @@ const CorporatePage = () => {
 
                 {/* KALİTE POLİTİKAMIZ */}
                 <section>
-                    <header className="mb-8 border-b border-amber-500/30 pb-4">
-                        <h2 className="text-3xl md:text-4xl font-bold tracking-tight uppercase text-amber-500">
+                    <header className="mb-8 border-b border-primary/30 pb-4">
+                        <h2 className="text-3xl md:text-4xl font-bold tracking-tight uppercase text-primary">
                             KALİTE POLİTİKAMIZ
                         </h2>
                     </header>
@@ -79,7 +79,7 @@ const CorporatePage = () => {
                                 "Uluslararası standartlara uygun olarak imalatını yapmış olduğumuz mutfak ekipmanları ve aksesuar çeşitleri ile sizlere her zaman doğru olanı sağlayacağız."
                             ].map((item, idx) => (
                                 <li key={idx} className="flex items-start">
-                                    <span className="text-amber-500 mr-2 mt-1">●</span>
+                                    <span className="text-primary mr-2 mt-1">●</span>
                                     <span>{item}</span>
                                 </li>
                             ))}

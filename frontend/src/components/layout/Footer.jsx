@@ -13,7 +13,7 @@ const Footer = () => {
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
                     {/* About Section */}
                     <div className="space-y-6">
-                        <h3 className="text-sm font-semibold tracking-[0.2em] uppercase text-amber-400">
+                        <h3 className="text-sm font-semibold tracking-[0.2em] uppercase text-primary">
                             {lang === "tr" ? "PROFİNOKS HAKKINDA" : "ABOUT PROFINOKS"}
                         </h3>
                         <p className="text-sm text-white/60 leading-relaxed">
@@ -32,39 +32,39 @@ const Footer = () => {
 
                     {/* Quick Links */}
                     <div className="space-y-6">
-                        <h3 className="text-sm font-semibold tracking-[0.2em] uppercase text-amber-400">
+                        <h3 className="text-sm font-semibold tracking-[0.2em] uppercase text-primary">
                             {lang === "tr" ? "HIZLI BAĞLANTILAR" : "QUICK LINKS"}
                         </h3>
                         <ul className="space-y-4 text-sm text-white/60">
-                            <li><Link to="/corporate" className="hover:text-amber-400 transition-colors flex items-center">› <span className="ml-2">{lang === "tr" ? "Kurumsal" : "Corporate"}</span></Link></li>
-                            <li><Link to="/products" className="hover:text-amber-400 transition-colors flex items-center">› <span className="ml-2">{lang === "tr" ? "Ürünler" : "Products"}</span></Link></li>
-                            <li><Link to="/references" className="hover:text-amber-400 transition-colors flex items-center">› <span className="ml-2">{lang === "tr" ? "Referanslar" : "References"}</span></Link></li>
-                            <li><Link to="/projects" className="hover:text-amber-400 transition-colors flex items-center">› <span className="ml-2">{lang === "tr" ? "Projeler" : "Projects"}</span></Link></li>
-                            <li><Link to="/news" className="hover:text-amber-400 transition-colors flex items-center">› <span className="ml-2">{lang === "tr" ? "Haberler" : "News"}</span></Link></li>
-                            <li><Link to="/contact" className="hover:text-amber-400 transition-colors flex items-center">› <span className="ml-2">{lang === "tr" ? "İletişim" : "Contact"}</span></Link></li>
+                            <li><Link to="/corporate" className="hover:text-primary transition-colors flex items-center">› <span className="ml-2">{lang === "tr" ? "Kurumsal" : "Corporate"}</span></Link></li>
+                            <li><Link to="/products" className="hover:text-primary transition-colors flex items-center">› <span className="ml-2">{lang === "tr" ? "Ürünler" : "Products"}</span></Link></li>
+                            <li><Link to="/references" className="hover:text-primary transition-colors flex items-center">› <span className="ml-2">{lang === "tr" ? "Referanslar" : "References"}</span></Link></li>
+                            <li><Link to="/projects" className="hover:text-primary transition-colors flex items-center">› <span className="ml-2">{lang === "tr" ? "Projeler" : "Projects"}</span></Link></li>
+                            <li><Link to="/news" className="hover:text-primary transition-colors flex items-center">› <span className="ml-2">{lang === "tr" ? "Haberler" : "News"}</span></Link></li>
+                            <li><Link to="/contact" className="hover:text-primary transition-colors flex items-center">› <span className="ml-2">{lang === "tr" ? "İletişim" : "Contact"}</span></Link></li>
                         </ul>
                     </div>
 
                     {/* Contact Info */}
                     <div className="space-y-6">
-                        <h3 className="text-sm font-semibold tracking-[0.2em] uppercase text-amber-400">
+                        <h3 className="text-sm font-semibold tracking-[0.2em] uppercase text-primary">
                             {lang === "tr" ? "İLETİŞİM BİLGİLERİ" : "CONTACT INFO"}
                         </h3>
                         <ul className="space-y-4 text-sm text-white/60">
                             <li className="flex items-start">
-                                <MapPin size={18} className="mr-3 text-amber-400 shrink-0 mt-0.5" />
+                                <MapPin size={18} className="mr-3 text-primary shrink-0 mt-0.5" />
                                 <span>{contactInfo.address}</span>
                             </li>
                             {contactInfo.phone.map((p, idx) => (
                                 <li key={idx} className="flex items-center">
-                                    <Phone size={18} className="mr-3 text-amber-400 shrink-0" />
-                                    <a href={`tel:${p.replace(/\s/g, "")}`} className="hover:text-amber-400 transition-colors">{p}</a>
+                                    <Phone size={18} className="mr-3 text-primary shrink-0" />
+                                    <a href={`tel:${p.replace(/\s/g, "")}`} className="hover:text-primary transition-colors">{p}</a>
                                 </li>
                             ))}
                             {contactInfo.emails.map((e, idx) => (
                                 <li key={idx} className="flex items-center">
-                                    <Mail size={18} className="mr-3 text-amber-400 shrink-0" />
-                                    <a href={`mailto:${e}`} className="hover:text-amber-400 transition-colors">{e}</a>
+                                    <Mail size={18} className="mr-3 text-primary shrink-0" />
+                                    <a href={`mailto:${e}`} className="hover:text-primary transition-colors">{e}</a>
                                 </li>
                             ))}
                         </ul>
@@ -72,7 +72,7 @@ const Footer = () => {
 
                     {/* Working Hours */}
                     <div className="space-y-6">
-                        <h3 className="text-sm font-semibold tracking-[0.2em] uppercase text-amber-400">
+                        <h3 className="text-sm font-semibold tracking-[0.2em] uppercase text-primary">
                             {lang === "tr" ? "ÇALIŞMA SAATLERİ" : "WORKING HOURS"}
                         </h3>
                         <div className="bg-white/5 p-4 rounded-sm border border-white/10">

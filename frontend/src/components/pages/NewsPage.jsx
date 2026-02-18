@@ -16,7 +16,7 @@ const newsItems = [
                     "Endüstriyel Mutfak Danışmanlığı"
                 ].map((item, i) => (
                     <li key={i} className="flex items-center space-x-2">
-                        <span className="h-1.5 w-1.5 rounded-full bg-amber-500"></span>
+                        <span className="h-1.5 w-1.5 rounded-full bg-primary"></span>
                         <span>{item}</span>
                     </li>
                 ))}
@@ -29,7 +29,7 @@ const newsItems = [
         date: "16 Şubat 2026",
         content: (
             <div className="space-y-4 text-sm text-white/70 leading-relaxed">
-                <p className="font-bold text-amber-400 italic">GEÇMİŞTEN BUGÜNE, HAMURA ŞEKİL VEREN TEKNOLOJİ...</p>
+                <p className="font-bold text-primary italic">GEÇMİŞTEN BUGÜNE, HAMURA ŞEKİL VEREN TEKNOLOJİ...</p>
                 <p>1976 yılında başladığı fırın makineleri imalatında bugün 45.000 m2 toplam alan üzerine kurulmuş FİMAK fabrikasında üretilen ürünler artık PROFİNOKS'ta.</p>
                 <p>Fimak günümüzde unlu mamul, fırıncılık, pastanecilik, restoran zincirleri, kafe, otel, catering alanlarında hizmet vermektedir. Fimak Retros adlı gastronomi fırını ile de gastronomi makinaları alanında da hizmet vermeye başlamıştır.</p>
                 <p>Fimak 2017 Temmuz ayında Sanayi Bakanlığı onaylı AR-GE merkezlerinden biri olmaya hak kazanmıştır. Dünyanın 65 ülkesine ihracat yapmaktadır.</p>
@@ -43,7 +43,7 @@ const newsItems = [
         content: (
             <div className="space-y-4 text-sm text-white/70 leading-relaxed">
                 <h4 className="font-bold text-white uppercase text-xs tracking-wider mb-2">Bayat Ekmek Böreği</h4>
-                <p className="italic text-xs text-amber-400/80">Malzemeler: 1 adet bayat ekmek, 200 gr kaşar rendesi, 200 gr beyaz peynir, 1,5 su bardağı süt, 2 yumurta.</p>
+                <p className="italic text-xs text-primary/80">Malzemeler: 1 adet bayat ekmek, 200 gr kaşar rendesi, 200 gr beyaz peynir, 1,5 su bardağı süt, 2 yumurta.</p>
                 <p>Ekmeklerin ziyan olması her yıl milyonlarca liranın çöpe gitmesine neden oluyor. İhtiyacımız kadarını almayı öğrenmeliyiz. Artan ekmekleri dondurucuya atabilir veya kurutup ekmek kırığı yapabilirsiniz.</p>
                 <p>Eğer çok fazla değilse kalan ekmeklerinizle bu nefis böreği deneyin. Süt miktarını ekmeklerinizin kuruluk derecesine göre kontrollü olarak ekleyin.</p>
             </div>
@@ -56,19 +56,19 @@ const newsItems = [
         content: (
             <div className="grid gap-4 sm:grid-cols-2 text-xs text-white/60">
                 <div>
-                    <h5 className="font-bold text-amber-500/90 mb-1">Deniz Ürünleri</h5>
+                    <h5 className="font-bold text-primary/90 mb-1">Deniz Ürünleri</h5>
                     <p>Tazelik ve kalite standartları kritik öneme sahiptir. Alışverişte ürün tazeliğine dikkat edilmelidir.</p>
                 </div>
                 <div>
-                    <h5 className="font-bold text-amber-500/90 mb-1">Steakhouse</h5>
+                    <h5 className="font-bold text-primary/90 mb-1">Steakhouse</h5>
                     <p>Orta ve üst düzeye hitap eder. Kaliteli et ve özel atmosfer fark yaratır.</p>
                 </div>
                 <div>
-                    <h5 className="font-bold text-amber-500/90 mb-1">Pizzacı</h5>
+                    <h5 className="font-bold text-primary/90 mb-1">Pizzacı</h5>
                     <p>İyi bir pizza ustası ve kaliteli malzemeler başarının anahtarıdır.</p>
                 </div>
                 <div>
-                    <h5 className="font-bold text-amber-500/90 mb-1">Kahve Evi</h5>
+                    <h5 className="font-bold text-primary/90 mb-1">Kahve Evi</h5>
                     <p>Dünyanın en popüler içeceğiyle yüksek kar marjı ve yoğun trafik sağlar.</p>
                 </div>
             </div>
@@ -108,10 +108,10 @@ const newsItems = [
                 <p><strong className="text-white">Standart Espresso:</strong> 7-7.5 gr kahve, 9 bar basınç, 24-27 saniye akış süresi.</p>
                 <div className="grid grid-cols-2 gap-4 text-xs">
                     <div className="p-3 bg-white/5 rounded border border-white/5">
-                        <span className="font-bold text-amber-400">Ristretto:</span> 15-20 ml, daha yoğun ve az acı.
+                        <span className="font-bold text-primary">Ristretto:</span> 15-20 ml, daha yoğun ve az acı.
                     </div>
                     <div className="p-3 bg-white/5 rounded border border-white/5">
-                        <span className="font-bold text-amber-400">Macchiato:</span> Espresso üzerine süt köpüğü.
+                        <span className="font-bold text-primary">Macchiato:</span> Espresso üzerine süt köpüğü.
                     </div>
                 </div>
             </div>
@@ -169,7 +169,7 @@ const NewsPage = () => {
         <div className="mt-[122px] md:pt-[130px] lg:pt-[140px] bg-[#050505] pb-20 text-white min-h-screen">
             <div className="mx-auto max-w-4xl px-4 py-12">
                 <header className="mb-12 border-b border-white/10 pb-8">
-                    <h1 className="text-3xl md:text-4xl font-bold tracking-tight uppercase text-amber-500">
+                    <h1 className="text-3xl md:text-4xl font-bold tracking-tight uppercase text-primary">
                         HABERLER & BLOG
                     </h1>
                     <p className="mt-2 text-white/50 text-sm">
@@ -181,18 +181,18 @@ const NewsPage = () => {
                     {newsItems.map((item) => (
                         <article
                             key={item.id}
-                            className="group overflow-hidden rounded-xl border border-white/5 bg-[#0c0c0c] transition-all hover:border-amber-500/30"
+                            className="group overflow-hidden rounded-xl border border-white/5 bg-[#0c0c0c] transition-all hover:border-primary/30"
                         >
                             <div className="p-6 md:p-8">
                                 <div className="flex items-center space-x-3 mb-4">
-                                    <span className="text-[11px] font-bold uppercase tracking-widest text-amber-500/80 bg-amber-500/10 px-2 py-1 rounded">
+                                    <span className="text-[11px] font-bold uppercase tracking-widest text-primary/80 bg-primary/10 px-2 py-1 rounded">
                                         HABER #{item.id}
                                     </span>
                                     <span className="text-[11px] text-white/30 uppercase tracking-widest">
                                         {item.date}
                                     </span>
                                 </div>
-                                <h2 className="text-xl md:text-2xl font-bold text-white mb-6 group-hover:text-amber-400 transition-colors">
+                                <h2 className="text-xl md:text-2xl font-bold text-white mb-6 group-hover:text-primary transition-colors">
                                     {item.title}
                                 </h2>
                                 <div className="border-t border-white/5 pt-6">

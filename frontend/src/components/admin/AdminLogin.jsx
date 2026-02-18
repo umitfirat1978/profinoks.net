@@ -46,7 +46,7 @@ const AdminLogin = () => {
               type="password"
               value={password}
               onChange={(e) => setPassword(e.target.value)}
-              className="w-full rounded-md border border-white/20 bg-black/40 px-3 py-2 text-sm focus:border-amber-400 focus:outline-none"
+              className="w-full rounded-md border border-white/20 bg-black/40 px-3 py-2 text-sm focus:border-primary focus:outline-none"
             />
           </div>
 
@@ -59,7 +59,7 @@ const AdminLogin = () => {
           <button
             type="submit"
             disabled={loading}
-            className="w-full rounded-md bg-amber-400 px-4 py-2 text-sm font-semibold text-black transition-colors hover:bg-amber-300 disabled:opacity-60"
+            className="w-full rounded-md bg-primary px-4 py-2 text-sm font-semibold text-white transition-colors hover:opacity-90 disabled:opacity-60"
           >
             {loading ? "..." : t(lang, "admin.signInButton")}
           </button>

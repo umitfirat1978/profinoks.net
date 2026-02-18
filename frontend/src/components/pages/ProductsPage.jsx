@@ -12,7 +12,7 @@ const ProductsPage = () => {
                     <h1 className="text-3xl font-semibold tracking-[0.2em] uppercase text-white mb-4">
                         {lang === "tr" ? "ÜRÜNLERİMİZ" : "PRODUCTS"}
                     </h1>
-                    <div className="h-1 w-20 bg-amber-400"></div>
+                    <div className="h-1 w-20 bg-primary"></div>
                 </div>
 
                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
@@ -29,13 +29,13 @@ const ProductsPage = () => {
                                 />
                             </div>
                             <div className="p-6 flex flex-col flex-grow">
-                                <h3 className="text-sm font-semibold tracking-[0.1em] text-white uppercase mb-2 group-hover:text-amber-400 transition-colors">
+                                <h3 className="text-sm font-semibold tracking-[0.1em] text-white uppercase mb-2 group-hover:text-primary transition-colors">
                                     {group.title}
                                 </h3>
                                 <p className="text-xs text-white/60 leading-relaxed line-clamp-2">
                                     {group.description}
                                 </p>
-                                <div className="mt-auto pt-4 flex items-center text-[10px] tracking-[0.2em] text-amber-400 uppercase font-bold opacity-0 group-hover:opacity-100 transition-opacity">
+                                <div className="mt-auto pt-4 flex items-center text-[10px] tracking-[0.2em] text-primary uppercase font-bold opacity-0 group-hover:opacity-100 transition-opacity">
                                     {lang === "tr" ? "İNCELE" : "VIEW DETAILS"} →
                                 </div>
                             </div>

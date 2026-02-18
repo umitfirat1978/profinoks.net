@@ -41,9 +41,9 @@ const Header = () => {
   };
 
   return (
-    <header className="fixed inset-x-0 top-0 z-40 text-white">
+    <header className="fixed inset-x-0 top-0 z-40 text-white font-medium">
       {/* Top utility bar */}
-      <div className="bg-black/80 backdrop-blur border-b border-white/10">
+      <div className="bg-[#1a1a1a]/95 backdrop-blur border-b border-white/5">
         <div className="mx-auto flex max-w-6xl items-center justify-end px-4 py-2 text-xs sm:text-[13px]">
           <div className="hidden items-center space-x-4 md:flex">
             <div className="flex items-center space-x-3 text-white/70">
@@ -143,7 +143,7 @@ const Header = () => {
       </div>
 
       {/* Main navigation */}
-      <div className="bg-black/90 backdrop-blur border-b border-white/5">
+      <div className="bg-primary/90 backdrop-blur border-b border-white/5 shadow-lg">
         <div className="mx-auto flex max-w-6xl items-center justify-between px-4 py-3">
           <Link to="/" className="flex items-center">
             <img
@@ -176,7 +176,7 @@ const Header = () => {
                     <span>{t(lang, item.translationKey)}</span>
                     <span
                       className={[
-                        "absolute inset-x-0 -bottom-0.5 h-0.5 origin-left bg-amber-400 transition-transform",
+                        "absolute inset-x-0 -bottom-0.5 h-0.5 origin-left bg-white transition-transform",
                         isNavActive || isActive(item.path)
                           ? "scale-x-100"
                           : "scale-x-0",
@@ -218,7 +218,7 @@ const Header = () => {
                 <Button
                   type="submit"
                   size="icon"
-                  className="h-9 w-9 bg-amber-400 text-black hover:bg-amber-300"
+                  className="h-9 w-9 bg-primary text-white hover:bg-primary/80"
                 >
                   <Search className="h-4 w-4" />
                 </Button>

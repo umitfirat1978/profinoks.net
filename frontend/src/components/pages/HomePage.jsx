@@ -138,7 +138,7 @@ const HomePage = () => {
                 className={[
                   "h-1.5 rounded-full transition-all duration-300",
                   index === activeSlide
-                    ? "w-6 bg-amber-400"
+                    ? "w-6 bg-white"
                     : "w-2 bg-white/40 hover:bg-white/70",
                 ].join(" ")}
               />
@@ -151,10 +151,11 @@ const HomePage = () => {
       <section className="bg-[#050505] py-14 md:py-20 border-t border-white/5">
         <div className="mx-auto max-w-6xl px-4">
           <div className="mb-10 lg:mb-14">
-            <h2 className="text-2xl md:text-3xl font-semibold tracking-[0.16em] text-white uppercase">
-              {t(lang, "productGroups.heading")}
+            <h2 className="text-2xl md:text-3xl font-semibold tracking-[0.16em] text-white uppercase flex items-center justify-center">
+              <span className="bg-white/10 px-6 py-2 border-b-2 border-primary">
+                {t(lang, "productGroups.heading")}
+              </span>
             </h2>
-            <div className="mt-4 h-1 w-20 bg-amber-400" />
           </div>
 
           <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
@@ -164,22 +165,20 @@ const HomePage = () => {
                 href={group.href || "#"}
                 target="_blank"
                 rel="noreferrer"
-                className="group flex flex-col overflow-hidden rounded-md border border-[#222] bg-[#0c0c0c] transition-all duration-300 hover:border-amber-400/50 hover:bg-[#111] hover:-translate-y-1"
+                className="group flex flex-col overflow-hidden bg-[#1a1c23] transition-all duration-300 hover:-translate-y-1 shadow-xl"
               >
-                <div className="aspect-[4/3] overflow-hidden bg-black/40 p-4">
+                <div className="aspect-square overflow-hidden bg-[#1a1c23] p-12">
                   <img
                     src={group.image_url || group.imageUrl}
                     alt={group.title}
-                    className="h-full w-full object-contain transition-transform duration-500 group-hover:scale-110"
+                    className="h-full w-full object-contain brightness-0 invert opacity-70 group-hover:opacity-100 transition-all duration-500 group-hover:scale-110"
                   />
                 </div>
-                <div className="flex flex-1 flex-col p-5 border-t border-white/5 bg-[#0e0e0e] group-hover:bg-[#121212] transition-colors">
-                  <h3 className="text-sm font-bold uppercase tracking-[0.14em] text-white group-hover:text-amber-400 transition-colors">
+                <div className="flex flex-col p-6 text-center border-t border-white/5 relative">
+                  <h3 className="text-[13px] font-bold uppercase tracking-[0.18em] text-white">
                     {group.title}
                   </h3>
-                  <p className="mt-2 text-[12px] leading-relaxed text-white/50 line-clamp-2">
-                    {group.description}
-                  </p>
+                  <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-32 h-0.5 bg-white scale-x-50 group-hover:scale-x-100 transition-transform duration-300" />
                 </div>
               </a>
             ))}
@@ -194,11 +193,11 @@ const HomePage = () => {
             <div>
               <Link
                 to="/references"
-                className="text-lg font-semibold tracking-[0.22em] text-white hover:text-amber-400"
+                className="text-lg font-semibold tracking-[0.22em] text-white hover:text-primary"
               >
                 {t(lang, "references.heading")}
               </Link>
-              <hr className="mt-2 h-px w-16 border-none bg-amber-400" />
+              <hr className="mt-2 h-px w-16 border-none bg-primary" />
             </div>
             <p className="mt-3 text-sm text-white/70 md:mt-0">
               {t(lang, "references.tagline")}
@@ -231,7 +230,7 @@ const HomePage = () => {
             <h2 className="text-xl md:text-2xl font-bold tracking-[0.2em] text-white uppercase">
               {t(lang, "testimonials.heading")}
             </h2>
-            <div className="mt-4 h-1 w-16 bg-amber-500" />
+            <div className="mt-4 h-1 w-16 bg-primary" />
           </div>
 
           <div className="relative overflow-hidden min-h-[350px] md:min-h-[300px] flex items-center">
@@ -239,27 +238,35 @@ const HomePage = () => {
               <div
                 key={item.id}
                 className={[
-                  "absolute inset-0 flex flex-col items-center justify-center text-center transition-all duration-700 ease-in-out px-4 md:px-12",
+                  "absolute inset-0 flex flex-col md:flex-row items-center transition-all duration-700 ease-in-out",
                   index === activeTestimonial
-                    ? "opacity-100 translate-x-0 scale-100"
-                    : "opacity-0 translate-x-10 scale-95 pointer-events-none",
+                    ? "opacity-100 translate-x-0"
+                    : "opacity-0 translate-x-10 pointer-events-none",
                 ].join(" ")}
               >
-                <div className="mb-8">
-                  <span className="text-6xl text-amber-500/20 font-serif leading-none">"</span>
+                <div className="w-full md:w-1/2 h-64 md:h-80 overflow-hidden relative border-4 border-primary">
+                  <img
+                    src={item.imageUrl || "https://images.unsplash.com/photo-1550963295-019d8a8a61c5?q=80&w=600&auto=format&fit=crop"}
+                    alt={item.person}
+                    className="w-full h-full object-cover"
+                  />
                 </div>
-
-                <p className="text-lg md:text-xl text-white/90 leading-relaxed font-light italic -mt-8">
-                  {item.quote}
-                </p>
-
-                <div className="mt-10 flex flex-col items-center">
-                  <div className="h-px w-8 bg-amber-500/30 mb-4" />
-                  <div className="text-base font-bold text-white tracking-wide">
-                    {item.person}
+                <div className="w-full md:w-1/2 bg-primary p-8 md:p-12 text-left relative flex flex-col justify-between min-h-[256px] md:min-h-[320px]">
+                  <div>
+                    <div className="text-sm md:text-base font-bold text-white tracking-widest uppercase mb-1">
+                      {item.person}
+                    </div>
+                    <div className="text-xs text-white/70 uppercase tracking-widest mb-6">
+                      {item.role}
+                    </div>
+                    <p className="text-sm md:text-base text-white/90 leading-relaxed font-light italic">
+                      "{item.quote}"
+                    </p>
                   </div>
-                  <div className="text-xs text-amber-500/70 mt-1 uppercase tracking-widest font-medium">
-                    {item.role}
+                  <div className="mt-6">
+                    <div className="inline-flex h-8 w-8 items-center justify-center bg-white text-primary">
+                      <ArrowRight size={16} />
+                    </div>
                   </div>
                 </div>
               </div>
@@ -271,7 +278,7 @@ const HomePage = () => {
             <button
               type="button"
               onClick={prevTestimonial}
-              className="inline-flex h-10 w-10 items-center justify-center rounded-full border border-white/10 bg-white/5 text-white hover:border-amber-500 hover:text-amber-500 transition-all"
+              className="inline-flex h-10 w-10 items-center justify-center rounded-full border border-white/10 bg-white/5 text-white hover:border-primary hover:text-primary transition-all"
             >
               <ChevronLeft className="h-5 w-5" />
             </button>
@@ -284,7 +291,7 @@ const HomePage = () => {
                   className={[
                     "h-1.5 rounded-full transition-all duration-300",
                     index === activeTestimonial
-                      ? "w-8 bg-amber-500"
+                      ? "w-8 bg-primary"
                       : "w-2 bg-white/10 hover:bg-white/30"
                   ].join(" ")}
                 />
@@ -294,7 +301,7 @@ const HomePage = () => {
             <button
               type="button"
               onClick={nextTestimonial}
-              className="inline-flex h-10 w-10 items-center justify-center rounded-full border border-white/10 bg-white/5 text-white hover:border-amber-500 hover:text-amber-500 transition-all"
+              className="inline-flex h-10 w-10 items-center justify-center rounded-full border border-white/10 bg-white/5 text-white hover:border-primary hover:text-primary transition-all"
             >
               <ChevronRight className="h-5 w-5" />
             </button>
