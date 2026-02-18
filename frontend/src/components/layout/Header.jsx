@@ -153,48 +153,50 @@ const Header = () => {
             </div>
           </div>
 
-          {/* Mobile menu */}
-          {mobileOpen && (
-            <div className="border-t border-white/10 bg-black/95 lg:hidden">
-              <div className="mx-auto max-w-6xl px-4 pb-4 pt-2">
-                <form onSubmit={handleSearchSubmit} className="mb-3 flex items-center space-x-2">
-                  <Input
-                    value={searchTerm}
-                    onChange={(e) => setSearchTerm(e.target.value)}
-                    className="h-9 flex-1 bg-white/10 text-xs placeholder:text-white/50 border-white/20 focus-visible:ring-white/40"
-                    placeholder="Search Product"
-                  />
-                  <Button
-                    type="submit"
-                    size="icon"
-                    className="h-9 w-9 bg-primary text-white hover:bg-primary/80"
-                  >
-                    <Search className="h-4 w-4" />
-                  </Button>
-                </form>
-
-                <nav className="flex flex-col space-y-2 text-xs font-medium uppercase tracking-[0.16em]">
-                  {mainNavItems.map((item) => (
-                    <NavLink
-                      key={item.path}
-                      to={item.path}
-                      className={({ isActive: isNavActive }) =>
-                        [
-                          "flex items-center justify-between rounded-sm px-2 py-1.5",
-                          isNavActive || isActive(item.path)
-                            ? "bg-white/10 text-white"
-                            : "text-white/75 hover:bg-white/5",
-                        ].join(" ")
-                      }
-                    >
-                      {t(lang, item.translationKey)}
-                    </NavLink>
-                  ))}
-                </nav>
-              </div>
-            </div>
-          )}
         </div>
+
+        {/* Mobile menu */}
+        {mobileOpen && (
+          <div className="border-t border-white/10 bg-black/95 lg:hidden">
+            <div className="mx-auto max-w-6xl px-4 pb-4 pt-2">
+              <form onSubmit={handleSearchSubmit} className="mb-3 flex items-center space-x-2">
+                <Input
+                  value={searchTerm}
+                  onChange={(e) => setSearchTerm(e.target.value)}
+                  className="h-9 flex-1 bg-white/10 text-xs placeholder:text-white/50 border-white/20 focus-visible:ring-white/40"
+                  placeholder="Search Product"
+                />
+                <Button
+                  type="submit"
+                  size="icon"
+                  className="h-9 w-9 bg-primary text-white hover:bg-primary/80"
+                >
+                  <Search className="h-4 w-4" />
+                </Button>
+              </form>
+
+              <nav className="flex flex-col space-y-2 text-xs font-medium uppercase tracking-[0.16em]">
+                {mainNavItems.map((item) => (
+                  <NavLink
+                    key={item.path}
+                    to={item.path}
+                    className={({ isActive: isNavActive }) =>
+                      [
+                        "flex items-center justify-between rounded-sm px-2 py-1.5",
+                        isNavActive || isActive(item.path)
+                          ? "bg-white/10 text-white"
+                          : "text-white/75 hover:bg-white/5",
+                      ].join(" ")
+                    }
+                  >
+                    {t(lang, item.translationKey)}
+                  </NavLink>
+                ))}
+              </nav>
+            </div>
+          </div>
+        )}
+      </div>
     </header>
   );
 };
