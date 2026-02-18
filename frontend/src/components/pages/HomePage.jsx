@@ -32,6 +32,15 @@ const HomePage = () => {
     containScroll: false
   });
 
+  const [emblaRefT, emblaApiT] = useEmblaCarousel({
+    loop: true,
+    align: "start",
+    slidesToScroll: 1, // Default to 1 for mobile
+    breakpoints: {
+      "(min-width: 1024px)": { slidesToScroll: 2 }
+    }
+  });
+
   const scrollPrev = useCallback(() => {
     if (emblaApi) emblaApi.scrollPrev();
   }, [emblaApi]);
@@ -40,7 +49,15 @@ const HomePage = () => {
     if (emblaApi) emblaApi.scrollNext();
   }, [emblaApi]);
 
-  // Auto-scroll effect
+  const scrollPrevT = useCallback(() => {
+    if (emblaApiT) emblaApiT.scrollPrev();
+  }, [emblaApiT]);
+
+  const scrollNextT = useCallback(() => {
+    if (emblaApiT) emblaApiT.scrollNext();
+  }, [emblaApiT]);
+
+  // Auto-scroll effect for references
   useEffect(() => {
     if (!emblaApi) return;
     const intervalId = setInterval(() => {
@@ -279,83 +296,87 @@ const HomePage = () => {
       </section>
 
       {/* Customer testimonials */}
-      <section className="bg-white pb-20 pt-10 border-t border-black/5">
-        <div className="mx-auto max-w-4xl px-4">
-          <div className="mb-12 flex flex-col items-center justify-center text-center">
-            <h2 className="text-xl md:text-2xl font-bold tracking-[0.2em] text-foreground uppercase">
-              {t(lang, "testimonials.heading")}
-            </h2>
-            <div className="mt-4 h-1 w-16 bg-primary" />
+      <section className="bg-white pb-20 pt-10 border-t border-black/5 w-full max-w-none overflow-hidden">
+        <div className="w-full">
+          <div className="mx-auto max-w-6xl px-4">
+            <div className="mb-12 flex flex-col items-center justify-center text-center">
+              <h2 className="text-xl md:text-2xl font-bold tracking-[0.2em] text-foreground uppercase">
+                {t(lang, "testimonials.heading")}
+              </h2>
+              <div className="mt-4 h-1 w-16 bg-primary" />
+            </div>
           </div>
 
-          <div className="relative overflow-hidden min-h-[350px] md:min-h-[300px] flex items-center">
-            {testimonials.map((item, index) => (
-              <div
-                key={item.id}
-                className={[
-                  "absolute inset-0 flex flex-col md:flex-row items-center transition-all duration-700 ease-in-out",
-                  index === activeTestimonial
-                    ? "opacity-100 translate-x-0"
-                    : "opacity-0 translate-x-10 pointer-events-none",
-                ].join(" ")}
+          <div className="relative group">
+            {/* Navigation Arrows - Extreme edges */}
+            <div className="absolute left-4 top-1/2 -translate-y-1/2 z-20">
+              <button
+                onClick={scrollPrevT}
+                className="text-primary hover:scale-110 transition-transform bg-white/50 backdrop-blur-sm rounded-full p-2"
+                aria-label="Previous testimonials"
               >
-                <div className="w-full md:w-1/4 h-48 md:h-80 flex items-center justify-center bg-gray-50 border-4 border-primary border-r-0">
-                  <User size={60} className="text-primary/20" strokeWidth={1} />
-                </div>
-                <div className="w-full md:w-3/4 bg-primary p-8 md:p-12 text-left relative flex flex-col justify-between min-h-[256px] md:min-h-[320px] border-4 border-primary">
-                  <div>
-                    <div className="text-sm md:text-base font-bold text-white tracking-widest uppercase mb-1">
-                      {item.person}
-                    </div>
-                    <div className="text-xs text-white/70 uppercase tracking-widest mb-6">
-                      {item.role}
-                    </div>
-                    <p className="text-sm md:text-base text-white/90 leading-relaxed font-light italic">
-                      "{item.quote}"
-                    </p>
-                  </div>
-                  <div className="mt-6">
-                    <div className="inline-flex h-8 w-8 items-center justify-center bg-white text-primary">
-                      <ArrowRight size={16} />
-                    </div>
-                  </div>
-                </div>
-              </div>
-            ))}
-          </div>
-
-          {/* Slider Controls */}
-          <div className="mt-12 flex items-center justify-center space-x-6">
-            <button
-              type="button"
-              onClick={prevTestimonial}
-              className="inline-flex h-10 w-10 items-center justify-center rounded-full border border-black/10 bg-black/5 text-foreground hover:border-primary hover:text-primary transition-all"
-            >
-              <ChevronLeft className="h-5 w-5" />
-            </button>
-
-            <div className="flex space-x-2">
-              {testimonials.map((_, index) => (
-                <button
-                  key={index}
-                  onClick={() => setActiveTestimonial(index)}
-                  className={[
-                    "h-1.5 rounded-full transition-all duration-300",
-                    index === activeTestimonial
-                      ? "w-8 bg-primary"
-                      : "w-2 bg-black/10 hover:bg-black/30"
-                  ].join(" ")}
-                />
-              ))}
+                <ChevronLeft size={48} strokeWidth={3} />
+              </button>
+            </div>
+            <div className="absolute right-4 top-1/2 -translate-y-1/2 z-20">
+              <button
+                onClick={scrollNextT}
+                className="text-primary hover:scale-110 transition-transform bg-white/50 backdrop-blur-sm rounded-full p-2"
+                aria-label="Next testimonials"
+              >
+                <ChevronRight size={48} strokeWidth={3} />
+              </button>
             </div>
 
-            <button
-              type="button"
-              onClick={nextTestimonial}
-              className="inline-flex h-10 w-10 items-center justify-center rounded-full border border-black/10 bg-black/5 text-foreground hover:border-primary hover:text-primary transition-all"
-            >
-              <ChevronRight className="h-5 w-5" />
-            </button>
+            <div className="overflow-hidden" ref={emblaRefT}>
+              <div className="flex">
+                {testimonials.map((item, index) => (
+                  <div
+                    key={item.id}
+                    className="flex-[0_0_100%] lg:flex-[0_0_50%] px-4 lg:px-6"
+                  >
+                    <div className="flex flex-col md:flex-row h-full border-t border-b border-black/5 md:border-none">
+                      {/* Left Side: Image */}
+                      <div className="w-full md:w-1/2 aspect-[4/3] md:aspect-auto relative overflow-hidden bg-gray-100">
+                        {item.image_url ? (
+                          <img
+                            src={item.image_url}
+                            alt={item.person}
+                            className="h-full w-full object-cover"
+                          />
+                        ) : (
+                          <div className="h-full w-full flex items-center justify-center">
+                            <User size={64} className="text-primary/10" strokeWidth={1} />
+                          </div>
+                        )}
+                        {/* Semi-transparent overlay to match style if needed */}
+                        <div className="absolute inset-0 bg-black/5" />
+                      </div>
+
+                      {/* Right Side: Text (Maroon BG) */}
+                      <div className="w-full md:w-1/2 bg-primary p-6 lg:p-10 text-left flex flex-col justify-between min-h-[280px]">
+                        <div>
+                          <div className="text-sm lg:text-base font-bold text-white tracking-widest uppercase mb-1">
+                            {item.place || "THE MARMARA TAKSİM"}
+                          </div>
+                          <div className="text-xs lg:text-sm text-white/80 uppercase tracking-widest mb-4">
+                            {item.person} | {item.role}
+                          </div>
+                          <p className="text-xs lg:text-sm text-white/90 leading-relaxed font-light line-clamp-4">
+                            "{item.quote}"
+                          </p>
+                        </div>
+                        <div className="mt-4">
+                          <div className="inline-flex h-8 w-8 items-center justify-center bg-white/20 text-white rounded-sm border border-white/40">
+                            <ArrowRight size={16} />
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
           </div>
         </div>
       </section>
