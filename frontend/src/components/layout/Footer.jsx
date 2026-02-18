@@ -36,12 +36,12 @@ const Footer = () => {
                             {lang === "tr" ? "HIZLI BAĞLANTILAR" : "QUICK LINKS"}
                         </h3>
                         <ul className="space-y-4 text-sm text-white">
-                            <li><Link to="/corporate" className="hover:text-primary transition-colors flex items-center">› <span className="ml-2">{lang === "tr" ? "Kurumsal" : "Corporate"}</span></Link></li>
-                            <li><Link to="/products" className="hover:text-primary transition-colors flex items-center">› <span className="ml-2">{lang === "tr" ? "Ürünler" : "Products"}</span></Link></li>
-                            <li><Link to="/references" className="hover:text-primary transition-colors flex items-center">› <span className="ml-2">{lang === "tr" ? "Referanslar" : "References"}</span></Link></li>
-                            <li><Link to="/projects" className="hover:text-primary transition-colors flex items-center">› <span className="ml-2">{lang === "tr" ? "Projeler" : "Projects"}</span></Link></li>
-                            <li><Link to="/news" className="hover:text-primary transition-colors flex items-center">› <span className="ml-2">{lang === "tr" ? "Haberler" : "News"}</span></Link></li>
-                            <li><Link to="/contact" className="hover:text-primary transition-colors flex items-center">› <span className="ml-2">{lang === "tr" ? "İletişim" : "Contact"}</span></Link></li>
+                            <li><Link to="/corporate" className="hover:text-white transition-colors flex items-center">› <span className="ml-2">{lang === "tr" ? "Kurumsal" : "Corporate"}</span></Link></li>
+                            <li><Link to="/products" className="hover:text-white transition-colors flex items-center">› <span className="ml-2">{lang === "tr" ? "Ürünler" : "Products"}</span></Link></li>
+                            <li><Link to="/references" className="hover:text-white transition-colors flex items-center">› <span className="ml-2">{lang === "tr" ? "Referanslar" : "References"}</span></Link></li>
+                            <li><Link to="/projects" className="hover:text-white transition-colors flex items-center">› <span className="ml-2">{lang === "tr" ? "Projeler" : "Projects"}</span></Link></li>
+                            <li><Link to="/news" className="hover:text-white transition-colors flex items-center">› <span className="ml-2">{lang === "tr" ? "Haberler" : "News"}</span></Link></li>
+                            <li><Link to="/contact" className="hover:text-white transition-colors flex items-center">› <span className="ml-2">{lang === "tr" ? "İletişim" : "Contact"}</span></Link></li>
                         </ul>
                     </div>
 
@@ -52,19 +52,19 @@ const Footer = () => {
                         </h3>
                         <ul className="space-y-4 text-sm text-white">
                             <li className="flex items-start">
-                                <MapPin size={18} className="mr-3 text-primary shrink-0 mt-0.5" />
+                                <MapPin size={18} className="mr-3 text-white shrink-0 mt-0.5" />
                                 <span>{contactInfo.address}</span>
                             </li>
                             {contactInfo.phone.map((p, idx) => (
                                 <li key={idx} className="flex items-center">
-                                    <Phone size={18} className="mr-3 text-primary shrink-0" />
-                                    <a href={`tel:${p.replace(/\s/g, "")}`} className="hover:text-primary transition-colors">{p}</a>
+                                    <Phone size={18} className="mr-3 text-white shrink-0" />
+                                    <a href={`tel:${p.replace(/\s/g, "")}`} className="hover:text-white transition-colors">{p}</a>
                                 </li>
                             ))}
                             {contactInfo.emails.map((e, idx) => (
                                 <li key={idx} className="flex items-center">
-                                    <Mail size={18} className="mr-3 text-primary shrink-0" />
-                                    <a href={`mailto:${e}`} className="hover:text-primary transition-colors">{e}</a>
+                                    <Mail size={18} className="mr-3 text-white shrink-0" />
+                                    <a href={`mailto:${e}`} className="hover:text-white transition-colors">{e}</a>
                                 </li>
                             ))}
                         </ul>
