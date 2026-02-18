@@ -46,7 +46,7 @@ const Header = () => {
       <div className="bg-transparent">
         <div className="mx-auto flex max-w-6xl items-center justify-end px-4 py-2 text-xs sm:text-[13px]">
           <div className="hidden items-center space-x-4 md:flex">
-            <div className="flex items-center bg-black/90 px-3 py-1 rounded-full space-x-3 text-white">
+            <div className="flex items-center bg-black/40 px-4 h-[50px] rounded-full space-x-3 text-white">
               <a
                 href="https://api.whatsapp.com/send?phone=905321546312"
                 target="_blank"
@@ -54,7 +54,7 @@ const Header = () => {
                 className="hover:text-primary transition-colors"
                 title="WhatsApp"
               >
-                <MessageCircle className="h-5 w-5" />
+                <MessageCircle className="h-[25px] w-[25px]" />
               </a>
               <a
                 href="https://www.instagram.com/profinoks/?hl=tr"
@@ -63,7 +63,7 @@ const Header = () => {
                 className="hover:text-primary transition-colors"
                 title="Instagram"
               >
-                <Instagram className="h-5 w-5" />
+                <Instagram className="h-[25px] w-[25px]" />
               </a>
               <a
                 href="https://www.facebook.com/profinoks.endustriyelmutfakekipmanlari"
@@ -72,7 +72,7 @@ const Header = () => {
                 className="hover:text-primary transition-colors"
                 title="Facebook"
               >
-                <Facebook className="h-5 w-5" />
+                <Facebook className="h-[25px] w-[25px]" />
               </a>
               <a
                 href="https://www.linkedin.com/in/profinoks-end%C3%BCstriyel-mutfak-ekipmanlari-4471921b2/"
@@ -81,7 +81,7 @@ const Header = () => {
                 className="hover:text-primary transition-colors"
                 title="LinkedIn"
               >
-                <Linkedin className="h-5 w-5" />
+                <Linkedin className="h-[25px] w-[25px]" />
               </a>
               <a
                 href="https://www.youtube.com/channel/UCTsoSgntPEXAshH80VtSa-g/featured"
@@ -90,7 +90,7 @@ const Header = () => {
                 className="hover:text-primary transition-colors"
                 title="YouTube"
               >
-                <Youtube className="h-5 w-5" />
+                <Youtube className="h-[25px] w-[25px]" />
               </a>
             </div>
 
@@ -98,9 +98,9 @@ const Header = () => {
               onClick={() => {
                 window.open("https://drive.google.com/file/d/1DTSz_N8ljmdiRxP0BQP_TmKiXxGlJwRQ/view?usp=sharing", "_blank");
               }}
-              className="bg-black/40 px-4 h-10 rounded-full text-white hover:bg-black/60 transition-colors flex items-center"
+              className="bg-black/40 px-4 h-[50px] rounded-full text-white hover:bg-black/60 transition-colors flex items-center"
             >
-              <span className="align-middle mr-1 inline-block h-4 w-4 rounded-sm bg-white/20" />
+              <span className="align-middle mr-1 inline-block h-5 w-5 rounded-sm bg-white/20" />
               <span className="text-base font-semibold">{t(lang, "nav.catalogue")}</span>
             </button>
 
@@ -111,9 +111,9 @@ const Header = () => {
             <button
               type="button"
               onClick={toggleLang}
-              className="bg-black/40 px-4 h-10 rounded-full flex items-center space-x-2 text-white hover:bg-black/60"
+              className="bg-black/40 px-4 h-[50px] rounded-full flex items-center space-x-2 text-white hover:bg-black/60"
             >
-              <Globe2 className="h-5 w-5" />
+              <Globe2 className="h-[25px] w-[25px]" />
               <span className="text-[15px] font-bold uppercase tracking-[0.16em]">
                 {lang === "en" ? "EN / TR" : "TR / EN"}
               </span>
