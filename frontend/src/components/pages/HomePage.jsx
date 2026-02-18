@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useCallback } from "react";
 import { Link } from "react-router-dom";
 import {
   sliderItems as sliderMock,
@@ -10,6 +10,7 @@ import { ChevronLeft, ChevronRight, ArrowRight, User } from "lucide-react";
 import { fetchHomePageData } from "../../api";
 import { useLanguage } from "../../contexts/LanguageContext";
 import { t } from "../../i18n";
+import useEmblaCarousel from "embla-carousel-react";
 
 const SLIDE_INTERVAL = 6000;
 
@@ -23,6 +24,30 @@ const HomePage = () => {
 
   const [activeSlide, setActiveSlide] = useState(0);
   const [activeTestimonial, setActiveTestimonial] = useState(0);
+
+  const [emblaRef, emblaApi] = useEmblaCarousel({
+    loop: true,
+    align: "start",
+    slidesToScroll: 1,
+    containScroll: false
+  });
+
+  const scrollPrev = useCallback(() => {
+    if (emblaApi) emblaApi.scrollPrev();
+  }, [emblaApi]);
+
+  const scrollNext = useCallback(() => {
+    if (emblaApi) emblaApi.scrollNext();
+  }, [emblaApi]);
+
+  // Auto-scroll effect
+  useEffect(() => {
+    if (!emblaApi) return;
+    const intervalId = setInterval(() => {
+      emblaApi.scrollNext();
+    }, 3000);
+    return () => clearInterval(intervalId);
+  }, [emblaApi]);
 
   useEffect(() => {
     let isMounted = true;
@@ -187,48 +212,64 @@ const HomePage = () => {
       </section>
 
       {/* References logos */}
-      <section className="bg-white py-10 md:py-14">
-        <div className="mx-auto max-w-6xl px-4">
-          <div className="flex flex-col items-start md:flex-row md:items-center md:justify-between">
-            <div>
-              <Link
-                to="/references"
-                className="text-lg font-semibold tracking-[0.22em] text-foreground hover:text-primary"
-              >
-                {t(lang, "references.heading")}
-              </Link>
-              <hr className="mt-2 h-px w-16 border-none bg-primary" />
+      <section className="bg-white py-10 md:py-14 w-full max-w-none overflow-hidden">
+        <div className="w-full">
+          <div className="mx-auto max-w-6xl px-4">
+            <div className="flex flex-col items-start md:flex-row md:items-center md:justify-between">
+              <div>
+                <Link
+                  to="/references"
+                  className="text-lg font-semibold tracking-[0.22em] text-foreground hover:text-primary"
+                >
+                  {t(lang, "references.heading")}
+                </Link>
+                <hr className="mt-2 h-px w-16 border-none bg-primary" />
+              </div>
+              <p className="mt-3 text-sm text-muted-foreground md:mt-0">
+                {t(lang, "references.tagline")}
+              </p>
             </div>
-            <p className="mt-3 text-sm text-muted-foreground md:mt-0">
-              {t(lang, "references.tagline")}
-            </p>
           </div>
 
-          <div className="relative mt-8">
-            {/* Horizontal Lines */}
+          <div className="relative mt-8 group">
+            {/* Horizontal Lines - Now Full Width */}
             <div className="absolute -top-6 left-0 right-0 h-px bg-black/10" />
             <div className="absolute -bottom-6 left-0 right-0 h-px bg-black/10" />
 
-            {/* Navigation Arrows */}
-            <div className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-8 md:-translate-x-12 z-10">
-              <ChevronLeft size={48} className="text-primary cursor-pointer hover:scale-110 transition-transform" strokeWidth={3} />
+            {/* Navigation Arrows - Positioned at viewport edges */}
+            <div className="absolute left-4 top-1/2 -translate-y-1/2 z-20">
+              <button
+                onClick={scrollPrev}
+                className="text-primary hover:scale-110 transition-transform bg-white/50 backdrop-blur-sm rounded-full p-2"
+                aria-label="Previous references"
+              >
+                <ChevronLeft size={48} strokeWidth={3} />
+              </button>
             </div>
-            <div className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-8 md:translate-x-12 z-10">
-              <ChevronRight size={48} className="text-primary cursor-pointer hover:scale-110 transition-transform" strokeWidth={3} />
+            <div className="absolute right-4 top-1/2 -translate-y-1/2 z-20">
+              <button
+                onClick={scrollNext}
+                className="text-primary hover:scale-110 transition-transform bg-white/50 backdrop-blur-sm rounded-full p-2"
+                aria-label="Next references"
+              >
+                <ChevronRight size={48} strokeWidth={3} />
+              </button>
             </div>
 
-            <div className="overflow-hidden py-4">
-              <div className="flex animate-[slide-left_40s_linear_infinite] gap-10 opacity-80 hover:opacity-100">
-                {[...referenceLogos, ...referenceLogos].map((logo, index) => (
+            <div className="overflow-hidden cursor-grab active:cursor-grabbing" ref={emblaRef}>
+              <div className="flex">
+                {referenceLogos.map((logo, index) => (
                   <div
                     key={`${logo}-${index}`}
-                    className="flex h-32 w-64 items-center justify-center bg-white"
+                    className="flex-[0_0_auto] px-5 sm:px-10"
                   >
-                    <img
-                      src={logo.image_url || logo}
-                      alt="Reference logo"
-                      className="max-h-28 max-w-[220px] object-contain"
-                    />
+                    <div className="flex h-32 w-64 items-center justify-center bg-white">
+                      <img
+                        src={logo.image_url || logo}
+                        alt="Reference logo"
+                        className="max-h-28 max-w-[220px] object-contain transition-opacity opacity-80 hover:opacity-100"
+                      />
+                    </div>
                   </div>
                 ))}
               </div>
