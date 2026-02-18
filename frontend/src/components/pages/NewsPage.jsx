@@ -166,13 +166,13 @@ const newsItems = [
 
 const NewsPage = () => {
     return (
-        <div className="mt-[122px] md:pt-[130px] lg:pt-[140px] bg-[#050505] pb-20 text-white min-h-screen">
+        <div className="mt-[122px] md:pt-[130px] lg:pt-[140px] bg-background pb-20 text-foreground min-h-screen">
             <div className="mx-auto max-w-4xl px-4 py-12">
-                <header className="mb-12 border-b border-white/10 pb-8">
+                <header className="mb-12 border-b border-black/10 pb-8">
                     <h1 className="text-3xl md:text-4xl font-bold tracking-tight uppercase text-primary">
                         HABERLER & BLOG
                     </h1>
-                    <p className="mt-2 text-white/50 text-sm">
+                    <p className="mt-2 text-muted-foreground text-sm">
                         Profinoks dünyasından en son güncellemeler ve sektörel rehberler.
                     </p>
                 </header>
@@ -181,21 +181,21 @@ const NewsPage = () => {
                     {newsItems.map((item) => (
                         <article
                             key={item.id}
-                            className="group overflow-hidden rounded-xl border border-white/5 bg-[#0c0c0c] transition-all hover:border-primary/30"
+                            className="group overflow-hidden rounded-xl border border-black/5 bg-white transition-all hover:border-primary/30 shadow-sm"
                         >
                             <div className="p-6 md:p-8">
                                 <div className="flex items-center space-x-3 mb-4">
                                     <span className="text-[11px] font-bold uppercase tracking-widest text-primary/80 bg-primary/10 px-2 py-1 rounded">
                                         HABER #{item.id}
                                     </span>
-                                    <span className="text-[11px] text-white/30 uppercase tracking-widest">
+                                    <span className="text-[11px] text-muted-foreground uppercase tracking-widest">
                                         {item.date}
                                     </span>
                                 </div>
-                                <h2 className="text-xl md:text-2xl font-bold text-white mb-6 group-hover:text-primary transition-colors">
+                                <h2 className="text-xl md:text-2xl font-bold text-foreground mb-6 group-hover:text-primary transition-colors">
                                     {item.title}
                                 </h2>
-                                <div className="border-t border-white/5 pt-6">
+                                <div className="border-t border-black/5 pt-6">
                                     {item.content}
                                 </div>
                             </div>

@@ -143,7 +143,7 @@ const Header = () => {
       </div>
 
       {/* Main navigation */}
-      <div className="bg-primary backdrop-blur border-b border-white/5 shadow-lg">
+      <div className="bg-primary/80 backdrop-blur-md border-b border-white/5 shadow-lg">
         <div className="mx-auto flex max-w-6xl items-center justify-between px-4 py-3">
           <Link to="/" className="flex items-center">
             <img
