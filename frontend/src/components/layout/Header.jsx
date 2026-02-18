@@ -46,7 +46,7 @@ const Header = () => {
       <div className="bg-transparent">
         <div className="mx-auto flex max-w-6xl items-center justify-end px-4 py-2 text-xs sm:text-[13px]">
           <div className="hidden items-center space-x-4 md:flex">
-            <div className="flex items-center bg-black/40 px-4 h-[50px] rounded-full space-x-3 text-white">
+            <div className="flex items-center bg-black/40 px-4 h-[42px] rounded-full space-x-3 text-white">
               <a
                 href="https://api.whatsapp.com/send?phone=905321546312"
                 target="_blank"
@@ -98,7 +98,7 @@ const Header = () => {
               onClick={() => {
                 window.open("https://drive.google.com/file/d/1DTSz_N8ljmdiRxP0BQP_TmKiXxGlJwRQ/view?usp=sharing", "_blank");
               }}
-              className="bg-black/40 px-4 h-[50px] rounded-full text-white hover:bg-black/60 transition-colors flex items-center"
+              className="bg-black/40 px-4 h-[42px] rounded-full text-white hover:bg-black/60 transition-colors flex items-center"
             >
               <span className="align-middle mr-1 inline-block h-5 w-5 rounded-sm bg-white/20" />
               <span className="text-base font-semibold">{t(lang, "nav.catalogue")}</span>
@@ -111,7 +111,7 @@ const Header = () => {
             <button
               type="button"
               onClick={toggleLang}
-              className="bg-black/40 px-4 h-[50px] rounded-full flex items-center space-x-2 text-white hover:bg-black/60"
+              className="bg-black/40 px-4 h-[42px] rounded-full flex items-center space-x-2 text-white hover:bg-black/60"
             >
               <Globe2 className="h-[25px] w-[25px]" />
               <span className="text-[15px] font-bold uppercase tracking-[0.16em]">
