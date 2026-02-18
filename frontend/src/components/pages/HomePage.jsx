@@ -204,20 +204,34 @@ const HomePage = () => {
             </p>
           </div>
 
-          <div className="mt-8 overflow-hidden border-y border-black/5 py-4">
-            <div className="flex animate-[slide-left_40s_linear_infinite] gap-10 opacity-80 hover:opacity-100">
-              {[...referenceLogos, ...referenceLogos].map((logo, index) => (
-                <div
-                  key={`${logo}-${index}`}
-                  className="flex h-32 w-64 items-center justify-center bg-white"
-                >
-                  <img
-                    src={logo.image_url || logo}
-                    alt="Reference logo"
-                    className="max-h-28 max-w-[220px] object-contain"
-                  />
-                </div>
-              ))}
+          <div className="relative mt-8">
+            {/* Horizontal Lines */}
+            <div className="absolute -top-6 left-0 right-0 h-px bg-black/10" />
+            <div className="absolute -bottom-6 left-0 right-0 h-px bg-black/10" />
+
+            {/* Navigation Arrows */}
+            <div className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-8 md:-translate-x-12 z-10">
+              <ChevronLeft size={48} className="text-primary cursor-pointer hover:scale-110 transition-transform" strokeWidth={3} />
+            </div>
+            <div className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-8 md:translate-x-12 z-10">
+              <ChevronRight size={48} className="text-primary cursor-pointer hover:scale-110 transition-transform" strokeWidth={3} />
+            </div>
+
+            <div className="overflow-hidden py-4">
+              <div className="flex animate-[slide-left_40s_linear_infinite] gap-10 opacity-80 hover:opacity-100">
+                {[...referenceLogos, ...referenceLogos].map((logo, index) => (
+                  <div
+                    key={`${logo}-${index}`}
+                    className="flex h-32 w-64 items-center justify-center bg-white"
+                  >
+                    <img
+                      src={logo.image_url || logo}
+                      alt="Reference logo"
+                      className="max-h-28 max-w-[220px] object-contain"
+                    />
+                  </div>
+                ))}
+              </div>
             </div>
           </div>
         </div>
