@@ -80,7 +80,7 @@ const HomePage = () => {
   return (
     <div className="bg-background text-foreground">
       {/* Hero slider */}
-      <section className="relative w-full pt-[122px] md:pt-[130px] lg:pt-[140px]">
+      <section className="relative w-full">
         <div className="relative h-[420px] md:h-[520px] lg:h-[620px] overflow-hidden">
           {sliderItems.map((slide, index) => (
             <div
