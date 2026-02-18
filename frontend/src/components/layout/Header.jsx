@@ -121,20 +121,20 @@ const Header = () => {
 
             <form
               onSubmit={handleSearchSubmit}
-              className="ml-2 hidden max-w-[220px] flex-1 items-center space-x-1 sm:flex"
+              className="ml-2 hidden max-w-[180px] flex-1 items-center space-x-1 sm:flex"
             >
               <div className="relative w-full">
                 <Input
                   value={searchTerm}
                   onChange={(e) => setSearchTerm(e.target.value)}
-                  className="h-10 bg-primary/60 pr-10 text-[15px] placeholder:text-white/70 border-white/20 text-white focus-visible:ring-primary/40"
+                  className="h-[30px] bg-primary/60 pr-8 text-[12px] placeholder:text-white/70 border-white/20 text-white focus-visible:ring-primary/40"
                   placeholder={lang === "tr" ? "Ürün Arama" : "Search Product"}
                 />
                 <button
                   type="submit"
                   className="absolute inset-y-0 right-2 flex items-center text-black/70 hover:text-black"
                 >
-                  <Search className="h-5 w-5 text-white/70 hover:text-white" />
+                  <Search className="h-4 w-4 text-white/70 hover:text-white" />
                 </button>
               </div>
             </form>
