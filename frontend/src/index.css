@@ -25,21 +25,23 @@ code {
     --card-foreground: 0 0% 10%;
     --popover: 0 0% 100%;
     --popover-foreground: 0 0% 10%;
-    --primary: 4 58% 31%; /* #7B2520 - Ormel Maroon */
+    --primary: 1 57% 29%;
+    /* #752320 - New Ormel Primary */
     --primary-foreground: 0 0% 100%;
     --secondary: 0 0% 96%;
-    --secondary-foreground: 4 58% 31%;
+    --secondary-foreground: 1 57% 29%;
     --muted: 0 0% 96%;
     --muted-foreground: 0 0% 45%;
-    --accent: 4 58% 95%;
-    --accent-foreground: 4 58% 31%;
+    --accent: 1 57% 95%;
+    --accent-foreground: 1 57% 29%;
     --destructive: 0 84% 60%;
     --destructive-foreground: 0 0% 100%;
     --border: 0 0% 90%;
     --input: 0 0% 90%;
-    --ring: 4 58% 31%;
+    --ring: 1 57% 29%;
     --radius: 0.5rem;
   }
+
   .dark {
     --background: 0 0% 7%;
     --foreground: 0 0% 98%;
@@ -67,6 +69,7 @@ code {
   * {
     @apply border-border;
   }
+
   body {
     @apply bg-background text-foreground;
   }
@@ -77,6 +80,7 @@ code {
   0% {
     transform: translateX(0);
   }
+
   100% {
     transform: translateX(-50%);
   }

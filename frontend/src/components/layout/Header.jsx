@@ -43,15 +43,15 @@ const Header = () => {
   return (
     <header className="fixed inset-x-0 top-0 z-40 text-white font-medium">
       {/* Top utility bar */}
-      <div className="bg-[#1a1a1a]/95 backdrop-blur border-b border-white/5">
+      <div className="bg-white/95 backdrop-blur border-b border-black/5">
         <div className="mx-auto flex max-w-6xl items-center justify-end px-4 py-2 text-xs sm:text-[13px]">
           <div className="hidden items-center space-x-4 md:flex">
-            <div className="flex items-center space-x-3 text-white/70">
+            <div className="flex items-center space-x-3 text-black/70">
               <a
                 href="https://www.instagram.com/profinoks/?hl=tr"
                 target="_blank"
                 rel="noreferrer"
-                className="inline-flex h-7 w-7 items-center justify-center rounded-full border border-white/20 hover:border-white hover:text-white transition-colors"
+                className="inline-flex h-7 w-7 items-center justify-center rounded-full border border-black/20 hover:border-black hover:text-black transition-colors"
                 title="Instagram"
               >
                 <Instagram className="h-3.5 w-3.5" />
@@ -60,7 +60,7 @@ const Header = () => {
                 href="https://www.facebook.com/profinoks.endustriyelmutfakekipmanlari"
                 target="_blank"
                 rel="noreferrer"
-                className="inline-flex h-7 w-7 items-center justify-center rounded-full border border-white/20 hover:border-white hover:text-white transition-colors"
+                className="inline-flex h-7 w-7 items-center justify-center rounded-full border border-black/20 hover:border-black hover:text-black transition-colors"
                 title="Facebook"
               >
                 <Facebook className="h-3.5 w-3.5" />
@@ -69,7 +69,7 @@ const Header = () => {
                 href="https://www.linkedin.com/in/profinoks-end%C3%BCstriyel-mutfak-ekipmanlari-4471921b2/"
                 target="_blank"
                 rel="noreferrer"
-                className="inline-flex h-7 w-7 items-center justify-center rounded-full border border-white/20 hover:border-white hover:text-white transition-colors"
+                className="inline-flex h-7 w-7 items-center justify-center rounded-full border border-black/20 hover:border-black hover:text-black transition-colors"
                 title="LinkedIn"
               >
                 <Linkedin className="h-3.5 w-3.5" />
@@ -78,7 +78,7 @@ const Header = () => {
                 href="https://www.youtube.com/channel/UCTsoSgntPEXAshH80VtSa-g/featured"
                 target="_blank"
                 rel="noreferrer"
-                className="inline-flex h-7 w-7 items-center justify-center rounded-full border border-white/20 hover:border-white hover:text-white transition-colors"
+                className="inline-flex h-7 w-7 items-center justify-center rounded-full border border-black/20 hover:border-black hover:text-black transition-colors"
                 title="YouTube"
               >
                 <Youtube className="h-3.5 w-3.5" />
@@ -87,7 +87,7 @@ const Header = () => {
                 href="https://api.whatsapp.com/send?phone=905306140705"
                 target="_blank"
                 rel="noreferrer"
-                className="inline-flex h-7 w-7 items-center justify-center rounded-full border border-white/20 hover:border-white hover:text-white transition-colors"
+                className="inline-flex h-7 w-7 items-center justify-center rounded-full border border-black/20 hover:border-black hover:text-black transition-colors"
                 title="WhatsApp"
               >
                 <MessageCircle className="h-3.5 w-3.5" />
@@ -98,9 +98,9 @@ const Header = () => {
               onClick={() => {
                 window.open("https://drive.google.com/file/d/1DTSz_N8ljmdiRxP0BQP_TmKiXxGlJwRQ/view?usp=sharing", "_blank");
               }}
-              className="text-white/80 hover:text-white transition-colors"
+              className="text-black/80 hover:text-black transition-colors"
             >
-              <span className="align-middle mr-1 inline-block h-4 w-4 rounded-sm bg-white/10" />
+              <span className="align-middle mr-1 inline-block h-4 w-4 rounded-sm bg-black/10" />
               {t(lang, "nav.catalogue")}
             </button>
 
@@ -111,7 +111,7 @@ const Header = () => {
             <button
               type="button"
               onClick={toggleLang}
-              className="flex items-center space-x-2 text-white/80 hover:text-white"
+              className="flex items-center space-x-2 text-black/80 hover:text-black"
             >
               <Globe2 className="h-4 w-4" />
               <span className="text-xs uppercase tracking-[0.16em]">
@@ -127,12 +127,12 @@ const Header = () => {
                 <Input
                   value={searchTerm}
                   onChange={(e) => setSearchTerm(e.target.value)}
-                  className="h-8 bg-white/10 pr-8 text-xs placeholder:text-white/50 border-white/20 focus-visible:ring-white/40"
+                  className="h-8 bg-black/5 pr-8 text-xs placeholder:text-black/50 border-black/10 text-black focus-visible:ring-primary/40"
                   placeholder="Search Product"
                 />
                 <button
                   type="submit"
-                  className="absolute inset-y-0 right-2 flex items-center text-white/70 hover:text-white"
+                  className="absolute inset-y-0 right-2 flex items-center text-black/70 hover:text-black"
                 >
                   <Search className="h-3.5 w-3.5" />
                 </button>
@@ -143,7 +143,7 @@ const Header = () => {
       </div>
 
       {/* Main navigation */}
-      <div className="bg-primary/90 backdrop-blur border-b border-white/5 shadow-lg">
+      <div className="bg-primary backdrop-blur border-b border-white/5 shadow-lg">
         <div className="mx-auto flex max-w-6xl items-center justify-between px-4 py-3">
           <Link to="/" className="flex items-center">
             <img

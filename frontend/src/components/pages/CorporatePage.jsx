@@ -2,7 +2,7 @@ import React from "react";
 
 const CorporatePage = () => {
     return (
-        <div className="mt-[122px] md:pt-[130px] lg:pt-[140px] bg-[#050505] pb-20 text-white min-h-screen">
+        <div className="mt-[122px] md:pt-[130px] lg:pt-[140px] bg-background pb-20 text-foreground min-h-screen">
             <div className="mx-auto max-w-4xl px-4 py-12">
                 {/* HAKKIMIZDA */}
                 <section className="mb-20">
@@ -11,7 +11,7 @@ const CorporatePage = () => {
                             HAKKIMIZDA
                         </h1>
                     </header>
-                    <div className="space-y-6 text-white/80 leading-relaxed text-base md:text-lg">
+                    <div className="space-y-6 text-muted-foreground leading-relaxed text-base md:text-lg">
                         <p>
                             Endüstriyel mutfak ekipmanları sektöründe 2010 yılında kurulan Profinoks Mutfak, yüksek kalite standartları, geçmiş tecrübeleri, ürün çeşitliliği ve proje tamamlama süreçleri ile kısa sürede sektöründe önemli başarılara imza atmıştır.
                         </p>
@@ -65,11 +65,11 @@ const CorporatePage = () => {
                             KALİTE POLİTİKAMIZ
                         </h2>
                     </header>
-                    <div className="text-white/80 leading-relaxed">
+                    <div className="text-muted-foreground leading-relaxed">
                         <p className="mb-6 italic text-lg">
                             Profinoks Mutfak olarak en önemli ürünümüz KALİTE ‘dir. Kalite sürdürülebilir ve geliştirilebilir bir hizmet olduğunda anlam kazanır. Firmamızın sürdürülebilir kalite standartları ile çözüm odaklı projeler sunmaya devam edecektir.
                         </p>
-                        <h4 className="text-white font-bold mb-4 uppercase">Kalite Politikalarımız;</h4>
+                        <h4 className="text-foreground font-bold mb-4 uppercase">Kalite Politikalarımız;</h4>
                         <ul className="space-y-4">
                             {[
                                 "KALİTE firmamızın kültürüdür. O ‘nu sürekli geliştireceğiz.",

@@ -7,13 +7,13 @@ const ReferencesPage = () => {
     const { lang } = useLanguage();
 
     return (
-        <div className="mt-[122px] md:pt-[130px] lg:pt-[140px] bg-[#050505] pb-20 text-white min-h-screen">
+        <div className="mt-[122px] md:pt-[130px] lg:pt-[140px] bg-background pb-20 text-foreground min-h-screen">
             <div className="mx-auto max-w-6xl px-4 py-12">
-                <header className="mb-12 border-b border-white/10 pb-8">
+                <header className="mb-12 border-b border-black/10 pb-8">
                     <h1 className="text-3xl md:text-4xl font-semibold tracking-tight uppercase text-primary">
                         {t(lang, "references.heading")}
                     </h1>
-                    <p className="mt-4 text-white/60 text-sm">
+                    <p className="mt-4 text-muted-foreground text-sm">
                         {t(lang, "references.tagline")}
                     </p>
                 </header>

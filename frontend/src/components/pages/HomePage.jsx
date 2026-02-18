@@ -78,7 +78,7 @@ const HomePage = () => {
   };
 
   return (
-    <div className="bg-[#050505] text-white">
+    <div className="bg-background text-foreground">
       {/* Hero slider */}
       <section className="relative w-full pt-[122px] md:pt-[130px] lg:pt-[140px]">
         <div className="relative h-[420px] md:h-[520px] lg:h-[620px] overflow-hidden">
@@ -148,11 +148,11 @@ const HomePage = () => {
       </section>
 
       {/* Product groups */}
-      <section className="bg-[#050505] py-14 md:py-20 border-t border-white/5">
+      <section className="bg-white py-14 md:py-20 border-t border-black/5">
         <div className="mx-auto max-w-6xl px-4">
           <div className="mb-10 lg:mb-14">
-            <h2 className="text-2xl md:text-3xl font-semibold tracking-[0.16em] text-white uppercase flex items-center justify-center">
-              <span className="bg-white/10 px-6 py-2 border-b-2 border-primary">
+            <h2 className="text-2xl md:text-3xl font-semibold tracking-[0.16em] text-foreground uppercase flex items-center justify-center">
+              <span className="bg-black/5 px-6 py-2 border-b-2 border-primary">
                 {t(lang, "productGroups.heading")}
               </span>
             </h2>
@@ -165,20 +165,20 @@ const HomePage = () => {
                 href={group.href || "#"}
                 target="_blank"
                 rel="noreferrer"
-                className="group flex flex-col overflow-hidden bg-[#1a1c23] transition-all duration-300 hover:-translate-y-1 shadow-xl"
+                className="group flex flex-col overflow-hidden bg-white border border-black/5 transition-all duration-300 hover:-translate-y-1 shadow-sm hover:shadow-md"
               >
-                <div className="aspect-square overflow-hidden bg-[#1a1c23] p-12">
+                <div className="aspect-square overflow-hidden bg-gray-50 p-12">
                   <img
                     src={group.image_url || group.imageUrl}
                     alt={group.title}
-                    className="h-full w-full object-contain brightness-0 invert opacity-70 group-hover:opacity-100 transition-all duration-500 group-hover:scale-110"
+                    className="h-full w-full object-contain brightness-100 invert-0 opacity-80 group-hover:opacity-100 transition-all duration-500 group-hover:scale-110"
                   />
                 </div>
-                <div className="flex flex-col p-6 text-center border-t border-white/5 relative">
-                  <h3 className="text-[13px] font-bold uppercase tracking-[0.18em] text-white">
+                <div className="flex flex-col p-6 text-center border-t border-black/5 relative">
+                  <h3 className="text-[13px] font-bold uppercase tracking-[0.18em] text-foreground">
                     {group.title}
                   </h3>
-                  <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-32 h-0.5 bg-white scale-x-50 group-hover:scale-x-100 transition-transform duration-300" />
+                  <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-32 h-0.5 bg-primary scale-x-50 group-hover:scale-x-100 transition-transform duration-300" />
                 </div>
               </a>
             ))}
@@ -187,24 +187,24 @@ const HomePage = () => {
       </section>
 
       {/* References logos */}
-      <section className="bg-[#050505] py-10 md:py-14">
+      <section className="bg-white py-10 md:py-14">
         <div className="mx-auto max-w-6xl px-4">
           <div className="flex flex-col items-start md:flex-row md:items-center md:justify-between">
             <div>
               <Link
                 to="/references"
-                className="text-lg font-semibold tracking-[0.22em] text-white hover:text-primary"
+                className="text-lg font-semibold tracking-[0.22em] text-foreground hover:text-primary"
               >
                 {t(lang, "references.heading")}
               </Link>
               <hr className="mt-2 h-px w-16 border-none bg-primary" />
             </div>
-            <p className="mt-3 text-sm text-white/70 md:mt-0">
+            <p className="mt-3 text-sm text-muted-foreground md:mt-0">
               {t(lang, "references.tagline")}
             </p>
           </div>
 
-          <div className="mt-8 overflow-hidden border-y border-white/5 py-4">
+          <div className="mt-8 overflow-hidden border-y border-black/5 py-4">
             <div className="flex animate-[slide-left_40s_linear_infinite] gap-10 opacity-80 hover:opacity-100">
               {[...referenceLogos, ...referenceLogos].map((logo, index) => (
                 <div
@@ -224,10 +224,10 @@ const HomePage = () => {
       </section>
 
       {/* Customer testimonials */}
-      <section className="bg-[#050505] pb-20 pt-10 border-t border-white/5">
+      <section className="bg-white pb-20 pt-10 border-t border-black/5">
         <div className="mx-auto max-w-4xl px-4">
           <div className="mb-12 flex flex-col items-center justify-center text-center">
-            <h2 className="text-xl md:text-2xl font-bold tracking-[0.2em] text-white uppercase">
+            <h2 className="text-xl md:text-2xl font-bold tracking-[0.2em] text-foreground uppercase">
               {t(lang, "testimonials.heading")}
             </h2>
             <div className="mt-4 h-1 w-16 bg-primary" />
@@ -278,7 +278,7 @@ const HomePage = () => {
             <button
               type="button"
               onClick={prevTestimonial}
-              className="inline-flex h-10 w-10 items-center justify-center rounded-full border border-white/10 bg-white/5 text-white hover:border-primary hover:text-primary transition-all"
+              className="inline-flex h-10 w-10 items-center justify-center rounded-full border border-black/10 bg-black/5 text-foreground hover:border-primary hover:text-primary transition-all"
             >
               <ChevronLeft className="h-5 w-5" />
             </button>
@@ -292,7 +292,7 @@ const HomePage = () => {
                     "h-1.5 rounded-full transition-all duration-300",
                     index === activeTestimonial
                       ? "w-8 bg-primary"
-                      : "w-2 bg-white/10 hover:bg-white/30"
+                      : "w-2 bg-black/10 hover:bg-black/30"
                   ].join(" ")}
                 />
               ))}
@@ -301,7 +301,7 @@ const HomePage = () => {
             <button
               type="button"
               onClick={nextTestimonial}
-              className="inline-flex h-10 w-10 items-center justify-center rounded-full border border-white/10 bg-white/5 text-white hover:border-primary hover:text-primary transition-all"
+              className="inline-flex h-10 w-10 items-center justify-center rounded-full border border-black/10 bg-black/5 text-foreground hover:border-primary hover:text-primary transition-all"
             >
               <ChevronRight className="h-5 w-5" />
             </button>

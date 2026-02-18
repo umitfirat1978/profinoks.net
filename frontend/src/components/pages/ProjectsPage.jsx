@@ -32,10 +32,10 @@ const ProjectsPage = () => {
     };
 
     return (
-        <div className="mt-[122px] md:pt-[130px] lg:pt-[140px] bg-[#050505] pb-20 text-white min-h-screen">
+        <div className="mt-[122px] md:pt-[130px] lg:pt-[140px] bg-background pb-20 text-foreground min-h-screen">
             <div className="mx-auto max-w-7xl px-4 py-12">
                 <header className="mb-12 border-b border-primary/30 pb-8 text-center">
-                    <h1 className="text-3xl md:text-5xl font-bold tracking-[0.1em] uppercase text-white">
+                    <h1 className="text-3xl md:text-5xl font-bold tracking-[0.1em] uppercase text-foreground">
                         PROJELERİMİZ
                     </h1>
                     <p className="mt-4 text-primary font-medium tracking-widest uppercase text-sm">
@@ -48,7 +48,7 @@ const ProjectsPage = () => {
                         <div
                             key={index}
                             onClick={() => openLightbox(index)}
-                            className="group relative aspect-square overflow-hidden rounded-lg bg-[#111] cursor-pointer border border-white/5 hover:border-primary/50 transition-all duration-300"
+                            className="group relative aspect-square overflow-hidden rounded-lg bg-gray-50 cursor-pointer border border-black/5 hover:border-primary/50 transition-all duration-300"
                         >
                             <img
                                 src={image}
