@@ -143,7 +143,7 @@ const Header = () => {
       </div>
 
       {/* Main navigation */}
-      <div className="bg-primary/60 backdrop-blur-md border-b border-white/5 shadow-lg">
+      <div className="bg-primary/50 backdrop-blur-md border-b border-white/5 shadow-lg">
         <div className="mx-auto flex max-w-6xl items-center justify-start px-4 py-3">
           <Link to="/" className="flex items-center">
             <img
@@ -167,7 +167,7 @@ const Header = () => {
                     "relative pb-1 transition-colors",
                     isNavActive || isActive(item.path)
                       ? "text-white"
-                      : "text-white/70 hover:text-white",
+                      : "text-white/90 hover:text-white",
                   ].join(" ")
                 }
               >
@@ -234,7 +234,7 @@ const Header = () => {
                         "flex items-center justify-between rounded-sm px-2 py-1.5",
                         isNavActive || isActive(item.path)
                           ? "bg-white/10 text-white"
-                          : "text-white/75 hover:bg-white/5",
+                          : "text-white/90 hover:bg-white/5",
                       ].join(" ")
                     }
                   >
