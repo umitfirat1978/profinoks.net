@@ -6,7 +6,7 @@ const newsItems = [
         title: "Endüstriyel Mutfak Projesi Hizmeti Verdiğimiz Alanlar",
         date: "17 Şubat 2026",
         content: (
-            <ul className="grid grid-cols-1 sm:grid-cols-2 gap-2 text-sm text-white/70">
+            <ul className="grid grid-cols-1 sm:grid-cols-2 gap-2 text-sm text-muted-foreground">
                 {[
                     "Restoran mutfağı", "Otel Mutfağı ve Otel Mutfak Ekipmanları", "Steakhouse mutfağı ve et teşhir dolapları",
                     "Askeri tesis mutfağı", "Bar Projeleri", "Hastane mutfakları", "Fastfood ekipmanları ve mutfağı",
@@ -42,7 +42,7 @@ const newsItems = [
         date: "15 Şubat 2026",
         content: (
             <div className="space-y-4 text-sm text-white/70 leading-relaxed">
-                <h4 className="font-bold text-white uppercase text-xs tracking-wider mb-2">Bayat Ekmek Böreği</h4>
+                <h4 className="font-bold text-foreground uppercase text-xs tracking-wider mb-2">Bayat Ekmek Böreği</h4>
                 <p className="italic text-xs text-primary/80">Malzemeler: 1 adet bayat ekmek, 200 gr kaşar rendesi, 200 gr beyaz peynir, 1,5 su bardağı süt, 2 yumurta.</p>
                 <p>Ekmeklerin ziyan olması her yıl milyonlarca liranın çöpe gitmesine neden oluyor. İhtiyacımız kadarını almayı öğrenmeliyiz. Artan ekmekleri dondurucuya atabilir veya kurutup ekmek kırığı yapabilirsiniz.</p>
                 <p>Eğer çok fazla değilse kalan ekmeklerinizle bu nefis böreği deneyin. Süt miktarını ekmeklerinizin kuruluk derecesine göre kontrollü olarak ekleyin.</p>
@@ -79,10 +79,10 @@ const newsItems = [
         title: "İyi Hamburger Nasıl Yapılır?",
         date: "13 Şubat 2026",
         content: (
-            <div className="space-y-3 text-sm text-white/70 leading-relaxed">
-                <p><strong className="text-white">Antrikottan Hazırlayın:</strong> Gerçek hamburger, kaliteli ve yağlı biftektir. %80 et, %20 yağ oranı idealdir.</p>
-                <p><strong className="text-white">Eti Yoğurmayın:</strong> Kıymanın içine hiçbir şey eklemeyin. Sadece hafifçe sıkarak form verin ve ortasına bir delik açın.</p>
-                <p><strong className="text-white">Pişirme:</strong> İç ısı 70°C olmalı. Son dakikada kaliteli bir peynir ekleyip eritin.</p>
+            <div className="space-y-3 text-sm text-muted-foreground leading-relaxed">
+                <p><strong className="text-foreground">Antrikottan Hazırlayın:</strong> Gerçek hamburger, kaliteli ve yağlı biftektir. %80 et, %20 yağ oranı idealdir.</p>
+                <p><strong className="text-foreground">Eti Yoğurmayın:</strong> Kıymanın içine hiçbir şey eklemeyin. Sadece hafifçe sıkarak form verin ve ortasına bir delik açın.</p>
+                <p><strong className="text-foreground">Pişirme:</strong> İç ısı 70°C olmalı. Son dakikada kaliteli bir peynir ekleyip eritin.</p>
             </div>
         )
     },
@@ -91,11 +91,11 @@ const newsItems = [
         title: "Şeflerin Kullandıkları En Temel Mutfak Aletleri",
         date: "12 Şubat 2026",
         content: (
-            <ul className="space-y-2 text-sm text-white/70">
-                <li><strong className="text-white">Isı Ölçer:</strong> Doğru pişirme ısısını sağlamak için kritiktir.</li>
-                <li><strong className="text-white">Cımbız:</strong> Hassas sunumlar ve mutfak estetiği için kullanılır.</li>
-                <li><strong className="text-white">Blender & Robot:</strong> Şeflerin hızı ve pürüzsüz dokular için sağ koludur.</li>
-                <li><strong className="text-white">Bıçaklar:</strong> Bir şefin gururu ve en önemli enstrümanıdır.</li>
+            <ul className="space-y-2 text-sm text-muted-foreground">
+                <li><strong className="text-foreground">Isı Ölçer:</strong> Doğru pişirme ısısını sağlamak için kritiktir.</li>
+                <li><strong className="text-foreground">Cımbız:</strong> Hassas sunumlar ve mutfak estetiği için kullanılır.</li>
+                <li><strong className="text-foreground">Blender & Robot:</strong> Şeflerin hızı ve pürüzsüz dokular için sağ koludur.</li>
+                <li><strong className="text-foreground">Bıçaklar:</strong> Bir şefin gururu ve en önemli enstrümanıdır.</li>
             </ul>
         )
     },
@@ -105,7 +105,7 @@ const newsItems = [
         date: "11 Şubat 2026",
         content: (
             <div className="space-y-4 text-sm text-white/70">
-                <p><strong className="text-white">Standart Espresso:</strong> 7-7.5 gr kahve, 9 bar basınç, 24-27 saniye akış süresi.</p>
+                <p><strong className="text-foreground">Standart Espresso:</strong> 7-7.5 gr kahve, 9 bar basınç, 24-27 saniye akış süresi.</p>
                 <div className="grid grid-cols-2 gap-4 text-xs">
                     <div className="p-3 bg-white/5 rounded border border-white/5">
                         <span className="font-bold text-primary">Ristretto:</span> 15-20 ml, daha yoğun ve az acı.
@@ -124,8 +124,8 @@ const newsItems = [
         content: (
             <div className="space-y-3 text-sm text-white/70">
                 <p>Bulaşık makineleri mutfağın nabzıdır. Endüstriyel modeller 3 dakikada yıkama yaparak hızı korur.</p>
-                <p><strong className="text-white">Giyotin Tip:</strong> Yüksek kapasiteli işletmeler için ideal.</p>
-                <p><strong className="text-white">Set Altı:</strong> Kısıtlı alanlarda endüstriyel performans sunar.</p>
+                <p><strong className="text-foreground">Giyotin Tip:</strong> Yüksek kapasiteli işletmeler için ideal.</p>
+                <p><strong className="text-foreground">Set Altı:</strong> Kısıtlı alanlarda endüstriyel performans sunar.</p>
             </div>
         )
     },
