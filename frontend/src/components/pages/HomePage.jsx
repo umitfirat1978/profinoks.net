@@ -335,9 +335,9 @@ const HomePage = () => {
                     key={item.id}
                     className="flex-[0_0_100%] lg:flex-[0_0_50%] px-4 lg:px-6"
                   >
-                    <div className="flex flex-col md:flex-row h-full border-t border-b border-black/5 md:border-none">
-                      {/* Left Side: Image */}
-                      <div className="w-full md:w-1/2 aspect-[4/3] md:aspect-auto relative overflow-hidden bg-gray-100">
+                    <div className="flex flex-col md:flex-row h-full border-t border-b border-black/5 md:border-none shadow-sm">
+                      {/* Left Side: Image (Narrower - 1/3) */}
+                      <div className="w-full md:w-1/3 aspect-[4/3] md:aspect-auto relative overflow-hidden bg-[#E5E7EB]">
                         {item.image_url ? (
                           <img
                             src={item.image_url}
@@ -349,27 +349,21 @@ const HomePage = () => {
                             <User size={64} className="text-primary/10" strokeWidth={1} />
                           </div>
                         )}
-                        {/* Semi-transparent overlay to match style if needed */}
                         <div className="absolute inset-0 bg-black/5" />
                       </div>
 
-                      {/* Right Side: Text (Maroon BG) */}
-                      <div className="w-full md:w-1/2 bg-primary p-6 lg:p-10 text-left flex flex-col justify-between min-h-[280px]">
+                      {/* Right Side: Text (Wider - 2/3) (Maroon BG) */}
+                      <div className="w-full md:w-2/3 bg-primary p-6 lg:p-8 text-left flex flex-col justify-center min-h-[220px]">
                         <div>
-                          <div className="text-sm lg:text-base font-bold text-white tracking-widest uppercase mb-1">
-                            {item.place || "THE MARMARA TAKSİM"}
+                          <div className="text-[13px] lg:text-[14px] font-bold text-white tracking-[0.18em] uppercase mb-1">
+                            {item.person}
                           </div>
-                          <div className="text-xs lg:text-sm text-white/80 uppercase tracking-widest mb-4">
-                            {item.person} | {item.role}
+                          <div className="text-[11px] lg:text-[12px] text-white/70 uppercase tracking-[0.15em] mb-4">
+                            {item.role}
                           </div>
-                          <p className="text-xs lg:text-sm text-white/90 leading-relaxed font-light line-clamp-4">
+                          <p className="text-[12px] lg:text-[13px] text-white/90 leading-relaxed font-light italic border-l-2 border-white/20 pl-4">
                             "{item.quote}"
                           </p>
-                        </div>
-                        <div className="mt-4">
-                          <div className="inline-flex h-8 w-8 items-center justify-center bg-white/20 text-white rounded-sm border border-white/40">
-                            <ArrowRight size={16} />
-                          </div>
                         </div>
                       </div>
                     </div>
