@@ -16,7 +16,7 @@ const Footer = () => {
                         <h3 className="text-sm font-semibold tracking-[0.2em] uppercase text-primary">
                             {lang === "tr" ? "PROFİNOKS HAKKINDA" : "ABOUT PROFINOKS"}
                         </h3>
-                        <p className="text-sm text-white/60 leading-relaxed">
+                        <p className="text-sm text-white leading-relaxed">
                             {lang === "tr"
                                 ? "2010 yılından beri endüstriyel mutfak ekipmanları üretimi ve montajı konusunda hizmet vermekteyiz. Kaliteli üretim anlayışımız ve müşteri memnuniyeti odaklı çalışma prensibimizle sektörde öncü firmalardan biriyiz."
                                 : "Since 2010, we have been providing services in the production and installation of industrial kitchen equipment. We are one of the leading companies in the sector with our quality production approach and customer satisfaction-oriented working principle."}
@@ -35,7 +35,7 @@ const Footer = () => {
                         <h3 className="text-sm font-semibold tracking-[0.2em] uppercase text-primary">
                             {lang === "tr" ? "HIZLI BAĞLANTILAR" : "QUICK LINKS"}
                         </h3>
-                        <ul className="space-y-4 text-sm text-white/60">
+                        <ul className="space-y-4 text-sm text-white">
                             <li><Link to="/corporate" className="hover:text-primary transition-colors flex items-center">› <span className="ml-2">{lang === "tr" ? "Kurumsal" : "Corporate"}</span></Link></li>
                             <li><Link to="/products" className="hover:text-primary transition-colors flex items-center">› <span className="ml-2">{lang === "tr" ? "Ürünler" : "Products"}</span></Link></li>
                             <li><Link to="/references" className="hover:text-primary transition-colors flex items-center">› <span className="ml-2">{lang === "tr" ? "Referanslar" : "References"}</span></Link></li>
@@ -50,7 +50,7 @@ const Footer = () => {
                         <h3 className="text-sm font-semibold tracking-[0.2em] uppercase text-primary">
                             {lang === "tr" ? "İLETİŞİM BİLGİLERİ" : "CONTACT INFO"}
                         </h3>
-                        <ul className="space-y-4 text-sm text-white/60">
+                        <ul className="space-y-4 text-sm text-white">
                             <li className="flex items-start">
                                 <MapPin size={18} className="mr-3 text-primary shrink-0 mt-0.5" />
                                 <span>{contactInfo.address}</span>
@@ -83,11 +83,15 @@ const Footer = () => {
                     </div>
                 </div>
 
-                <div className="pt-8 border-t border-white/5 flex flex-col md:flex-row justify-between items-center text-xs text-white/40 gap-4">
+            </div>
+
+            <div className="bg-black py-4 mt-8">
+                <div className="mx-auto max-w-6xl px-4 flex flex-col md:flex-row justify-between items-center text-xs text-white/80 gap-4">
                     <p>© {new Date().getFullYear()} Profinoks Endüstriyel Mutfak. Tüm hakları saklıdır.</p>
                     <div className="flex space-x-6">
                         <Link to="/privacy" className="hover:text-white transition-colors">Privacy Policy</Link>
                         <Link to="/terms" className="hover:text-white transition-colors">Terms of Service</Link>
+                        <span className="text-white/40">TTR BILISIM</span>
                     </div>
                 </div>
             </div>
