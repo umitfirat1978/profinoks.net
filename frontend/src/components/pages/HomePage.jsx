@@ -80,7 +80,7 @@ const HomePage = () => {
   return (
     <div className="bg-background text-foreground">
       {/* Hero slider */}
-      <section className="relative w-full">
+      <section className="relative w-full pt-[122px] md:pt-[130px] lg:pt-[140px]">
         <div className="relative h-[420px] md:h-[520px] lg:h-[620px] overflow-hidden">
           {sliderItems.map((slide, index) => (
             <div
@@ -95,12 +95,7 @@ const HomePage = () => {
                 alt={slide.title}
                 className="h-full w-full object-cover"
               />
-              <div className="absolute inset-0 bg-black/30" />
-              <div className="absolute bottom-20 left-0 right-0 px-12 text-right">
-                <h2 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white uppercase tracking-tight drop-shadow-2xl">
-                  {slide.title || "Aesthetics & Dynamic"}
-                </h2>
-              </div>
+              <div className="absolute inset-0 bg-black/20" />
             </div>
           ))}
 

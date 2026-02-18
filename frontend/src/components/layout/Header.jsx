@@ -41,47 +41,110 @@ const Header = () => {
   };
 
   return (
-    <header className="fixed inset-x-0 top-0 z-40 text-white">
+    <header className="fixed inset-x-0 top-0 z-40 text-white font-medium">
       {/* Top utility bar */}
-      <div className="bg-transparent">
-        <div className="mx-auto flex max-w-6xl items-center justify-end px-4 py-4 space-x-4">
-          <div className="hidden items-center space-x-3 md:flex">
-            <div className="flex items-center space-x-2 bg-black/60 backdrop-blur-sm rounded-full px-3 py-1.5 border border-white/10">
-              <a href="https://www.linkedin.com/..." className="text-white hover:text-white/80 transition-colors"><Linkedin size={14} /></a>
-              <a href="https://www.youtube.com/..." className="text-white hover:text-white/80 transition-colors"><Youtube size={14} /></a>
+      <div className="bg-white/95 backdrop-blur border-b border-black/5">
+        <div className="mx-auto flex max-w-6xl items-center justify-end px-4 py-2 text-xs sm:text-[13px]">
+          <div className="hidden items-center space-x-4 md:flex">
+            <div className="flex items-center bg-black/90 px-3 py-1 rounded-full space-x-3 text-white">
+              <a
+                href="https://api.whatsapp.com/send?phone=905321546312"
+                target="_blank"
+                rel="noreferrer"
+                className="hover:text-primary transition-colors"
+                title="WhatsApp"
+              >
+                <MessageCircle className="h-3.5 w-3.5" />
+              </a>
+              <a
+                href="https://www.instagram.com/profinoks/?hl=tr"
+                target="_blank"
+                rel="noreferrer"
+                className="hover:text-primary transition-colors"
+                title="Instagram"
+              >
+                <Instagram className="h-3.5 w-3.5" />
+              </a>
+              <a
+                href="https://www.facebook.com/profinoks.endustriyelmutfakekipmanlari"
+                target="_blank"
+                rel="noreferrer"
+                className="hover:text-primary transition-colors"
+                title="Facebook"
+              >
+                <Facebook className="h-3.5 w-3.5" />
+              </a>
+              <a
+                href="https://www.linkedin.com/in/profinoks-end%C3%BCstriyel-mutfak-ekipmanlari-4471921b2/"
+                target="_blank"
+                rel="noreferrer"
+                className="hover:text-primary transition-colors"
+                title="LinkedIn"
+              >
+                <Linkedin className="h-3.5 w-3.5" />
+              </a>
+              <a
+                href="https://www.youtube.com/channel/UCTsoSgntPEXAshH80VtSa-g/featured"
+                target="_blank"
+                rel="noreferrer"
+                className="hover:text-primary transition-colors"
+                title="YouTube"
+              >
+                <Youtube className="h-3.5 w-3.5" />
+              </a>
             </div>
 
             <button
               onClick={() => {
                 window.open("https://drive.google.com/file/d/1DTSz_N8ljmdiRxP0BQP_TmKiXxGlJwRQ/view?usp=sharing", "_blank");
               }}
-              className="flex items-center bg-white/80 text-black px-4 py-1.5 rounded-md text-[13px] font-bold hover:bg-white transition-colors"
+              className="text-black/80 hover:text-black transition-colors"
             >
-              <img src="/profinoks/catalogue-icon.png" className="h-4 w-4 mr-2" alt="" onError={(e) => e.target.style.display = 'none'} />
+              <span className="align-middle mr-1 inline-block h-4 w-4 rounded-sm bg-black/10" />
               {t(lang, "nav.catalogue")}
             </button>
 
-            <button className="bg-black/60 backdrop-blur-sm text-white px-4 py-1.5 rounded-md text-[13px] font-bold border border-white/10 hover:bg-black/80 transition-colors">
-              Online Payment
+
+          </div>
+
+          <div className="ml-4 flex flex-1 items-center justify-end space-x-3">
+            <button
+              type="button"
+              onClick={toggleLang}
+              className="flex items-center space-x-2 text-black/80 hover:text-black"
+            >
+              <Globe2 className="h-4 w-4" />
+              <span className="text-xs uppercase tracking-[0.16em]">
+                {lang === "en" ? "EN / TR" : "TR / EN"}
+              </span>
             </button>
 
-            <div className="relative">
-              <input
-                type="text"
-                placeholder="Search Product"
-                value={searchTerm}
-                onChange={(e) => setSearchTerm(e.target.value)}
-                className="bg-primary hover:bg-primary/90 text-white pl-4 pr-10 py-1.5 rounded-md text-[13px] font-bold placeholder:text-white/70 w-[180px] focus:outline-none"
-              />
-              <Search className="absolute right-3 top-1/2 -translate-y-1/2 h-4 w-4 text-white" />
-            </div>
+            <form
+              onSubmit={handleSearchSubmit}
+              className="ml-2 hidden max-w-[220px] flex-1 items-center space-x-1 sm:flex"
+            >
+              <div className="relative w-full">
+                <Input
+                  value={searchTerm}
+                  onChange={(e) => setSearchTerm(e.target.value)}
+                  className="h-8 bg-black/5 pr-8 text-xs placeholder:text-black/50 border-black/10 text-black focus-visible:ring-primary/40"
+                  placeholder="Search Product"
+                />
+                <button
+                  type="submit"
+                  className="absolute inset-y-0 right-2 flex items-center text-black/70 hover:text-black"
+                >
+                  <Search className="h-3.5 w-3.5" />
+                </button>
+              </div>
+            </form>
           </div>
         </div>
       </div>
 
       {/* Main navigation */}
       <div className="bg-primary/80 backdrop-blur-md border-b border-white/5 shadow-lg">
-        <div className="mx-auto flex max-w-6xl items-center justify-between px-4 py-3">
+        <div className="mx-auto flex max-w-6xl items-center justify-start px-4 py-3">
           <Link to="/" className="flex items-center">
             <img
               src="/profinoks/logo.png"
@@ -94,17 +157,17 @@ const Header = () => {
             />
           </Link>
 
-          <nav className="hidden items-center space-x-8 text-[15px] font-bold uppercase tracking-[0.12em] lg:flex">
+          <nav className="hidden items-center ml-auto space-x-6 text-[13px] uppercase tracking-[0.12em] lg:flex">
             {mainNavItems.map((item) => (
               <NavLink
                 key={item.path}
                 to={item.path}
                 className={({ isActive: isNavActive }) =>
                   [
-                    "relative pb-1 transition-colors text-white",
+                    "relative pb-1 transition-colors",
                     isNavActive || isActive(item.path)
-                      ? "opacity-100"
-                      : "opacity-80 hover:opacity-100",
+                      ? "text-white"
+                      : "text-white/70 hover:text-white",
                   ].join(" ")
                 }
               >
@@ -125,34 +188,20 @@ const Header = () => {
             ))}
           </nav>
 
-          <div className="flex items-center space-x-6">
-            <Link to="/cart" className="text-white hover:text-white/80 transition-colors">
-              <svg className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z" />
-              </svg>
-            </Link>
-
-            <button onClick={toggleLang} className="flex items-center space-x-2 text-white font-bold text-[14px]">
-              <Globe2 className="h-4 w-4" />
-              <span>{lang === "tr" ? "EN" : "TR"}</span>
+          <div className="flex items-center ml-auto space-x-3 lg:hidden">
+            <button
+              type="button"
+              onClick={() => setMobileOpen((open) => !open)}
+              className="inline-flex h-9 w-9 items-center justify-center rounded-full border border-white/20 text-white hover:border-white"
+              aria-label="Toggle navigation"
+            >
+              {mobileOpen ? (
+                <X className="h-4 w-4" />
+              ) : (
+                <Menu className="h-4 w-4" />
+              )}
             </button>
-
-            <div className="lg:hidden">
-              <button
-                type="button"
-                onClick={() => setMobileOpen((open) => !open)}
-                className="inline-flex h-9 w-9 items-center justify-center rounded-full border border-white/20 text-white hover:border-white"
-                aria-label="Toggle navigation"
-              >
-                {mobileOpen ? (
-                  <X className="h-4 w-4" />
-                ) : (
-                  <Menu className="h-4 w-4" />
-                )}
-              </button>
-            </div>
           </div>
-
         </div>
 
         {/* Mobile menu */}
