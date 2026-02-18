@@ -244,10 +244,10 @@ const HomePage = () => {
                     : "opacity-0 translate-x-10 pointer-events-none",
                 ].join(" ")}
               >
-                <div className="w-full md:w-1/2 h-64 md:h-80 flex items-center justify-center bg-gray-50 border-4 border-primary">
-                  <User size={120} className="text-primary/20" strokeWidth={1} />
+                <div className="w-full md:w-1/4 h-48 md:h-80 flex items-center justify-center bg-gray-50 border-4 border-primary border-r-0">
+                  <User size={60} className="text-primary/20" strokeWidth={1} />
                 </div>
-                <div className="w-full md:w-1/2 bg-primary p-8 md:p-12 text-left relative flex flex-col justify-between min-h-[256px] md:min-h-[320px]">
+                <div className="w-full md:w-3/4 bg-primary p-8 md:p-12 text-left relative flex flex-col justify-between min-h-[256px] md:min-h-[320px] border-4 border-primary">
                   <div>
                     <div className="text-sm md:text-base font-bold text-white tracking-widest uppercase mb-1">
                       {item.person}
