@@ -28,7 +28,7 @@ const newsItems = [
         title: "Fimak Ürünleri Profinoks'ta",
         date: "16 Şubat 2026",
         content: (
-            <div className="space-y-4 text-sm text-white/70 leading-relaxed">
+            <div className="space-y-4 text-sm text-muted-foreground leading-relaxed">
                 <p className="font-bold text-primary italic">GEÇMİŞTEN BUGÜNE, HAMURA ŞEKİL VEREN TEKNOLOJİ...</p>
                 <p>1976 yılında başladığı fırın makineleri imalatında bugün 45.000 m2 toplam alan üzerine kurulmuş FİMAK fabrikasında üretilen ürünler artık PROFİNOKS'ta.</p>
                 <p>Fimak günümüzde unlu mamul, fırıncılık, pastanecilik, restoran zincirleri, kafe, otel, catering alanlarında hizmet vermektedir. Fimak Retros adlı gastronomi fırını ile de gastronomi makinaları alanında da hizmet vermeye başlamıştır.</p>
@@ -41,7 +41,7 @@ const newsItems = [
         title: "Bayat Ekmek Yemek Tarifleri",
         date: "15 Şubat 2026",
         content: (
-            <div className="space-y-4 text-sm text-white/70 leading-relaxed">
+            <div className="space-y-4 text-sm text-muted-foreground leading-relaxed">
                 <h4 className="font-bold text-foreground uppercase text-xs tracking-wider mb-2">Bayat Ekmek Böreği</h4>
                 <p className="italic text-xs text-primary/80">Malzemeler: 1 adet bayat ekmek, 200 gr kaşar rendesi, 200 gr beyaz peynir, 1,5 su bardağı süt, 2 yumurta.</p>
                 <p>Ekmeklerin ziyan olması her yıl milyonlarca liranın çöpe gitmesine neden oluyor. İhtiyacımız kadarını almayı öğrenmeliyiz. Artan ekmekleri dondurucuya atabilir veya kurutup ekmek kırığı yapabilirsiniz.</p>
@@ -54,7 +54,7 @@ const newsItems = [
         title: "Restoran Konseptleri",
         date: "14 Şubat 2026",
         content: (
-            <div className="grid gap-4 sm:grid-cols-2 text-xs text-white/60">
+            <div className="grid gap-4 sm:grid-cols-2 text-xs text-muted-foreground">
                 <div>
                     <h5 className="font-bold text-primary/90 mb-1">Deniz Ürünleri</h5>
                     <p>Tazelik ve kalite standartları kritik öneme sahiptir. Alışverişte ürün tazeliğine dikkat edilmelidir.</p>
@@ -104,7 +104,7 @@ const newsItems = [
         title: "Espresso Reçeteleri",
         date: "11 Şubat 2026",
         content: (
-            <div className="space-y-4 text-sm text-white/70">
+            <div className="space-y-4 text-sm text-muted-foreground">
                 <p><strong className="text-foreground">Standart Espresso:</strong> 7-7.5 gr kahve, 9 bar basınç, 24-27 saniye akış süresi.</p>
                 <div className="grid grid-cols-2 gap-4 text-xs">
                     <div className="p-3 bg-white/5 rounded border border-white/5">
@@ -122,7 +122,7 @@ const newsItems = [
         title: "Endüstriyel Bulaşık Makinası Alma Rehberi",
         date: "10 Şubat 2026",
         content: (
-            <div className="space-y-3 text-sm text-white/70">
+            <div className="space-y-3 text-sm text-muted-foreground">
                 <p>Bulaşık makineleri mutfağın nabzıdır. Endüstriyel modeller 3 dakikada yıkama yaparak hızı korur.</p>
                 <p><strong className="text-foreground">Giyotin Tip:</strong> Yüksek kapasiteli işletmeler için ideal.</p>
                 <p><strong className="text-foreground">Set Altı:</strong> Kısıtlı alanlarda endüstriyel performans sunar.</p>
@@ -134,7 +134,7 @@ const newsItems = [
         title: "Endüstriyel Fırın Seçimleri",
         date: "09 Şubat 2026",
         content: (
-            <div className="space-y-3 text-sm text-white/70">
+            <div className="space-y-3 text-sm text-muted-foreground">
                 <p>İşletmenizin türüne göre seçim yapın: Restoranlar için kombi/buharlı, et lokantaları için kurutmayan fırınlar.</p>
                 <p>Gazlı fırınlar sürekli ve yoğun kullanım için, elektrikli fırınlar ise daha hafif tempolu işletmeler için uygundur.</p>
             </div>
@@ -145,7 +145,7 @@ const newsItems = [
         title: "Polietilen Kesme Bloğu Çeşitleri",
         date: "08 Şubat 2026",
         content: (
-            <div className="space-y-3 text-sm text-white/70">
+            <div className="space-y-3 text-sm text-muted-foreground">
                 <p>Renk kodları hijyenin anahtarıdır: <span className="text-red-500 font-bold">Kırmızı (Çiğ Et)</span>, <span className="text-green-500 font-bold">Yeşil (Sebze)</span>, <span className="text-blue-500 font-bold">Mavi (Balık)</span>.</p>
                 <p>Derin çizikler oluştuğunda bakteri yuvası haline gelmemesi için bloğu mutlaka yenileyin.</p>
             </div>
@@ -156,7 +156,7 @@ const newsItems = [
         title: "Filtre Kahve Nasıl Yapılır?",
         date: "07 Şubat 2026",
         content: (
-            <div className="space-y-3 text-sm text-white/70">
+            <div className="space-y-3 text-sm text-muted-foreground">
                 <p>İyi bir filtre kahve için taze çekirdek ve kaliteli bir makine şarttır. Suyu bir kez kaynatıp dinlendirerek (kireçsiz su) kullanın.</p>
                 <p>Demleme sonrası bekletmeden servis etmek aromayı korumanın en iyi yoludur.</p>
             </div>

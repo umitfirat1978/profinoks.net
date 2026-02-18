@@ -13,7 +13,7 @@ const Footer = () => {
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
                     {/* About Section */}
                     <div className="space-y-6">
-                        <h3 className="text-sm font-semibold tracking-[0.2em] uppercase text-primary">
+                        <h3 className="text-sm font-bold tracking-[0.2em] uppercase text-white">
                             {lang === "tr" ? "PROFİNOKS HAKKINDA" : "ABOUT PROFINOKS"}
                         </h3>
                         <p className="text-sm text-white leading-relaxed">
@@ -32,7 +32,7 @@ const Footer = () => {
 
                     {/* Quick Links */}
                     <div className="space-y-6">
-                        <h3 className="text-sm font-semibold tracking-[0.2em] uppercase text-primary">
+                        <h3 className="text-sm font-bold tracking-[0.2em] uppercase text-white">
                             {lang === "tr" ? "HIZLI BAĞLANTILAR" : "QUICK LINKS"}
                         </h3>
                         <ul className="space-y-4 text-sm text-white">
@@ -47,7 +47,7 @@ const Footer = () => {
 
                     {/* Contact Info */}
                     <div className="space-y-6">
-                        <h3 className="text-sm font-semibold tracking-[0.2em] uppercase text-primary">
+                        <h3 className="text-sm font-bold tracking-[0.2em] uppercase text-white">
                             {lang === "tr" ? "İLETİŞİM BİLGİLERİ" : "CONTACT INFO"}
                         </h3>
                         <ul className="space-y-4 text-sm text-white">
@@ -72,7 +72,7 @@ const Footer = () => {
 
                     {/* Working Hours */}
                     <div className="space-y-6">
-                        <h3 className="text-sm font-semibold tracking-[0.2em] uppercase text-primary">
+                        <h3 className="text-sm font-bold tracking-[0.2em] uppercase text-white">
                             {lang === "tr" ? "ÇALIŞMA SAATLERİ" : "WORKING HOURS"}
                         </h3>
                         <div className="bg-white/5 p-4 rounded-sm border border-white/10">
@@ -91,7 +91,6 @@ const Footer = () => {
                     <div className="flex space-x-6">
                         <Link to="/privacy" className="hover:text-white transition-colors">Privacy Policy</Link>
                         <Link to="/terms" className="hover:text-white transition-colors">Terms of Service</Link>
-                        <span className="text-white/40">TTR BILISIM</span>
                     </div>
                 </div>
             </div>

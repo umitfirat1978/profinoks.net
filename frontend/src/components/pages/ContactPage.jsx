@@ -49,7 +49,7 @@ const ContactPage = () => {
                                                 {lang === "tr" ? "TELEFON" : "PHONE"}
                                             </p>
                                             {contactInfo.phone.map((p, idx) => (
-                                                <p key={idx} className="text-sm text-white/80">
+                                                <p key={idx} className="text-sm text-foreground/80">
                                                     <a href={`tel:${p.replace(/\s/g, "")}`} className="hover:text-primary transition-colors">{p}</a>
                                                 </p>
                                             ))}
@@ -67,7 +67,7 @@ const ContactPage = () => {
                                                 {lang === "tr" ? "E-POSTA" : "EMAIL"}
                                             </p>
                                             {contactInfo.emails.map((e, idx) => (
-                                                <p key={idx} className="text-sm text-white/80">
+                                                <p key={idx} className="text-sm text-foreground/80">
                                                     <a href={`mailto:${e}`} className="hover:text-primary transition-colors">{e}</a>
                                                 </p>
                                             ))}
@@ -107,7 +107,7 @@ const ContactPage = () => {
 
                     {/* Form Section */}
                     <div className="bg-white p-8 rounded-md border border-black/10 shadow-sm">
-                        <h2 className="text-xl font-semibold tracking-wide text-white mb-8 border-l-4 border-primary pl-4 uppercase">
+                        <h2 className="text-xl font-semibold tracking-wide text-foreground mb-8 border-l-4 border-primary pl-4 uppercase">
                             {lang === "tr" ? "BİZE ULAŞIN" : "CONTACT FORM"}
                         </h2>
 

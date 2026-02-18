@@ -40,18 +40,18 @@ const CorporatePage = () => {
 
                     <div className="grid gap-12 md:grid-cols-2">
                         <div>
-                            <h3 className="text-xl font-bold text-white mb-4 uppercase tracking-wider border-l-4 border-primary pl-4">
+                            <h3 className="text-xl font-bold text-foreground mb-4 uppercase tracking-wider border-l-4 border-primary pl-4">
                                 MİSYONUMUZ
                             </h3>
-                            <p className="text-white/80 leading-relaxed">
+                            <p className="text-muted-foreground leading-relaxed">
                                 PROFİNOKS MUTFAK olarak üstlenmiş olduğumuz misyon; faaliyet gösterdiğimiz sektörde standardı yüksek ürün ve kalite odaklı hizmet anlayışı ile projeler üretmeye devam etmektir. Bu doğrultuda hedefimiz, çevreye ve evrensel değerlere karşı sorumluluklarımızı yerine getirmek, gelişen Türkiye’yle beraber hedeflerimize doğru büyüyerek ilerlemektir.
                             </p>
                         </div>
                         <div>
-                            <h3 className="text-xl font-bold text-white mb-4 uppercase tracking-wider border-l-4 border-primary pl-4">
+                            <h3 className="text-xl font-bold text-foreground mb-4 uppercase tracking-wider border-l-4 border-primary pl-4">
                                 VİZYONUMUZ
                             </h3>
-                            <p className="text-white/80 leading-relaxed">
+                            <p className="text-muted-foreground leading-relaxed">
                                 Kuruluşumuzdan bugüne firmamız “Üstün Hizmet, Kesin Çözüm ve Güven” sloganı üzerine şekillenmiştir. Bu vizyonun bizim için anlamı sunduğumuz ürün ve hizmetlerle piyasada bize duyulan güveni her gün hak etmek ve müşteri memnuniyetini sağlayarak daha ileri seviyelere taşımaktır.
                             </p>
                         </div>
