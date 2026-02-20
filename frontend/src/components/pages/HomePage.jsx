@@ -73,7 +73,17 @@ const HomePage = () => {
       .then((data) => {
         if (!isMounted) return;
         if (data?.slider?.length) setSliderItems(data.slider);
-        if (data?.product_groups?.length) setProductGroups(data.product_groups);
+
+        // If API provides product groups, merge them with mock data to preserve slugs and local image paths
+        if (data?.product_groups?.length) {
+          setProductGroups(prevGroups =>
+            prevGroups.map(mockGroup => {
+              const apiGroup = data.product_groups.find(g => g.id === mockGroup.id);
+              return apiGroup ? { ...mockGroup, ...apiGroup, slug: mockGroup.slug, imageUrl: mockGroup.imageUrl, href: mockGroup.href } : mockGroup;
+            })
+          );
+        }
+
         if (data?.references?.length)
           setReferenceLogos(data.references.map((r) => r.image_url));
         if (data?.testimonials?.length) setTestimonials(data.testimonials);
@@ -209,7 +219,7 @@ const HomePage = () => {
               >
                 <div className="aspect-square overflow-hidden bg-gray-50 p-12">
                   <img
-                    src={group.image_url || group.imageUrl}
+                    src={group.imageUrl}
                     alt={group.title}
                     className="h-full w-full object-contain brightness-100 invert-0 opacity-80 group-hover:opacity-100 transition-all duration-500 group-hover:scale-110"
                   />
