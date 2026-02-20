@@ -27,7 +27,7 @@ const ProductsPage = () => {
                                 <img
                                     src={group.imageUrl}
                                     alt={group.title}
-                                    className="w-full h-full object-contain p-6 transition-transform duration-500 group-hover:scale-110"
+                                    className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
                                 />
                             </div>
                             <div className="p-6 flex flex-col flex-grow">

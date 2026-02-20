@@ -217,11 +217,11 @@ const HomePage = () => {
                 to={`/products/${group.slug}`}
                 className="group flex flex-col overflow-hidden bg-white border border-black/5 transition-all duration-300 hover:-translate-y-1 shadow-sm hover:shadow-md"
               >
-                <div className="aspect-square overflow-hidden bg-gray-50 p-12">
+                <div className="aspect-square overflow-hidden bg-gray-50">
                   <img
                     src={group.imageUrl}
                     alt={group.title}
-                    className="h-full w-full object-contain brightness-100 invert-0 opacity-80 group-hover:opacity-100 transition-all duration-500 group-hover:scale-110"
+                    className="h-full w-full object-cover brightness-100 invert-0 opacity-80 group-hover:opacity-100 transition-all duration-500 group-hover:scale-110"
                   />
                 </div>
                 <div className="flex flex-col p-6 text-center border-t border-black/5 relative">

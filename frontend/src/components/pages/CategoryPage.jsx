@@ -43,11 +43,11 @@ const CategoryPage = () => {
             <div className="mx-auto max-w-6xl px-4 py-12">
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
                     {/* Category Image */}
-                    <div className="aspect-square bg-white border border-black/5 rounded-lg overflow-hidden p-8 shadow-sm">
+                    <div className="aspect-square bg-white border border-black/5 rounded-lg overflow-hidden shadow-sm">
                         <img
                             src={category.imageUrl}
                             alt={category.title}
-                            className="w-full h-full object-contain"
+                            className="w-full h-full object-cover"
                         />
                     </div>
 
