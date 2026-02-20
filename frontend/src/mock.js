@@ -46,7 +46,7 @@ export const productGroups = [
   { id: 14, title: "MUTFAK ARABALARI", slug: "mutfak-arabalari", imageUrl: "/profinoks/products/mutfak-arabalari.jpg", href: "/products/mutfak-arabalari", description: "Taşıma, servis ve toplama arabaları." },
   { id: 15, title: "YARDIMCI MUTFAK EKİPMANLARI", slug: "yardimci-mutfak-ekipmanlari", imageUrl: "/profinoks/products/yardimci-mutfak-ekipmanlari.jpg", href: "/products/yardimci-mutfak-ekipmanlari", description: "Tencere, tava and küçük el aletleri." },
   { id: 16, title: "SETÜSTÜ OTEL EKİPMANLARI", slug: "setustu-otel-ekipmanlari", imageUrl: "/profinoks/products/setustu-otel-ekipmanlari.jpg", href: "/products/setustu-otel-ekipmanlari", description: "Otel odası ve restoran setüstü ekipmanları." },
-  { id: 17, title: "ÇAMAŞIRHANE EKİPMANLARI", slug: "camasirhane-ekipmanlari", imageUrl: "/profinoks/products/camasirhane-ekipmanlari.jpg", href: "/products/camasirhane-ekipmanlari", description: "Endüstriyel çamaşır yıkama ve kurutma makineleri." },
+  { id: 17, title: "ÇAMAŞIRHANE EKİPMANLARI", slug: "camasirhane-ekipmanlari", imageUrl: "/profinoks/products/camasirhane-ekipmanlari.png", href: "/products/camasirhane-ekipmanlari", description: "Endüstriyel çamaşır yıkama ve kurutma makineleri." },
   { id: 18, title: "AHŞAP ÜRÜNLER", slug: "ahsap-urunler", imageUrl: "/profinoks/products/ahsap-urunler.jpg", href: "/products/ahsap-urunler", description: "Modern ve şık ahşap mutfak ve servis ekipmanları." },
 ];
 

@@ -78,8 +78,16 @@ const HomePage = () => {
         if (data?.product_groups?.length) {
           setProductGroups(prevGroups =>
             prevGroups.map(mockGroup => {
-              const apiGroup = data.product_groups.find(g => g.id === mockGroup.id);
-              return apiGroup ? { ...mockGroup, ...apiGroup, slug: mockGroup.slug, imageUrl: mockGroup.imageUrl, href: mockGroup.href } : mockGroup;
+              const apiGroup = data.product_groups.find(g => String(g.id) === String(mockGroup.id));
+              if (apiGroup) {
+                return {
+                  ...apiGroup,
+                  slug: mockGroup.slug,
+                  imageUrl: mockGroup.imageUrl,
+                  href: mockGroup.href
+                };
+              }
+              return mockGroup;
             })
           );
         }
