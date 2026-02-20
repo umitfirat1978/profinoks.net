@@ -10,6 +10,7 @@ import ReferencesPage from "./components/pages/ReferencesPage";
 import CorporatePage from "./components/pages/CorporatePage";
 import NewsPage from "./components/pages/NewsPage";
 import ProjectsPage from "./components/pages/ProjectsPage";
+import CategoryPage from "./components/pages/CategoryPage";
 import AdminLogin from "./components/admin/AdminLogin";
 import AdminProducts from "./components/admin/AdminProducts";
 import Footer from "./components/layout/Footer";
@@ -49,6 +50,7 @@ function App() {
                 <Route path="/" element={<HomePage />} />
                 <Route path="/corporate" element={<CorporatePage />} />
                 <Route path="/products" element={<ProductsPage />} />
+                <Route path="/products/:slug" element={<CategoryPage />} />
                 <Route path="/references" element={<ReferencesPage />} />
                 <Route path="/news" element={<NewsPage />} />
                 <Route path="/projects" element={<ProjectsPage />} />

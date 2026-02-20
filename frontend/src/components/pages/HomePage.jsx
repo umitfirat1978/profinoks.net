@@ -202,11 +202,9 @@ const HomePage = () => {
 
           <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
             {productGroups.map((group) => (
-              <a
+              <Link
                 key={group.id}
-                href={group.href || "#"}
-                target="_blank"
-                rel="noreferrer"
+                to={`/products/${group.slug}`}
                 className="group flex flex-col overflow-hidden bg-white border border-black/5 transition-all duration-300 hover:-translate-y-1 shadow-sm hover:shadow-md"
               >
                 <div className="aspect-square overflow-hidden bg-gray-50 p-12">
@@ -222,7 +220,7 @@ const HomePage = () => {
                   </h3>
                   <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-32 h-0.5 bg-primary scale-x-50 group-hover:scale-x-100 transition-transform duration-300" />
                 </div>
-              </a>
+              </Link>
             ))}
           </div>
         </div>

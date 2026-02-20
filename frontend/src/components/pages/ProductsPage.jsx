@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import { useLanguage } from "../../contexts/LanguageContext";
 import { productGroups } from "../../mock";
 
@@ -17,8 +18,9 @@ const ProductsPage = () => {
 
                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
                     {productGroups.map((group) => (
-                        <div
+                        <Link
                             key={group.id}
+                            to={`/products/${group.slug}`}
                             className="group relative overflow-hidden rounded-md border border-black/5 bg-white hover:shadow-md transition-all duration-300 flex flex-col"
                         >
                             <div className="aspect-[4/3] overflow-hidden bg-gray-50">
@@ -39,7 +41,7 @@ const ProductsPage = () => {
                                     {lang === "tr" ? "İNCELE" : "VIEW DETAILS"} →
                                 </div>
                             </div>
-                        </div>
+                        </Link>
                     ))}
                 </div>
             </div>
