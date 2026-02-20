@@ -74,23 +74,9 @@ const HomePage = () => {
         if (!isMounted) return;
         if (data?.slider?.length) setSliderItems(data.slider);
 
-        // If API provides product groups, merge them with mock data to preserve slugs and local image paths
-        if (data?.product_groups?.length) {
-          setProductGroups(prevGroups =>
-            prevGroups.map(mockGroup => {
-              const apiGroup = data.product_groups.find(g => String(g.id) === String(mockGroup.id));
-              if (apiGroup) {
-                return {
-                  ...apiGroup,
-                  slug: mockGroup.slug,
-                  imageUrl: mockGroup.imageUrl,
-                  href: mockGroup.href
-                };
-              }
-              return mockGroup;
-            })
-          );
-        }
+        // Primary source of truth for product groups is mock.js to maintain localized image paths and slugs
+        // API data for groups is ignored for now to prevent broken image links shown on the home page
+
 
         if (data?.references?.length)
           setReferenceLogos(data.references.map((r) => r.image_url));
