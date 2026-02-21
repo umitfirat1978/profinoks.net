@@ -7,11 +7,13 @@ import { Button } from "../../components/ui/button";
 import { mainNavItems } from "../../mock";
 import { useLanguage } from "../../contexts/LanguageContext";
 import { t } from "../../i18n";
+import MegaMenu from "./MegaMenu";
 
 const Header = () => {
   const location = useLocation();
   const { lang, toggleLang } = useLanguage();
   const [mobileOpen, setMobileOpen] = useState(false);
+  const [megaMenuOpen, setMegaMenuOpen] = useState(false);
   const [searchTerm, setSearchTerm] = useState(() => {
     if (typeof window === "undefined") return "";
     return window.localStorage.getItem("profinoksSearch") || "";
@@ -157,36 +159,50 @@ const Header = () => {
             />
           </Link>
 
-          <nav className="hidden items-center ml-auto space-x-8 text-[16px] font-bold uppercase tracking-[0.12em] lg:flex">
+          <nav className="hidden items-center ml-auto space-x-8 text-[16px] font-bold uppercase tracking-[0.12em] lg:flex h-full">
             {mainNavItems.map((item) => (
-              <NavLink
+              <div
                 key={item.path}
-                to={item.path}
-                className={({ isActive: isNavActive }) =>
-                  [
-                    "relative pb-1 transition-colors",
-                    isNavActive || isActive(item.path)
-                      ? "text-white"
-                      : "text-white/90 hover:text-white",
-                  ].join(" ")
-                }
+                className="h-full flex items-center"
+                onMouseEnter={() => item.translationKey === "nav.products" && setMegaMenuOpen(true)}
+                onMouseLeave={() => item.translationKey === "nav.products" && setMegaMenuOpen(false)}
               >
-                {({ isActive: isNavActive }) => (
-                  <>
-                    <span>{t(lang, item.translationKey)}</span>
-                    <span
-                      className={[
-                        "absolute inset-x-0 -bottom-0.5 h-0.5 origin-left bg-white transition-transform",
-                        isNavActive || isActive(item.path)
-                          ? "scale-x-100"
-                          : "scale-x-0",
-                      ].join(" ")}
-                    />
-                  </>
-                )}
-              </NavLink>
+                <NavLink
+                  to={item.path}
+                  className={({ isActive: isNavActive }) =>
+                    [
+                      "relative pb-1 transition-colors",
+                      isNavActive || isActive(item.path)
+                        ? "text-white"
+                        : "text-white/90 hover:text-white",
+                    ].join(" ")
+                  }
+                >
+                  {({ isActive: isNavActive }) => (
+                    <>
+                      <span>{t(lang, item.translationKey)}</span>
+                      <span
+                        className={[
+                          "absolute inset-x-0 -bottom-0.5 h-0.5 origin-left bg-white transition-transform",
+                          isNavActive || isActive(item.path)
+                            ? "scale-x-100"
+                            : "scale-x-0",
+                        ].join(" ")}
+                      />
+                    </>
+                  )}
+                </NavLink>
+              </div>
             ))}
           </nav>
+
+          {/* Mega Menu Overlay */}
+          {megaMenuOpen && (
+            <MegaMenu
+              lang={lang}
+              onClose={() => setMegaMenuOpen(false)}
+            />
+          )}
 
           <div className="flex items-center ml-auto space-x-3 lg:hidden">
             <button
