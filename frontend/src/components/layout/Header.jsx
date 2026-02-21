@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import { Link, NavLink, useLocation } from "react-router-dom";
 import { Linkedin, Youtube, Instagram, Facebook, MessageCircle, Globe2, Search, Menu, X } from "lucide-react";
 
