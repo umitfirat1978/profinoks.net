@@ -27,6 +27,31 @@ export const sliderItems = [
     title: "",
     imageUrl: "/profinoks/hero/hero-5.jpg",
   },
+  {
+    id: 6,
+    title: "",
+    imageUrl: "/profinoks/hero/hero-6.jpg",
+  },
+  {
+    id: 7,
+    title: "",
+    imageUrl: "/profinoks/hero/hero-7.jpg",
+  },
+  {
+    id: 8,
+    title: "",
+    imageUrl: "/profinoks/hero/hero-8.jpg",
+  },
+  {
+    id: 9,
+    title: "",
+    imageUrl: "/profinoks/hero/hero-9.jpg",
+  },
+  {
+    id: 10,
+    title: "",
+    imageUrl: "/profinoks/hero/hero-10.jpg",
+  },
 ];
 
 export const productGroups = [
@@ -174,116 +199,116 @@ export const mainNavItems = [
 ];
 
 export const projectImages = [
-    "/profinoks/projects/1.jpg", "/profinoks/projects/2.jpg", "/profinoks/projects/3.jpg", "/profinoks/projects/4.jpg",
-    "/profinoks/projects/5.jpg", "/profinoks/projects/6.jpg", "/profinoks/projects/7.jpg", "/profinoks/projects/8.jpg",
-    "/profinoks/projects/9.jpg", "/profinoks/projects/10.jpg", "/profinoks/projects/11.jpg", "/profinoks/projects/12.jpg",
-    "/profinoks/projects/14.jpeg", "/profinoks/projects/15.jpg", "/profinoks/projects/16.jpg", "/profinoks/projects/17.jpg",
-    "/profinoks/projects/18.jpg", "/profinoks/projects/19.jpg", "/profinoks/projects/20.jpg", "/profinoks/projects/21.jpg",
-    "/profinoks/projects/22.jpg", "/profinoks/projects/23.jpg", "/profinoks/projects/24.jpg", "/profinoks/projects/25.jpg",
-    "/profinoks/projects/26.jpg", "/profinoks/projects/27.jpg", "/profinoks/projects/28.jpg", "/profinoks/projects/29.jpg",
-    "/profinoks/projects/30.jpg", "/profinoks/projects/31.jpeg", "/profinoks/projects/32.jpg", "/profinoks/projects/33.jpg",
-    "/profinoks/projects/34.jpg", "/profinoks/projects/35.jpg", "/profinoks/projects/36.jpg", "/profinoks/projects/37.jpg",
-    "/profinoks/projects/38.jpg", "/profinoks/projects/39.jpg", "/profinoks/projects/40.jpg", "/profinoks/projects/41.jpg",
-    "/profinoks/projects/42.jpg", "/profinoks/projects/43.jpg", "/profinoks/projects/44.jpg", "/profinoks/projects/45.jpg",
-    "/profinoks/projects/46.jpg", "/profinoks/projects/47.jpg", "/profinoks/projects/48.jpg", "/profinoks/projects/49.jpg",
-    "/profinoks/projects/50.jpg", "/profinoks/projects/51.jpg", "/profinoks/projects/52.jpg", "/profinoks/projects/53.jpg",
-    "/profinoks/projects/54.jpg", "/profinoks/projects/55.jpg", "/profinoks/projects/56.jpg", "/profinoks/projects/57.jpg",
-    "/profinoks/projects/58.jpg", "/profinoks/projects/59.jpg", "/profinoks/projects/60.jpg", "/profinoks/projects/61.jpg",
-    "/profinoks/projects/62.jpg", "/profinoks/projects/63.jpg", "/profinoks/projects/64.jpeg", "/profinoks/projects/65.jpg",
-    "/profinoks/projects/66.jpg", "/profinoks/projects/67.jpg", "/profinoks/projects/68.jpg", "/profinoks/projects/69.jpg",
-    "/profinoks/projects/70.jpg", "/profinoks/projects/71.jpg", "/profinoks/projects/72.jpg", "/profinoks/projects/73.jpg",
-    "/profinoks/projects/74.jpeg", "/profinoks/projects/75.jpg", "/profinoks/projects/76.jpg", "/profinoks/projects/77.jpg",
-    "/profinoks/projects/78.jpg", "/profinoks/projects/79.jpg", "/profinoks/projects/80.jpg", "/profinoks/projects/81.jpg",
-    "/profinoks/projects/82.jpg", "/profinoks/projects/83.jpg", "/profinoks/projects/84.jpg", "/profinoks/projects/85.JPG",
-    "/profinoks/projects/86.jpg", "/profinoks/projects/87.jpg", "/profinoks/projects/88.jpg", "/profinoks/projects/89.jpg",
-    "/profinoks/projects/90.jpg", "/profinoks/projects/91.jpg", "/profinoks/projects/92.jpg", "/profinoks/projects/93.jpg",
-    "/profinoks/projects/94.jpg", "/profinoks/projects/95.jpg", "/profinoks/projects/96.jpg", "/profinoks/projects/97.jpg",
-    "/profinoks/projects/98.jpg", "/profinoks/projects/99.jpg", "/profinoks/projects/100.jpg", "/profinoks/projects/101.jpg",
-    "/profinoks/projects/102.jpg", "/profinoks/projects/103.jpg", "/profinoks/projects/104.jpg", "/profinoks/projects/105.JPEG",
-    "/profinoks/projects/106.JPEG", "/profinoks/projects/107.jpg", "/profinoks/projects/108.jpg", "/profinoks/projects/109.jpg",
-    "/profinoks/projects/110.jpg", "/profinoks/projects/111.jpg", "/profinoks/projects/112.jpg", "/profinoks/projects/113.jpg",
-    "/profinoks/projects/114.jpg", "/profinoks/projects/115.jpg", "/profinoks/projects/116.jpg", "/profinoks/projects/117.jpg",
-    "/profinoks/projects/118.jpg", "/profinoks/projects/120.jpg", "/profinoks/projects/121.jpg", "/profinoks/projects/122.jpg",
-    "/profinoks/projects/123.jpg", "/profinoks/projects/124.jpg", "/profinoks/projects/125.jpg", "/profinoks/projects/126.jpg",
-    "/profinoks/projects/127.jpg", "/profinoks/projects/128.jpg", "/profinoks/projects/129.jpg", "/profinoks/projects/130.jpg",
-    "/profinoks/projects/131.jpg", "/profinoks/projects/132.jpg", "/profinoks/projects/133.jpg", "/profinoks/projects/134.jpg"
+  "/profinoks/projects/1.jpg", "/profinoks/projects/2.jpg", "/profinoks/projects/3.jpg", "/profinoks/projects/4.jpg",
+  "/profinoks/projects/5.jpg", "/profinoks/projects/6.jpg", "/profinoks/projects/7.jpg", "/profinoks/projects/8.jpg",
+  "/profinoks/projects/9.jpg", "/profinoks/projects/10.jpg", "/profinoks/projects/11.jpg", "/profinoks/projects/12.jpg",
+  "/profinoks/projects/14.jpeg", "/profinoks/projects/15.jpg", "/profinoks/projects/16.jpg", "/profinoks/projects/17.jpg",
+  "/profinoks/projects/18.jpg", "/profinoks/projects/19.jpg", "/profinoks/projects/20.jpg", "/profinoks/projects/21.jpg",
+  "/profinoks/projects/22.jpg", "/profinoks/projects/23.jpg", "/profinoks/projects/24.jpg", "/profinoks/projects/25.jpg",
+  "/profinoks/projects/26.jpg", "/profinoks/projects/27.jpg", "/profinoks/projects/28.jpg", "/profinoks/projects/29.jpg",
+  "/profinoks/projects/30.jpg", "/profinoks/projects/31.jpeg", "/profinoks/projects/32.jpg", "/profinoks/projects/33.jpg",
+  "/profinoks/projects/34.jpg", "/profinoks/projects/35.jpg", "/profinoks/projects/36.jpg", "/profinoks/projects/37.jpg",
+  "/profinoks/projects/38.jpg", "/profinoks/projects/39.jpg", "/profinoks/projects/40.jpg", "/profinoks/projects/41.jpg",
+  "/profinoks/projects/42.jpg", "/profinoks/projects/43.jpg", "/profinoks/projects/44.jpg", "/profinoks/projects/45.jpg",
+  "/profinoks/projects/46.jpg", "/profinoks/projects/47.jpg", "/profinoks/projects/48.jpg", "/profinoks/projects/49.jpg",
+  "/profinoks/projects/50.jpg", "/profinoks/projects/51.jpg", "/profinoks/projects/52.jpg", "/profinoks/projects/53.jpg",
+  "/profinoks/projects/54.jpg", "/profinoks/projects/55.jpg", "/profinoks/projects/56.jpg", "/profinoks/projects/57.jpg",
+  "/profinoks/projects/58.jpg", "/profinoks/projects/59.jpg", "/profinoks/projects/60.jpg", "/profinoks/projects/61.jpg",
+  "/profinoks/projects/62.jpg", "/profinoks/projects/63.jpg", "/profinoks/projects/64.jpeg", "/profinoks/projects/65.jpg",
+  "/profinoks/projects/66.jpg", "/profinoks/projects/67.jpg", "/profinoks/projects/68.jpg", "/profinoks/projects/69.jpg",
+  "/profinoks/projects/70.jpg", "/profinoks/projects/71.jpg", "/profinoks/projects/72.jpg", "/profinoks/projects/73.jpg",
+  "/profinoks/projects/74.jpeg", "/profinoks/projects/75.jpg", "/profinoks/projects/76.jpg", "/profinoks/projects/77.jpg",
+  "/profinoks/projects/78.jpg", "/profinoks/projects/79.jpg", "/profinoks/projects/80.jpg", "/profinoks/projects/81.jpg",
+  "/profinoks/projects/82.jpg", "/profinoks/projects/83.jpg", "/profinoks/projects/84.jpg", "/profinoks/projects/85.JPG",
+  "/profinoks/projects/86.jpg", "/profinoks/projects/87.jpg", "/profinoks/projects/88.jpg", "/profinoks/projects/89.jpg",
+  "/profinoks/projects/90.jpg", "/profinoks/projects/91.jpg", "/profinoks/projects/92.jpg", "/profinoks/projects/93.jpg",
+  "/profinoks/projects/94.jpg", "/profinoks/projects/95.jpg", "/profinoks/projects/96.jpg", "/profinoks/projects/97.jpg",
+  "/profinoks/projects/98.jpg", "/profinoks/projects/99.jpg", "/profinoks/projects/100.jpg", "/profinoks/projects/101.jpg",
+  "/profinoks/projects/102.jpg", "/profinoks/projects/103.jpg", "/profinoks/projects/104.jpg", "/profinoks/projects/105.JPEG",
+  "/profinoks/projects/106.JPEG", "/profinoks/projects/107.jpg", "/profinoks/projects/108.jpg", "/profinoks/projects/109.jpg",
+  "/profinoks/projects/110.jpg", "/profinoks/projects/111.jpg", "/profinoks/projects/112.jpg", "/profinoks/projects/113.jpg",
+  "/profinoks/projects/114.jpg", "/profinoks/projects/115.jpg", "/profinoks/projects/116.jpg", "/profinoks/projects/117.jpg",
+  "/profinoks/projects/118.jpg", "/profinoks/projects/120.jpg", "/profinoks/projects/121.jpg", "/profinoks/projects/122.jpg",
+  "/profinoks/projects/123.jpg", "/profinoks/projects/124.jpg", "/profinoks/projects/125.jpg", "/profinoks/projects/126.jpg",
+  "/profinoks/projects/127.jpg", "/profinoks/projects/128.jpg", "/profinoks/projects/129.jpg", "/profinoks/projects/130.jpg",
+  "/profinoks/projects/131.jpg", "/profinoks/projects/132.jpg", "/profinoks/projects/133.jpg", "/profinoks/projects/134.jpg"
 ];
 
 export const megaMenuProducts = {
-    "pisiriciler": [
-        { id: 1, name_tr: "4'lü Kuzine", name_en: "4 Burner Range", imageUrl: "/profinoks/products/pisiriciler.jpg" },
-        { id: 2, name_tr: "Gazlı Izgara", name_en: "Gas Grill", imageUrl: "/profinoks/products/pisiriciler.jpg" },
-        { id: 3, name_tr: "Devrilir Tava", name_en: "Bratt Pan", imageUrl: "/profinoks/products/pisiriciler.jpg" },
-        { id: 4, name_tr: "Kaynatma Tenceresi", name_en: "Boiling Pan", imageUrl: "/profinoks/products/pisiriciler.jpg" },
-    ],
-    "firinlar": [
-        { id: 1, name_tr: "Konveksiyonlu Fırın", name_en: "Convection Oven", imageUrl: "/profinoks/products/firinlar.jpg" },
-        { id: 2, name_tr: "Pizza Fırını", name_en: "Pizza Oven", imageUrl: "/profinoks/products/firinlar.jpg" },
-        { id: 3, name_tr: "Pastane Fırını", name_en: "Pastry Oven", imageUrl: "/profinoks/products/firinlar.jpg" },
-    ],
-    "bulasik-makineleri": [
-        { id: 1, name_tr: "Setaltı Bulaşık Makinesi", name_en: "Undercounter Dishwasher", imageUrl: "/profinoks/products/bulasik-makineleri.jpg" },
-        { id: 2, name_tr: "Giyotin Tip Makine", name_en: "Hood Type Dishwasher", imageUrl: "/profinoks/products/bulasik-makineleri.jpg" },
-        { id: 3, name_tr: "Bardak Yıkama Makinesi", name_en: "Glass Washer", imageUrl: "/profinoks/products/bulasik-makineleri.jpg" },
-    ],
-    "hazirlik-makineleri": [
-        { id: 1, name_tr: "Hamur Yoğurma Makinesi", name_en: "Dough Mixer", imageUrl: "/profinoks/products/hazirlik-makineleri.jpg" },
-        { id: 2, name_tr: "Et Kıyma Makinesi", name_en: "Meat Grinder", imageUrl: "/profinoks/products/hazirlik-makineleri.jpg" },
-    ],
-    "icecek-makineleri": [
-        { id: 1, name_tr: "Çay Kazanı", name_en: "Tea Boiler", imageUrl: "/profinoks/products/icecek-makineleri.jpg" },
-        { id: 2, name_tr: "Kahve Makinesi", name_en: "Coffee Machine", imageUrl: "/profinoks/products/icecek-makineleri.jpg" },
-    ],
-    "self-servis": [
-        { id: 1, name_tr: "Sıcak Servis Ünitesi", name_en: "Hot Service Unit", imageUrl: "/profinoks/products/self-servis-uniteleri.jpg" },
-        { id: 2, name_tr: "Soğuk Servis Ünitesi", name_en: "Cold Service Unit", imageUrl: "/profinoks/products/self-servis-uniteleri.jpg" },
-    ],
-    "acik-bufe": [
-        { id: 1, name_tr: "Ahşap Açık Büfe", name_en: "Wooden Open Buffet", imageUrl: "/profinoks/products/acik-bufe-servis-uniteleri.jpg" },
-        { id: 2, name_tr: "Isıtmalı Stand", name_en: "Heated Stand", imageUrl: "/profinoks/products/acik-bufe-servis-uniteleri.jpg" },
-    ],
-    "buzdolaplari": [
-        { id: 1, name_tr: "Dik Tip Buzdolabı", name_en: "Upright Refrigerator", imageUrl: "/profinoks/products/buzdolaplari.jpg" },
-        { id: 2, name_tr: "Tezgah Tipi Buzdolabı", name_en: "Countertop Refrigerator", imageUrl: "/profinoks/products/buzdolaplari.jpg" },
-    ],
-    "soguk-odalar": [
-        { id: 1, name_tr: "Panel Soğuk Depo", name_en: "Panel Cold Store", imageUrl: "/profinoks/products/soguk-odalar.jpg" },
-        { id: 2, name_tr: "Merkezi Soğutma Sistemi", name_en: "Central Cooling System", imageUrl: "/profinoks/products/soguk-odalar.jpg" },
-    ],
-    "tezgahlar": [
-        { id: 1, name_tr: "Çalışma Tezgahı", name_en: "Work Bench", imageUrl: "/profinoks/products/tezgahlar.jpg" },
-        { id: 2, name_tr: "Evyeli Tezgah", name_en: "Sink Table", imageUrl: "/profinoks/products/tezgahlar.jpg" },
-    ],
-    "istif-raflari": [
-        { id: 1, name_tr: "Düz İstif Rafı", name_en: "Solid Shelving", imageUrl: "/profinoks/products/istif-raflari.jpg" },
-        { id: 2, name_tr: "Delikli İstif Rafı", name_en: "Perforated Shelving", imageUrl: "/profinoks/products/istif-raflari.jpg" },
-    ],
-    "yer-izgaralari": [
-        { id: 1, name_tr: "Drenaj Kanalı", name_en: "Drainage Channel", imageUrl: "/profinoks/products/yer-izgaralari.jpg" },
-        { id: 2, name_tr: "Yağ Ayırıcı", name_en: "Grease Trap", imageUrl: "/profinoks/products/yer-izgaralari.jpg" },
-    ],
-    "davlumbazlar": [
-        { id: 1, name_tr: "Duvar Tipi Davlumbaz", name_en: "Wall Type Hood", imageUrl: "/profinoks/products/davlumbazlar.jpg" },
-        { id: 2, name_tr: "Orta Tip Davlumbaz", name_en: "Island Type Hood", imageUrl: "/profinoks/products/davlumbazlar.jpg" },
-    ],
-    "mutfak-arabalari": [
-        { id: 1, name_tr: "Servis Arabası", name_en: "Service Trolley", imageUrl: "/profinoks/products/mutfak-arabalari.jpg" },
-        { id: 2, name_tr: "Toplama Arabası", name_en: "Clearing Trolley", imageUrl: "/profinoks/products/mutfak-arabalari.jpg" },
-    ],
-    "yardimci-mutfak-ekipmanlari": [
-        { id: 1, name_tr: "Paslanmaz Tencere", name_en: "Stainless Steel Pot", imageUrl: "/profinoks/products/yardimci-mutfak-ekipmanlari.jpg" },
-        { id: 2, name_tr: "Süzgeç", name_en: "Strainer", imageUrl: "/profinoks/products/yardimci-mutfak-ekipmanlari.jpg" },
-    ],
-    "setustu-otel-ekipmanlari": [
-        { id: 1, name_tr: "Servis Tepsisi", name_en: "Serving Tray", imageUrl: "/profinoks/products/setustu-otel-ekipmanlari.jpg" },
-        { id: 2, name_tr: "Menaj Takımı", name_en: "Cruet Set", imageUrl: "/profinoks/products/setustu-otel-ekipmanlari.jpg" },
-    ],
-    "camasirhane-ekipmanlari": [
-        { id: 1, name_tr: "Yıkama Makinesi", name_en: "Washing Machine", imageUrl: "/profinoks/products/camasirhane-ekipmanlari.jpg" },
-        { id: 2, name_tr: "Kurutma Makinesi", name_en: "Drying Machine", imageUrl: "/profinoks/products/camasirhane-ekipmanlari.jpg" },
-    ],
-    "ahsap-urunler": [
-        { id: 1, name_tr: "Ahşap Sunum Tahtası", name_en: "Wooden Serving Board", imageUrl: "/profinoks/products/ahsap-urunler.jpg" },
-        { id: 2, name_tr: "Ahşap Ekmeklik", name_en: "Wooden Bread Basket", imageUrl: "/profinoks/products/ahsap-urunler.jpg" },
-    ],
+  "pisiriciler": [
+    { id: 1, name_tr: "4'lü Kuzine", name_en: "4 Burner Range", imageUrl: "/profinoks/products/pisiriciler.jpg" },
+    { id: 2, name_tr: "Gazlı Izgara", name_en: "Gas Grill", imageUrl: "/profinoks/products/pisiriciler.jpg" },
+    { id: 3, name_tr: "Devrilir Tava", name_en: "Bratt Pan", imageUrl: "/profinoks/products/pisiriciler.jpg" },
+    { id: 4, name_tr: "Kaynatma Tenceresi", name_en: "Boiling Pan", imageUrl: "/profinoks/products/pisiriciler.jpg" },
+  ],
+  "firinlar": [
+    { id: 1, name_tr: "Konveksiyonlu Fırın", name_en: "Convection Oven", imageUrl: "/profinoks/products/firinlar.jpg" },
+    { id: 2, name_tr: "Pizza Fırını", name_en: "Pizza Oven", imageUrl: "/profinoks/products/firinlar.jpg" },
+    { id: 3, name_tr: "Pastane Fırını", name_en: "Pastry Oven", imageUrl: "/profinoks/products/firinlar.jpg" },
+  ],
+  "bulasik-makineleri": [
+    { id: 1, name_tr: "Setaltı Bulaşık Makinesi", name_en: "Undercounter Dishwasher", imageUrl: "/profinoks/products/bulasik-makineleri.jpg" },
+    { id: 2, name_tr: "Giyotin Tip Makine", name_en: "Hood Type Dishwasher", imageUrl: "/profinoks/products/bulasik-makineleri.jpg" },
+    { id: 3, name_tr: "Bardak Yıkama Makinesi", name_en: "Glass Washer", imageUrl: "/profinoks/products/bulasik-makineleri.jpg" },
+  ],
+  "hazirlik-makineleri": [
+    { id: 1, name_tr: "Hamur Yoğurma Makinesi", name_en: "Dough Mixer", imageUrl: "/profinoks/products/hazirlik-makineleri.jpg" },
+    { id: 2, name_tr: "Et Kıyma Makinesi", name_en: "Meat Grinder", imageUrl: "/profinoks/products/hazirlik-makineleri.jpg" },
+  ],
+  "icecek-makineleri": [
+    { id: 1, name_tr: "Çay Kazanı", name_en: "Tea Boiler", imageUrl: "/profinoks/products/icecek-makineleri.jpg" },
+    { id: 2, name_tr: "Kahve Makinesi", name_en: "Coffee Machine", imageUrl: "/profinoks/products/icecek-makineleri.jpg" },
+  ],
+  "self-servis": [
+    { id: 1, name_tr: "Sıcak Servis Ünitesi", name_en: "Hot Service Unit", imageUrl: "/profinoks/products/self-servis-uniteleri.jpg" },
+    { id: 2, name_tr: "Soğuk Servis Ünitesi", name_en: "Cold Service Unit", imageUrl: "/profinoks/products/self-servis-uniteleri.jpg" },
+  ],
+  "acik-bufe": [
+    { id: 1, name_tr: "Ahşap Açık Büfe", name_en: "Wooden Open Buffet", imageUrl: "/profinoks/products/acik-bufe-servis-uniteleri.jpg" },
+    { id: 2, name_tr: "Isıtmalı Stand", name_en: "Heated Stand", imageUrl: "/profinoks/products/acik-bufe-servis-uniteleri.jpg" },
+  ],
+  "buzdolaplari": [
+    { id: 1, name_tr: "Dik Tip Buzdolabı", name_en: "Upright Refrigerator", imageUrl: "/profinoks/products/buzdolaplari.jpg" },
+    { id: 2, name_tr: "Tezgah Tipi Buzdolabı", name_en: "Countertop Refrigerator", imageUrl: "/profinoks/products/buzdolaplari.jpg" },
+  ],
+  "soguk-odalar": [
+    { id: 1, name_tr: "Panel Soğuk Depo", name_en: "Panel Cold Store", imageUrl: "/profinoks/products/soguk-odalar.jpg" },
+    { id: 2, name_tr: "Merkezi Soğutma Sistemi", name_en: "Central Cooling System", imageUrl: "/profinoks/products/soguk-odalar.jpg" },
+  ],
+  "tezgahlar": [
+    { id: 1, name_tr: "Çalışma Tezgahı", name_en: "Work Bench", imageUrl: "/profinoks/products/tezgahlar.jpg" },
+    { id: 2, name_tr: "Evyeli Tezgah", name_en: "Sink Table", imageUrl: "/profinoks/products/tezgahlar.jpg" },
+  ],
+  "istif-raflari": [
+    { id: 1, name_tr: "Düz İstif Rafı", name_en: "Solid Shelving", imageUrl: "/profinoks/products/istif-raflari.jpg" },
+    { id: 2, name_tr: "Delikli İstif Rafı", name_en: "Perforated Shelving", imageUrl: "/profinoks/products/istif-raflari.jpg" },
+  ],
+  "yer-izgaralari": [
+    { id: 1, name_tr: "Drenaj Kanalı", name_en: "Drainage Channel", imageUrl: "/profinoks/products/yer-izgaralari.jpg" },
+    { id: 2, name_tr: "Yağ Ayırıcı", name_en: "Grease Trap", imageUrl: "/profinoks/products/yer-izgaralari.jpg" },
+  ],
+  "davlumbazlar": [
+    { id: 1, name_tr: "Duvar Tipi Davlumbaz", name_en: "Wall Type Hood", imageUrl: "/profinoks/products/davlumbazlar.jpg" },
+    { id: 2, name_tr: "Orta Tip Davlumbaz", name_en: "Island Type Hood", imageUrl: "/profinoks/products/davlumbazlar.jpg" },
+  ],
+  "mutfak-arabalari": [
+    { id: 1, name_tr: "Servis Arabası", name_en: "Service Trolley", imageUrl: "/profinoks/products/mutfak-arabalari.jpg" },
+    { id: 2, name_tr: "Toplama Arabası", name_en: "Clearing Trolley", imageUrl: "/profinoks/products/mutfak-arabalari.jpg" },
+  ],
+  "yardimci-mutfak-ekipmanlari": [
+    { id: 1, name_tr: "Paslanmaz Tencere", name_en: "Stainless Steel Pot", imageUrl: "/profinoks/products/yardimci-mutfak-ekipmanlari.jpg" },
+    { id: 2, name_tr: "Süzgeç", name_en: "Strainer", imageUrl: "/profinoks/products/yardimci-mutfak-ekipmanlari.jpg" },
+  ],
+  "setustu-otel-ekipmanlari": [
+    { id: 1, name_tr: "Servis Tepsisi", name_en: "Serving Tray", imageUrl: "/profinoks/products/setustu-otel-ekipmanlari.jpg" },
+    { id: 2, name_tr: "Menaj Takımı", name_en: "Cruet Set", imageUrl: "/profinoks/products/setustu-otel-ekipmanlari.jpg" },
+  ],
+  "camasirhane-ekipmanlari": [
+    { id: 1, name_tr: "Yıkama Makinesi", name_en: "Washing Machine", imageUrl: "/profinoks/products/camasirhane-ekipmanlari.jpg" },
+    { id: 2, name_tr: "Kurutma Makinesi", name_en: "Drying Machine", imageUrl: "/profinoks/products/camasirhane-ekipmanlari.jpg" },
+  ],
+  "ahsap-urunler": [
+    { id: 1, name_tr: "Ahşap Sunum Tahtası", name_en: "Wooden Serving Board", imageUrl: "/profinoks/products/ahsap-urunler.jpg" },
+    { id: 2, name_tr: "Ahşap Ekmeklik", name_en: "Wooden Bread Basket", imageUrl: "/profinoks/products/ahsap-urunler.jpg" },
+  ],
 };
