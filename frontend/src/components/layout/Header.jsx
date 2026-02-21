@@ -14,6 +14,21 @@ const Header = () => {
   const { lang, toggleLang } = useLanguage();
   const [mobileOpen, setMobileOpen] = useState(false);
   const [megaMenuOpen, setMegaMenuOpen] = useState(false);
+  const megaMenuTimeoutRef = useRef(null);
+
+  const handleProductsMouseEnter = () => {
+    if (megaMenuTimeoutRef.current) {
+      clearTimeout(megaMenuTimeoutRef.current);
+      megaMenuTimeoutRef.current = null;
+    }
+    setMegaMenuOpen(true);
+  };
+
+  const handleProductsMouseLeave = () => {
+    megaMenuTimeoutRef.current = setTimeout(() => {
+      setMegaMenuOpen(false);
+    }, 150);
+  };
   const [searchTerm, setSearchTerm] = useState(() => {
     if (typeof window === "undefined") return "";
     return window.localStorage.getItem("profinoksSearch") || "";
@@ -164,8 +179,8 @@ const Header = () => {
               <div
                 key={item.path}
                 className="h-full flex items-center"
-                onMouseEnter={() => item.translationKey === "nav.products" && setMegaMenuOpen(true)}
-                onMouseLeave={() => item.translationKey === "nav.products" && setMegaMenuOpen(false)}
+                onMouseEnter={() => item.translationKey === "nav.products" && handleProductsMouseEnter()}
+                onMouseLeave={() => item.translationKey === "nav.products" && handleProductsMouseLeave()}
               >
                 <NavLink
                   to={item.path}
@@ -200,6 +215,8 @@ const Header = () => {
           {megaMenuOpen && (
             <MegaMenu
               lang={lang}
+              onMouseEnter={handleProductsMouseEnter}
+              onMouseLeave={handleProductsMouseLeave}
               onClose={() => setMegaMenuOpen(false)}
             />
           )}

@@ -1,16 +1,32 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import { Link } from "react-router-dom";
 import { productGroups, megaMenuProducts } from "../../mock";
 
-const MegaMenu = ({ lang, onClose }) => {
+const MegaMenu = ({ lang, onMouseEnter, onMouseLeave, onClose }) => {
     const [activeCategory, setActiveCategory] = useState(productGroups[0]?.slug);
+    const menuRef = useRef(null);
 
     const currentProducts = megaMenuProducts[activeCategory] || [];
 
+    useEffect(() => {
+        const handleClickOutside = (event) => {
+            if (menuRef.current && !menuRef.current.contains(event.target)) {
+                onClose();
+            }
+        };
+
+        document.addEventListener("mousedown", handleClickOutside);
+        return () => {
+            document.removeEventListener("mousedown", handleClickOutside);
+        };
+    }, [onClose]);
+
     return (
         <div
+            ref={menuRef}
             className="absolute top-full left-0 right-0 bg-white shadow-2xl border-t border-black/5 animate-in fade-in slide-in-from-top-2 duration-300 z-50 overflow-hidden"
-            onMouseLeave={onClose}
+            onMouseEnter={onMouseEnter}
+            onMouseLeave={onMouseLeave}
         >
             <div className="mx-auto flex max-w-6xl min-h-[500px]">
                 {/* Left Sidebar: Categories */}
@@ -21,8 +37,8 @@ const MegaMenu = ({ lang, onClose }) => {
                                 key={group.slug}
                                 onMouseEnter={() => setActiveCategory(group.slug)}
                                 className={`px-8 py-3.5 text-left transition-all duration-200 border-b border-black/5 last:border-b-0 ${activeCategory === group.slug
-                                        ? "bg-primary/5 text-primary border-l-4 border-l-primary"
-                                        : "text-gray-800 hover:bg-gray-50 border-l-4 border-l-transparent"
+                                    ? "bg-primary/5 text-primary border-l-4 border-l-primary"
+                                    : "text-gray-800 hover:bg-gray-50 border-l-4 border-l-transparent"
                                     }`}
                             >
                                 <span className="text-[13px] font-bold uppercase tracking-[0.1em]">
