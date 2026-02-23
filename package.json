@@ -8,7 +8,7 @@
   },
   "scripts": {
     "start": "node server.js",
-    "build": "cd frontend && npm install && npm run build && cd .. && rm -rf .next && mkdir -p .next && cp -r frontend/build/* .next/",
+    "build": "cd frontend && npm install && npm run build && cd .. && rm -rf dist && mkdir -p dist && cp -rv frontend/build/* dist/",
     "postinstall": "cd frontend && npm install"
   },
   "dependencies": {
