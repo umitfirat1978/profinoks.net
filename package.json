@@ -8,8 +8,8 @@
   },
   "scripts": {
     "start": "node server.js",
-    "build": "cd frontend && npm install && npm run build && cd .. && rm -rf dist && mkdir -p dist && cp -rv frontend/build/* dist/",
-    "postinstall": "cd frontend && npm install"
+    "build": "echo 'Artifacts already provided in dist folder. Skipping build.'",
+    "postinstall": "echo 'Skipping frontend install on server.'"
   },
   "dependencies": {
     "express": "^4.18.2",
