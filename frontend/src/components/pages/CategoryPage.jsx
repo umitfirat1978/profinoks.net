@@ -1,6 +1,7 @@
 import React from "react";
 import { useParams, Link } from "react-router-dom";
 import { productGroups } from "../../mock";
+import { categoryProducts } from "../../data/categoryProducts";
 import { useLanguage } from "../../contexts/LanguageContext";
 import { t } from "../../i18n";
 import { ChevronRight, Home } from "lucide-react";
@@ -10,6 +11,7 @@ const CategoryPage = () => {
     const { lang } = useLanguage();
 
     const category = productGroups.find((group) => group.slug === slug);
+    const products = categoryProducts[slug] || [];
 
     if (!category) {
         return (
@@ -80,7 +82,7 @@ const CategoryPage = () => {
                     </div>
                 </div>
 
-                {/* Products Grid Placeholder */}
+                {/* Products Grid */}
                 <div className="mt-20">
                     <h2 className="text-xl font-bold tracking-widest uppercase mb-8 flex items-center">
                         <span className="mr-4">{lang === "tr" ? "ÜRÜNLER" : "PRODUCTS"}</span>
@@ -88,14 +90,35 @@ const CategoryPage = () => {
                     </h2>
 
                     <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
-                        {/* Product list will go here */}
-                        <div className="col-span-full py-20 text-center border-2 border-dashed border-black/5 rounded-xl">
-                            <p className="text-muted-foreground italic">
-                                {lang === "tr"
-                                    ? "Bu kategorideki ürünler yakında eklenecektir."
-                                    : "Products in this category will be added soon."}
-                            </p>
-                        </div>
+                        {products.length > 0 ? (
+                            products.map((product) => (
+                                <div
+                                    key={product.id}
+                                    className="group relative overflow-hidden rounded-md border border-black/5 bg-white hover:shadow-md transition-all duration-300 flex flex-col"
+                                >
+                                    <div className="aspect-[4/3] overflow-hidden bg-white flex items-center justify-center p-4">
+                                        <img
+                                            src={product.imageUrl}
+                                            alt={lang === "tr" ? product.name_tr : product.name_en}
+                                            className="max-w-full max-h-full object-contain transition-transform duration-500 group-hover:scale-110"
+                                        />
+                                    </div>
+                                    <div className="p-4 flex flex-col flex-grow text-center border-t border-black/5 bg-gray-50/50">
+                                        <h3 className="text-sm font-semibold tracking-[0.05em] text-foreground group-hover:text-primary transition-colors">
+                                            {lang === "tr" ? product.name_tr : product.name_en}
+                                        </h3>
+                                    </div>
+                                </div>
+                            ))
+                        ) : (
+                            <div className="col-span-full py-20 text-center border-2 border-dashed border-black/5 rounded-xl">
+                                <p className="text-muted-foreground italic">
+                                    {lang === "tr"
+                                        ? "Bu kategorideki ürünler yakında eklenecektir."
+                                        : "Products in this category will be added soon."}
+                                </p>
+                            </div>
+                        )}
                     </div>
                 </div>
             </div>
