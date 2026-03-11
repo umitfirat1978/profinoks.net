@@ -298,4 +298,8 @@ app.get('*', (req, res) => {
 
 app.listen(PORT, () => {
   console.log(`Server is running on port ${PORT}`);
+  // Create a port file for debugging
+  try {
+    fs.writeFileSync(path.join(__dirname, 'PORT_DEBUG.txt'), PORT.toString());
+  } catch (e) {}
 });
