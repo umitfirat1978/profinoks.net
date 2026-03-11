@@ -1,16 +1,18 @@
 <IfModule mod_rewrite.c>
   RewriteEngine On
   
-  # Ensure /api and /uploads are handled by Node.js (Phusion Passenger)
-  # On Hostinger, Passenger usually handles the request if it matches the entry point.
-  # But we need to make sure Apache doesn't redirect them to index.html first.
-  
-  RewriteCond %{REQUEST_URI} ^/api [OR]
-  RewriteCond %{REQUEST_URI} ^/uploads
+  # 1. Allow physical files to be served (images, css, js)
+  RewriteCond %{REQUEST_FILENAME} -f
   RewriteRule ^ - [L]
 
-  # For React SPA routing
+  # 2. Let Node.js handling /api
+  RewriteCond %{REQUEST_URI} ^/api
+  RewriteRule ^ - [L]
+
+  # 3. Handle React SPA routing
+  # If the request is not for a file/dir, serve index.html
+  # Hostinger usually needs this to point to the actual file location
   RewriteCond %{REQUEST_FILENAME} !-f
   RewriteCond %{REQUEST_FILENAME} !-d
-  RewriteRule ^ index.html [L]
+  RewriteRule ^ /index.html [L]
 </IfModule>

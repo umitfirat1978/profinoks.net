@@ -38,14 +38,18 @@ const mongoUrl = process.env.MONGO_URL || 'mongodb://localhost:27017';
 const dbName = process.env.DB_NAME || 'profinoks';
 let db;
 
+console.log('Attempting to connect to MongoDB at:', mongoUrl);
 MongoClient.connect(mongoUrl)
   .then(client => {
     db = client.db(dbName);
     console.log(`Connected to Database: ${dbName}`);
     // Initialize collections if they don't exist
-    initializeDB();
+    initializeDB().catch(err => console.error('Error during DB Initialization:', err));
   })
-  .catch(error => console.error(error));
+  .catch(error => {
+    console.error('CRITICAL: MongoDB Connection Failed!');
+    console.error(error);
+  });
 
 // Seed initial data if DB is empty
 async function initializeDB() {
