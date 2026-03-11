@@ -4,7 +4,7 @@ const BACKEND_URL = process.env.REACT_APP_BACKEND_URL;
 
 // Do not hardcode URL or port; REACT_APP_BACKEND_URL is configured via .env
 const apiClient = axios.create({
-  baseURL: `${BACKEND_URL}/api`,
+  baseURL: BACKEND_URL ? `${BACKEND_URL}/api` : "/api",
 });
 
 export async function fetchHomePageData() {
