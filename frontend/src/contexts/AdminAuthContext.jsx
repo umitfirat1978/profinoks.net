@@ -9,25 +9,25 @@ const AdminAuthContext = createContext(undefined);
 export const AdminAuthProvider = ({ children }) => {
   const [token, setToken] = useState(() => {
     if (typeof window === "undefined") return null;
-    return window.sessionStorage.getItem("profinoks_admin_token");
+    return window.localStorage.getItem("profinoks_admin_token");
   });
 
   useEffect(() => {
     if (!token) {
-      delete axios.defaults.headers.common["X-Admin-Token"];
+      delete axios.defaults.headers.common["Authorization"];
       if (typeof window !== "undefined") {
-        window.sessionStorage.removeItem("profinoks_admin_token");
+        window.localStorage.removeItem("profinoks_admin_token");
       }
     } else {
-      axios.defaults.headers.common["X-Admin-Token"] = token;
+      axios.defaults.headers.common["Authorization"] = `Bearer ${token}`;
       if (typeof window !== "undefined") {
-        window.sessionStorage.setItem("profinoks_admin_token", token);
+        window.localStorage.setItem("profinoks_admin_token", token);
       }
     }
   }, [token]);
 
-  const loginAsDevAdmin = async (password) => {
-    const res = await axios.post(`${API}/admin/login`, { password });
+  const login = async (username, password) => {
+    const res = await axios.post(`${API}/admin/login`, { username, password });
     setToken(res.data.token);
   };
 
@@ -37,7 +37,7 @@ export const AdminAuthProvider = ({ children }) => {
 
   return (
     <AdminAuthContext.Provider
-      value={{ isAdmin: Boolean(token), token, loginAsDevAdmin, logout }}
+      value={{ isAdmin: Boolean(token), token, login, logout }}
     >
       {children}
     </AdminAuthContext.Provider>

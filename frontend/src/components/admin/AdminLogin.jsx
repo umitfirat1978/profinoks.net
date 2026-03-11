@@ -6,8 +6,9 @@ import { t } from "../../i18n";
 
 const AdminLogin = () => {
   const { lang } = useLanguage();
-  const { loginAsDevAdmin } = useAdminAuth();
-  const [password, setPassword] = useState("dev-admin");
+  const { login } = useAdminAuth();
+  const [username, setUsername] = useState("admin");
+  const [password, setPassword] = useState("");
   const [error, setError] = useState("");
   const [loading, setLoading] = useState(false);
   const navigate = useNavigate();
@@ -17,11 +18,11 @@ const AdminLogin = () => {
     setError("");
     setLoading(true);
     try {
-      await loginAsDevAdmin(password);
+      await login(username, password);
       navigate("/admin/products");
     } catch (err) {
       console.error(err);
-      setError(t(lang, "admin.wrongPassword"));
+      setError(t(lang, "admin.wrongPassword") || "Invalid credentials");
     } finally {
       setLoading(false);
     }
@@ -31,22 +32,35 @@ const AdminLogin = () => {
     <div className="mt-[140px] flex min-h-[60vh] items-center justify-center bg-[#050505] text-white">
       <div className="w-full max-w-md rounded-md border border-white/10 bg-black/80 p-6 shadow-lg">
         <h1 className="text-xl font-semibold tracking-[0.18em] uppercase">
-          {t(lang, "admin.loginTitle")}
+          {t(lang, "admin.loginTitle") || "Admin Panel"}
         </h1>
         <p className="mt-2 text-sm text-white/70">
-          {t(lang, "admin.loginDescription")}
+          {t(lang, "admin.loginDescription") || "Enter your credentials to continue"}
         </p>
 
         <form onSubmit={handleSubmit} className="mt-5 space-y-4">
           <div>
             <label className="mb-1 block text-xs uppercase tracking-[0.16em] text-white/70">
-              {t(lang, "admin.passwordLabel")}
+              {t(lang, "admin.usernameLabel") || "Username"}
+            </label>
+            <input
+              type="text"
+              value={username}
+              onChange={(e) => setUsername(e.target.value)}
+              className="w-full rounded-md border border-white/20 bg-black/40 px-3 py-2 text-sm focus:border-primary focus:outline-none"
+              required
+            />
+          </div>
+          <div>
+            <label className="mb-1 block text-xs uppercase tracking-[0.16em] text-white/70">
+              {t(lang, "admin.passwordLabel") || "Password"}
             </label>
             <input
               type="password"
               value={password}
               onChange={(e) => setPassword(e.target.value)}
               className="w-full rounded-md border border-white/20 bg-black/40 px-3 py-2 text-sm focus:border-primary focus:outline-none"
+              required
             />
           </div>
 
@@ -61,7 +75,7 @@ const AdminLogin = () => {
             disabled={loading}
             className="w-full rounded-md bg-primary px-4 py-2 text-sm font-semibold text-white transition-colors hover:opacity-90 disabled:opacity-60"
           >
-            {loading ? "..." : t(lang, "admin.signInButton")}
+            {loading ? "..." : (t(lang, "admin.signInButton") || "Sign In")}
           </button>
         </form>
       </div>
