@@ -3,8 +3,10 @@ import axios from "axios";
 const BACKEND_URL = process.env.REACT_APP_BACKEND_URL;
 
 // Do not hardcode URL or port; REACT_APP_BACKEND_URL is configured via .env
+// Safely handle backend URL: use env var if provided and not on localhost in production
+const isLocalhost = typeof window !== 'undefined' && (window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1');
 const apiClient = axios.create({
-  baseURL: BACKEND_URL ? `${BACKEND_URL}/api` : "/api",
+  baseURL: (BACKEND_URL && (isLocalhost || !BACKEND_URL.includes('localhost'))) ? `${BACKEND_URL}/api` : "/api",
 });
 
 // Response interceptor to catch HTML responses (routing issues)

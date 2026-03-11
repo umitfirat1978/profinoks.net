@@ -2,7 +2,8 @@ import React, { createContext, useContext, useEffect, useState } from "react";
 import axios from "axios";
 
 const BACKEND_URL = process.env.REACT_APP_BACKEND_URL || '';
-const API = BACKEND_URL ? `${BACKEND_URL}/api` : '/api';
+const isLocalhost = typeof window !== 'undefined' && (window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1');
+const API = (BACKEND_URL && (isLocalhost || !BACKEND_URL.includes('localhost'))) ? `${BACKEND_URL}/api` : '/api';
 
 const AdminAuthContext = createContext(undefined);
 
