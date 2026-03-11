@@ -27,8 +27,18 @@ export const AdminAuthProvider = ({ children }) => {
   }, [token]);
 
   const login = async (username, password) => {
-    const res = await axios.post(`${API}/admin/login`, { username, password });
-    setToken(res.data.token);
+    try {
+      const res = await axios.post(`${API}/admin/login`, { username, password });
+      if (typeof res.data === 'string' && res.data.includes('<!DOCTYPE html>')) {
+        throw new Error("Server returned HTML instead of JSON. This usually means a routing issue (Hostinger/Apache config).");
+      }
+      setToken(res.data.token);
+    } catch (err) {
+      if (err.response && typeof err.response.data === 'string' && err.response.data.includes('<!DOCTYPE html>')) {
+        throw new Error("API Route misconfigured: Server returned HTML page.");
+      }
+      throw err;
+    }
   };
 
   const logout = () => {

@@ -100,8 +100,18 @@ async function initializeDB() {
   }
 }
 
+// Test endpoint to verify API is reachable
+app.get('/api/test', (req, res) => {
+  res.json({ 
+    status: 'ok', 
+    message: 'Backend is alive',
+    dbConnected: !!db
+  });
+});
+
 // Middleware for Admin authentication
 const authenticateToken = (req, res, next) => {
+  if (!db) return res.status(503).json({ message: 'Database not connected yet' });
   const authHeader = req.headers['authorization'];
   const token = authHeader && authHeader.split(' ')[1];
 
@@ -116,6 +126,7 @@ const authenticateToken = (req, res, next) => {
 
 // --- Auth Routes ---
 app.post('/api/admin/login', async (req, res) => {
+  if (!db) return res.status(503).json({ message: 'Database not connected yet' });
   const { username, password } = req.body;
   try {
     const user = await db.collection('users').findOne({ username });
