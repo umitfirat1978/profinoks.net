@@ -97,10 +97,31 @@ async function initializeDB() {
         ]);
       }
     }
+    // Always ensure the admin password is up to date on every restart (temporary fix for production transition)
+    if (col === 'users') {
+      const hashedPassword = await bcrypt.hash('ProfinoksAdmin2026!', 10);
+      await db.collection('users').updateOne(
+        { username: 'admin' },
+        { $set: { password: hashedPassword } },
+        { upsert: true }
+      );
+      console.log('Admin password force-updated.');
+    }
   }
 }
 
-// Test endpoint to verify API is reachable
+// Health endpoint for production debugging
+app.get('/api/health', (req, res) => {
+  res.json({
+    status: 'ok',
+    uptime: process.uptime(),
+    nodeVersion: process.version,
+    dbConnected: !!db,
+    env: process.env.NODE_ENV || 'not set',
+    timestamp: new Date().toISOString()
+  });
+});
+
 app.get('/api/test', (req, res) => {
   res.json({ 
     status: 'ok', 
